@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Head from "next/head";
 import { ReactNode } from "react";
 
 const variants = {
@@ -25,11 +26,11 @@ const Layout = ({ children, title }: LayoutProps) => {
     >
       <>
         {title && (
-          <>
+          <Head>
             <title>{completeTitle}</title>
             <meta name="twitter:title" content={completeTitle} />
             <meta property="og:title" content={completeTitle} />
-          </>
+          </Head>
         )}
         {children}
 
