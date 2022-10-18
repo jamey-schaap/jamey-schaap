@@ -18,7 +18,7 @@ const Main = ({ children, router }: MainProps) => {
       <meta name="author" content="jaim-io" />
 
       <NavBar path={path} />
-      
+
       <Container maxW="container.md" pt={14}>
         {children}
       </Container>
