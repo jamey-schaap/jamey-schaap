@@ -22,7 +22,7 @@ const Home: NextPageWithLayout = () => {
         </Box>
 
         <Section delay={0.2}>
-        {/* @ts-ignore */}
+          {/* @ts-ignore */}
           <Heading as="h3" variant="section-title" align="center">
             Education
           </Heading>
