@@ -1,7 +1,7 @@
 import { Box, Container } from "@chakra-ui/react";
 import { Router } from "next/router";
 import { ReactNode } from "react";
-import NavBar from "../navbar";
+import NavBar from "../navBar";
 
 type MainProps = {
   router?: Router;
@@ -16,7 +16,9 @@ const Main = ({ children, router }: MainProps) => {
       <meta name="description" content="Jamey's homepage" />
       <meta name="author" content="Jamey Schaap" />
       <meta name="author" content="jaim-io" />
+
       <NavBar path={path} />
+      
       <Container maxW="container.md" pt={14}>
         {children}
       </Container>

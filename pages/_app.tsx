@@ -1,9 +1,9 @@
 import { NextPage } from "next";
 import type { AppProps } from "next/app";
-import { Router } from "next/router";
 import { ReactElement, ReactNode } from "react";
 import { AnimatePresence } from "framer-motion";
 import Fonts from "../components/fonts";
+import Chakra from "../components/chakra";
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode;
@@ -16,7 +16,8 @@ type AppPropsWithLayout = AppProps & {
 function App({ Component, pageProps, router }: AppPropsWithLayout) {
   const getLayout = Component.getLayout ?? ((page) => page);
   return (
-    <>
+    // @ts-ignore
+    <Chakra cookies={pageProps.cookies}>
       <Fonts />
       {getLayout(
         <AnimatePresence
@@ -31,7 +32,7 @@ function App({ Component, pageProps, router }: AppPropsWithLayout) {
           <Component {...pageProps} key={router.route} />
         </AnimatePresence>
       )}
-    </>
+    </Chakra>
   );
 }
 
