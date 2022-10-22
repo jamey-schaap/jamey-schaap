@@ -10,7 +10,7 @@ const SectionHeading = ({ children, ...props }: SectionHeadingProps) => (
       as="h3"
       fontSize={20}
       marginTop={3}
-      marginBottom={1}
+      marginBottom={2}
       // @ts-ignore
       align="center"
       {...props}
@@ -19,7 +19,7 @@ const SectionHeading = ({ children, ...props }: SectionHeadingProps) => (
     </Heading>
     <Divider
       orientation="horizontal"
-      borderTop="4px solid #525252;"
+      borderTop="2px solid #525252;"
       borderRadius="lg"
       marginBottom="2"
     />

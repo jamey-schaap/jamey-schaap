@@ -1,6 +1,6 @@
-import { motion } from "framer-motion";
 import Head from "next/head";
 import { ReactNode } from "react";
+import Fade from "../transitions/fade";
 
 const variants = {
   hidden: { opacity: 0, x: 0, y: 20 },
@@ -16,13 +16,7 @@ type LayoutProps = {
 const Layout = ({ children, title }: LayoutProps) => {
   const completeTitle = `${title} - Jamey Schaap`;
   return (
-    <motion.article
-      initial="hidden"
-      animate="enter"
-      exit="exit"
-      variants={variants}
-      transition={{ duration: 0.4, type: "easInOut" }}
-      style={{ position: "relative" }}
+    <Fade
     >
       <>
         {title && (
@@ -36,7 +30,7 @@ const Layout = ({ children, title }: LayoutProps) => {
 
         {/* <GridItemStyle /> */}
       </>
-    </motion.article>
+    </Fade>
   );
 };
 

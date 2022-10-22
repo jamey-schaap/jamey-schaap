@@ -5,7 +5,7 @@ import NextLink from "next/link";
 
 type ImageGridItemProps = {
   href: string;
-  title: string;
+  title?: string;
   thumbnail: string;
   children?: ReactNode;
 };
@@ -21,10 +21,9 @@ const ImageGridItem = ({
         <Image
           src={thumbnail}
           alt={title}
-          width="240"
-          height="135"
+          width="180"
+          height="101.25"
           style={{ borderRadius: "12px" }}
-          // placeholder="blur"
           loading="lazy"
         />
         <LinkOverlay href={href}>
