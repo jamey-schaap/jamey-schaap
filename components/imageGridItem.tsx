@@ -20,11 +20,11 @@ type ImageGridItemProps = {
 };
 
 const OnHoverLinkStyle = {
-  "&:hover" : {
+  "&:hover": {
     textDecoration: "none",
-    color: "teal"
-  }
-}
+    color: "teal",
+  },
+};
 
 const ImageGridItem = ({
   href,
@@ -35,7 +35,7 @@ const ImageGridItem = ({
 }: ImageGridItemProps) => (
   <Box w="100%" textAlign="center">
     <NextLink href={href} passHref scroll={false}>
-      <Link color={useColorModeValue("black", "white")} css={OnHoverLinkStyle} >
+      <Link color={useColorModeValue("black", "white")} css={OnHoverLinkStyle}>
         <Tooltip
           label={tooltip}
           bg={useColorModeValue("whiteAlpha.500", "whiteAlpha.200")}

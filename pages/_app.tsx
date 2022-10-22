@@ -19,22 +19,22 @@ function App({ Component, pageProps, router }: AppPropsWithLayout) {
   return (
     // @ts-ignore
     <Chakra cookies={pageProps.cookies}>
-      <Fonts />
-      {getLayout(
-        <AnimatePresence
-          mode="wait"
-          initial={true}
-          onExitComplete={() => {
-            if (typeof window !== "undefined") {
-              window.scrollTo({ top: 0 });
-            }
-          }}
-        >
-          <TabProvider>
+      <TabProvider>
+        <Fonts />
+        {getLayout(
+          <AnimatePresence
+            mode="wait"
+            initial={true}
+            onExitComplete={() => {
+              if (typeof window !== "undefined") {
+                window.scrollTo({ top: 0 });
+              }
+            }}
+          >
             <Component {...pageProps} key={router.route} />
-          </TabProvider>
-        </AnimatePresence>
-      )}
+          </AnimatePresence>
+        )}
+      </TabProvider>
     </Chakra>
   );
 }
