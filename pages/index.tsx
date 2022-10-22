@@ -18,13 +18,13 @@ import { ReactElement, useContext } from "react";
 import { useColorModeValue } from "@chakra-ui/react";
 import Layout from "../components/layouts/article";
 import Section from "../components/section";
-import SectionHeading from "../components/sectionHeader";
-import { InfoSection, DateSection } from "../components/subSection";
-import ImageGridItem from "../components/imageGridItem";
+import SectionHeading from "../components/section-header";
+import { InfoSection, DateSection } from "../components/sub-section";
+import ImageGridItem from "../components/image-grid-item";
 import { AiOutlineDoubleRight } from "react-icons/ai";
 import Fade from "../components/transitions/fade";
 import NextLink from "next/link";
-import TabContext from "../contexts/tabcontext";
+import TabContext from "../contexts/tab-context";
 
 const Home: NextPageWithLayout = () => {
   const { tabIndex, setTabIndex } = useContext(TabContext);
@@ -237,8 +237,8 @@ const Home: NextPageWithLayout = () => {
                       </Button>
                     </ImageGridItem>
                     <ImageGridItem
-                      href="/languages/csharp"
-                      thumbnail="/svgs/csharp.svg"
+                      href="/languages/c-sharp"
+                      thumbnail="/svgs/c-sharp.svg"
                     >
                       <Button
                         leftIcon={<AiOutlineDoubleRight />}
@@ -309,8 +309,8 @@ const Home: NextPageWithLayout = () => {
                       </Button>
                     </ImageGridItem>
                     <ImageGridItem
-                      href="/frameworks/aspnetcore"
-                      thumbnail="/svgs/dotnetcore.svg"
+                      href="/frameworks/aspnet-core"
+                      thumbnail="/svgs/dotnet-core.svg"
                       tooltip="ASP.NET Core"
                     >
                       <Button
@@ -321,8 +321,8 @@ const Home: NextPageWithLayout = () => {
                       </Button>
                     </ImageGridItem>
                     <ImageGridItem
-                      href="/frameworks/efcore"
-                      thumbnail="/svgs/dotnetcore.svg"
+                      href="/frameworks/ef-core"
+                      thumbnail="/svgs/dotnet-core.svg"
                       tooltip="Entity Framework Core"
                     >
                       <Button

@@ -12,7 +12,7 @@ import {
   Box,
 } from "@chakra-ui/react";
 import Layout from "../../components/layouts/article";
-import NoContent from "../nocontent";
+import NoContent from "../no-content";
 import NextLink from "next/link";
 import { AiOutlineRight } from "react-icons/ai";
 

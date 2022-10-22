@@ -1,5 +1,5 @@
 import { Box, Container, Stack, useColorModeValue } from "@chakra-ui/react";
-import NavItem from "./navItem";
+import NavItem from "./nav-item";
 import ThemeToggleButton from "./theme-toggle-button";
 
 type NavProps = {

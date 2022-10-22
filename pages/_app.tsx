@@ -4,7 +4,7 @@ import { ReactElement, ReactNode } from "react";
 import { AnimatePresence } from "framer-motion";
 import Fonts from "../components/fonts";
 import Chakra from "../components/chakra";
-import { TabProvider } from "../contexts/tabcontext";
+import { TabProvider } from "../contexts/tab-context";
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode;

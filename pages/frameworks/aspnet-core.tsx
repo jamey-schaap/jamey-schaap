@@ -3,9 +3,9 @@ import { ReactElement } from "react";
 import MainLayout from "../../components/layouts/main";
 import ArticleLayout from "../../components/layouts/article";
 import Layout from "../../components/layouts/article";
-import NoContent from "../nocontent";
+import NoContent from "../no-content";
 
-const CSharp = () => (
+const AspNetCore = () => (
   <Layout>
     <Container>
       <NoContent />
@@ -13,7 +13,7 @@ const CSharp = () => (
   </Layout>
 );
 
-CSharp.getLayout = (page: ReactElement) => {
+AspNetCore.getLayout = (page: ReactElement) => {
   return (
     <MainLayout>
       <ArticleLayout>{page}</ArticleLayout>
@@ -21,4 +21,4 @@ CSharp.getLayout = (page: ReactElement) => {
   );
 };
 
-export default CSharp;
+export default AspNetCore;

@@ -3,7 +3,7 @@ import { ReactElement } from "react";
 import MainLayout from "../../components/layouts/main";
 import ArticleLayout from "../../components/layouts/article";
 import Layout from "../../components/layouts/article";
-import NoContent from "../nocontent";
+import NoContent from "../no-content";
 
 const DotNet = () => (
   <Layout>

@@ -1,7 +1,7 @@
 import { Box, Container } from "@chakra-ui/react";
 import { Router } from "next/router";
 import { ReactNode } from "react";
-import NavBar from "../navBar";
+import NavBar from "../nav-bar";
 
 type MainProps = {
   router?: Router;

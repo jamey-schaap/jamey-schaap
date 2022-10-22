@@ -1,5 +1,5 @@
 import { Box } from "@chakra-ui/react";
-import SectionHeading from "../components/sectionHeader";
+import SectionHeading from "../components/section-header";
 
 const NoContent = () => (
   <>

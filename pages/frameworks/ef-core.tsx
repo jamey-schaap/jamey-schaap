@@ -3,9 +3,9 @@ import { ReactElement } from "react";
 import MainLayout from "../../components/layouts/main";
 import ArticleLayout from "../../components/layouts/article";
 import Layout from "../../components/layouts/article";
-import NoContent from "../nocontent";
+import NoContent from "../no-content";
 
-const AspNetCore = () => (
+const EfCore = () => (
   <Layout>
     <Container>
       <NoContent />
@@ -13,7 +13,7 @@ const AspNetCore = () => (
   </Layout>
 );
 
-AspNetCore.getLayout = (page: ReactElement) => {
+EfCore.getLayout = (page: ReactElement) => {
   return (
     <MainLayout>
       <ArticleLayout>{page}</ArticleLayout>
@@ -21,4 +21,4 @@ AspNetCore.getLayout = (page: ReactElement) => {
   );
 };
 
-export default AspNetCore;
+export default EfCore;
