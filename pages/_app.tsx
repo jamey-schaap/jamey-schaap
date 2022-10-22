@@ -4,6 +4,7 @@ import { ReactElement, ReactNode } from "react";
 import { AnimatePresence } from "framer-motion";
 import Fonts from "../components/fonts";
 import Chakra from "../components/chakra";
+import { TabProvider } from "../contexts/tabcontext";
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode;
@@ -29,7 +30,9 @@ function App({ Component, pageProps, router }: AppPropsWithLayout) {
             }
           }}
         >
+          <TabProvider>
           <Component {...pageProps} key={router.route} />
+          </TabProvider>
         </AnimatePresence>
       )}
     </Chakra>

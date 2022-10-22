@@ -14,7 +14,7 @@ import {
 import MainLayout from "../components/layouts/main";
 import ArticleLayout from "../components/layouts/article";
 import { NextPageWithLayout } from "./_app";
-import { ReactElement } from "react";
+import { ReactElement, useContext } from "react";
 import { useColorModeValue } from "@chakra-ui/react";
 import Layout from "../components/layouts/article";
 import Section from "../components/section";
@@ -24,8 +24,11 @@ import ImageGridItem from "../components/imageGridItem";
 import { AiOutlineDoubleRight } from "react-icons/ai";
 import Fade from "../components/transitions/fade";
 import NextLink from "next/link";
+import { useTab } from "../contexts/tabcontext";
 
 const Home: NextPageWithLayout = () => {
+  const { tabIndex, setTabIndex } = useTab();
+
   return (
     <Layout>
       <Container>
@@ -183,6 +186,8 @@ const Home: NextPageWithLayout = () => {
             variant="line"
             colorScheme={useColorModeValue("#000", "#fff")}
             borderColor={useColorModeValue("white", "#525252")}
+            onChange={(index) => setTabIndex(index)}
+            defaultIndex={tabIndex}
           >
             <TabList borderBottomWidth="2px" borderRadius="2px" color="gray">
               <Tab
@@ -220,7 +225,10 @@ const Home: NextPageWithLayout = () => {
               <TabPanel>
                 <Fade>
                   <SimpleGrid columns={[1, 3, 3]} gap={6}>
-                    <ImageGridItem href="/languages/golang" thumbnail="/svgs/gopher.svg">
+                    <ImageGridItem
+                      href="/languages/golang"
+                      thumbnail="/svgs/gopher.svg"
+                    >
                       <Button
                         leftIcon={<AiOutlineDoubleRight />}
                         borderRadius="lg"
@@ -228,7 +236,10 @@ const Home: NextPageWithLayout = () => {
                         Golang
                       </Button>
                     </ImageGridItem>
-                    <ImageGridItem href="/languages/csharp" thumbnail="/svgs/csharp.svg">
+                    <ImageGridItem
+                      href="/languages/csharp"
+                      thumbnail="/svgs/csharp.svg"
+                    >
                       <Button
                         leftIcon={<AiOutlineDoubleRight />}
                         borderRadius="lg"
@@ -236,7 +247,10 @@ const Home: NextPageWithLayout = () => {
                         C#{" "}
                       </Button>
                     </ImageGridItem>
-                    <ImageGridItem href="/languages/python" thumbnail="/svgs/python.svg">
+                    <ImageGridItem
+                      href="/languages/python"
+                      thumbnail="/svgs/python.svg"
+                    >
                       <Button
                         leftIcon={<AiOutlineDoubleRight />}
                         borderRadius="lg"
@@ -244,7 +258,10 @@ const Home: NextPageWithLayout = () => {
                         Python
                       </Button>
                     </ImageGridItem>
-                    <ImageGridItem href="/languages/nodejs" thumbnail="/svgs/nodejs.svg">
+                    <ImageGridItem
+                      href="/languages/nodejs"
+                      thumbnail="/svgs/nodejs.svg"
+                    >
                       <Button
                         leftIcon={<AiOutlineDoubleRight />}
                         borderRadius="lg"
@@ -252,7 +269,10 @@ const Home: NextPageWithLayout = () => {
                         Node.js
                       </Button>
                     </ImageGridItem>
-                    <ImageGridItem href="/languages/sql" thumbnail="/svgs/sql.svg">
+                    <ImageGridItem
+                      href="/languages/sql"
+                      thumbnail="/svgs/sql.svg"
+                    >
                       <Button
                         leftIcon={<AiOutlineDoubleRight />}
                         borderRadius="lg"
@@ -260,7 +280,10 @@ const Home: NextPageWithLayout = () => {
                         SQL
                       </Button>
                     </ImageGridItem>
-                    <ImageGridItem href="/languages/other" thumbnail="/svgs/other.svg">
+                    <ImageGridItem
+                      href="/languages/other"
+                      thumbnail="/svgs/other.svg"
+                    >
                       <Button
                         leftIcon={<AiOutlineDoubleRight />}
                         borderRadius="lg"
@@ -274,7 +297,10 @@ const Home: NextPageWithLayout = () => {
               <TabPanel>
                 <Fade>
                   <SimpleGrid columns={[1, 3, 3]} gap={6}>
-                    <ImageGridItem href="/frameworks/dotnet" thumbnail="/svgs/dotnet.svg">
+                    <ImageGridItem
+                      href="/frameworks/dotnet"
+                      thumbnail="/svgs/dotnet.svg"
+                    >
                       <Button
                         leftIcon={<AiOutlineDoubleRight />}
                         borderRadius="lg"
@@ -306,7 +332,10 @@ const Home: NextPageWithLayout = () => {
                         Entity Fr...
                       </Button>
                     </ImageGridItem>
-                    <ImageGridItem href="/frameworks/react" thumbnail="/svgs/react.svg">
+                    <ImageGridItem
+                      href="/frameworks/react"
+                      thumbnail="/svgs/react.svg"
+                    >
                       <Button
                         leftIcon={<AiOutlineDoubleRight />}
                         borderRadius="lg"
@@ -314,7 +343,10 @@ const Home: NextPageWithLayout = () => {
                         React
                       </Button>
                     </ImageGridItem>
-                    <ImageGridItem href="/frameworks/vue" thumbnail="/svgs/vue.svg">
+                    <ImageGridItem
+                      href="/frameworks/vue"
+                      thumbnail="/svgs/vue.svg"
+                    >
                       <Button
                         leftIcon={<AiOutlineDoubleRight />}
                         borderRadius="lg"
@@ -328,7 +360,10 @@ const Home: NextPageWithLayout = () => {
               <TabPanel>
                 <Fade>
                   <SimpleGrid columns={[1, 3, 3]} gap={6}>
-                    <ImageGridItem href="/devops/docker" thumbnail="/svgs/docker.svg">
+                    <ImageGridItem
+                      href="/devops/docker"
+                      thumbnail="/svgs/docker.svg"
+                    >
                       <Button
                         leftIcon={<AiOutlineDoubleRight />}
                         borderRadius="lg"
@@ -336,7 +371,10 @@ const Home: NextPageWithLayout = () => {
                         Docker
                       </Button>
                     </ImageGridItem>
-                    <ImageGridItem href="/devops/kubernetes" thumbnail="/svgs/Kubernetes.svg">
+                    <ImageGridItem
+                      href="/devops/kubernetes"
+                      thumbnail="/svgs/Kubernetes.svg"
+                    >
                       <Button
                         leftIcon={<AiOutlineDoubleRight />}
                         borderRadius="lg"
