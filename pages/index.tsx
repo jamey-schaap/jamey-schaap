@@ -373,7 +373,7 @@ const Home: NextPageWithLayout = () => {
                     </ImageGridItem>
                     <ImageGridItem
                       href="/devops/kubernetes"
-                      thumbnail="/svgs/Kubernetes.svg"
+                      thumbnail="/svgs/kubernetes.svg"
                     >
                       <Button
                         leftIcon={<AiOutlineDoubleRight />}

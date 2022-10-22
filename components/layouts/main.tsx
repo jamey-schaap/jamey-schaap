@@ -1,6 +1,7 @@
 import { Box, Container } from "@chakra-ui/react";
 import { Router } from "next/router";
 import { ReactNode } from "react";
+import Footer from "../footer";
 import NavBar from "../nav-bar";
 
 type MainProps = {
@@ -21,6 +22,8 @@ const Main = ({ children, router }: MainProps) => {
 
       <Container maxW="container.md" pt={14}>
         {children}
+
+        <Footer />
       </Container>
     </Box>
   );
