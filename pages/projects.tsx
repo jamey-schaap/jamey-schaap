@@ -4,10 +4,8 @@ import MainLayout from "../components/layouts/main";
 import ArticleLayout from "../components/layouts/article";
 
 const Projects: NextPageWithLayout = () => {
-  return(
-    <></>
-  )
-}
+  return <></>;
+};
 
 Projects.getLayout = (page: ReactElement) => {
   return (

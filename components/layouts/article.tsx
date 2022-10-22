@@ -16,8 +16,7 @@ type LayoutProps = {
 const Layout = ({ children, title }: LayoutProps) => {
   const completeTitle = `${title} - Jamey Schaap`;
   return (
-    <Fade
-    >
+    <Fade>
       <>
         {title && (
           <Head>

@@ -24,10 +24,10 @@ import ImageGridItem from "../components/imageGridItem";
 import { AiOutlineDoubleRight } from "react-icons/ai";
 import Fade from "../components/transitions/fade";
 import NextLink from "next/link";
-import { useTab } from "../contexts/tabcontext";
+import TabContext from "../contexts/tabcontext";
 
 const Home: NextPageWithLayout = () => {
-  const { tabIndex, setTabIndex } = useTab();
+  const { tabIndex, setTabIndex } = useContext(TabContext);
 
   return (
     <Layout>

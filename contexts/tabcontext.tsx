@@ -12,8 +12,6 @@ const TabIndexConextDefaultValues: TabContextType = {
 
 const TabContext = createContext<TabContextType>(TabIndexConextDefaultValues);
 
-export const useTab = () => useContext(TabContext);
-
 type TabIndexProps = {
   children: ReactNode;
 };
@@ -26,12 +24,7 @@ export const TabProvider = ({ children }: TabIndexProps) => {
     setTabIndex,
   };
 
-  return (
-    // @ts-ignore
-    <TabContext.Provider value={value}>
-      {children}
-    </TabContext.Provider>
-  );
+  return <TabContext.Provider value={value}>{children}</TabContext.Provider>;
 };
 
 export default TabContext;

@@ -19,6 +19,13 @@ type ImageGridItemProps = {
   children?: ReactNode;
 };
 
+const OnHoverLinkStyle = {
+  "&:hover" : {
+    textDecoration: "none",
+    color: "teal"
+  }
+}
+
 const ImageGridItem = ({
   href,
   title,
@@ -28,7 +35,7 @@ const ImageGridItem = ({
 }: ImageGridItemProps) => (
   <Box w="100%" textAlign="center">
     <NextLink href={href} passHref scroll={false}>
-      <Link color={useColorModeValue("black", "white")}>
+      <Link color={useColorModeValue("black", "white")} css={OnHoverLinkStyle} >
         <Tooltip
           label={tooltip}
           bg={useColorModeValue("whiteAlpha.500", "whiteAlpha.200")}
@@ -38,7 +45,6 @@ const ImageGridItem = ({
           placement="bottom"
         >
           <LinkBox cursor="pointer">
-            {/* <LinkOverlay href={href}> */}
             <Image
               src={thumbnail}
               alt={title}
@@ -50,7 +56,6 @@ const ImageGridItem = ({
             />
             <Text mt={2}>{title}</Text>
             <Text fontSize={14}>{children}</Text>
-            {/* </LinkOverlay> */}
           </LinkBox>
         </Tooltip>
       </Link>

@@ -31,7 +31,7 @@ function App({ Component, pageProps, router }: AppPropsWithLayout) {
           }}
         >
           <TabProvider>
-          <Component {...pageProps} key={router.route} />
+            <Component {...pageProps} key={router.route} />
           </TabProvider>
         </AnimatePresence>
       )}
