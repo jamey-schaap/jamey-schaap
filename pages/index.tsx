@@ -220,7 +220,7 @@ const Home: NextPageWithLayout = () => {
               <TabPanel>
                 <Fade>
                   <SimpleGrid columns={[1, 3, 3]} gap={6}>
-                    <ImageGridItem href="/golang" thumbnail="/svgs/gopher.svg">
+                    <ImageGridItem href="/languages/golang" thumbnail="/svgs/gopher.svg">
                       <Button
                         leftIcon={<AiOutlineDoubleRight />}
                         borderRadius="lg"
@@ -228,7 +228,7 @@ const Home: NextPageWithLayout = () => {
                         Golang
                       </Button>
                     </ImageGridItem>
-                    <ImageGridItem href="/" thumbnail="/svgs/csharp.svg">
+                    <ImageGridItem href="/languages/csharp" thumbnail="/svgs/csharp.svg">
                       <Button
                         leftIcon={<AiOutlineDoubleRight />}
                         borderRadius="lg"
@@ -236,7 +236,7 @@ const Home: NextPageWithLayout = () => {
                         C#{" "}
                       </Button>
                     </ImageGridItem>
-                    <ImageGridItem href="/" thumbnail="/svgs/python.svg">
+                    <ImageGridItem href="/languages/python" thumbnail="/svgs/python.svg">
                       <Button
                         leftIcon={<AiOutlineDoubleRight />}
                         borderRadius="lg"
@@ -244,7 +244,7 @@ const Home: NextPageWithLayout = () => {
                         Python
                       </Button>
                     </ImageGridItem>
-                    <ImageGridItem href="/" thumbnail="/svgs/nodejs.svg">
+                    <ImageGridItem href="/languages/nodejs" thumbnail="/svgs/nodejs.svg">
                       <Button
                         leftIcon={<AiOutlineDoubleRight />}
                         borderRadius="lg"
@@ -252,7 +252,7 @@ const Home: NextPageWithLayout = () => {
                         Node.js
                       </Button>
                     </ImageGridItem>
-                    <ImageGridItem href="/" thumbnail="/svgs/sql.svg">
+                    <ImageGridItem href="/languages/sql" thumbnail="/svgs/sql.svg">
                       <Button
                         leftIcon={<AiOutlineDoubleRight />}
                         borderRadius="lg"
@@ -260,7 +260,7 @@ const Home: NextPageWithLayout = () => {
                         SQL
                       </Button>
                     </ImageGridItem>
-                    <ImageGridItem href="/" thumbnail="/svgs/other.svg">
+                    <ImageGridItem href="/languages/other" thumbnail="/svgs/other.svg">
                       <Button
                         leftIcon={<AiOutlineDoubleRight />}
                         borderRadius="lg"
@@ -274,7 +274,7 @@ const Home: NextPageWithLayout = () => {
               <TabPanel>
                 <Fade>
                   <SimpleGrid columns={[1, 3, 3]} gap={6}>
-                    <ImageGridItem href="/" thumbnail="/svgs/dotnet.svg">
+                    <ImageGridItem href="/frameworks/dotnet" thumbnail="/svgs/dotnet.svg">
                       <Button
                         leftIcon={<AiOutlineDoubleRight />}
                         borderRadius="lg"
@@ -283,7 +283,7 @@ const Home: NextPageWithLayout = () => {
                       </Button>
                     </ImageGridItem>
                     <ImageGridItem
-                      href="/"
+                      href="/frameworks/aspnetcore"
                       thumbnail="/svgs/dotnetcore.svg"
                       tooltip="ASP.NET Core"
                     >
@@ -295,7 +295,7 @@ const Home: NextPageWithLayout = () => {
                       </Button>
                     </ImageGridItem>
                     <ImageGridItem
-                      href="/"
+                      href="/frameworks/efcore"
                       thumbnail="/svgs/dotnetcore.svg"
                       tooltip="Entity Framework Core"
                     >
@@ -306,7 +306,7 @@ const Home: NextPageWithLayout = () => {
                         Entity Fr...
                       </Button>
                     </ImageGridItem>
-                    <ImageGridItem href="/" thumbnail="/svgs/react.svg">
+                    <ImageGridItem href="/frameworks/react" thumbnail="/svgs/react.svg">
                       <Button
                         leftIcon={<AiOutlineDoubleRight />}
                         borderRadius="lg"
@@ -314,7 +314,7 @@ const Home: NextPageWithLayout = () => {
                         React
                       </Button>
                     </ImageGridItem>
-                    <ImageGridItem href="/" thumbnail="/svgs/vue.svg">
+                    <ImageGridItem href="/frameworks/vue" thumbnail="/svgs/vue.svg">
                       <Button
                         leftIcon={<AiOutlineDoubleRight />}
                         borderRadius="lg"
@@ -328,7 +328,7 @@ const Home: NextPageWithLayout = () => {
               <TabPanel>
                 <Fade>
                   <SimpleGrid columns={[1, 3, 3]} gap={6}>
-                    <ImageGridItem href="/" thumbnail="/svgs/docker.svg">
+                    <ImageGridItem href="/devops/docker" thumbnail="/svgs/docker.svg">
                       <Button
                         leftIcon={<AiOutlineDoubleRight />}
                         borderRadius="lg"
@@ -336,7 +336,7 @@ const Home: NextPageWithLayout = () => {
                         Docker
                       </Button>
                     </ImageGridItem>
-                    <ImageGridItem href="/" thumbnail="/svgs/Kubernetes.svg">
+                    <ImageGridItem href="/devops/kubernetes" thumbnail="/svgs/Kubernetes.svg">
                       <Button
                         leftIcon={<AiOutlineDoubleRight />}
                         borderRadius="lg"
@@ -344,7 +344,11 @@ const Home: NextPageWithLayout = () => {
                         Kubernetes
                       </Button>
                     </ImageGridItem>
-                    <ImageGridItem href="/" thumbnail="/svgs/githubactions.svg" tooltip="GitHub Actions">
+                    <ImageGridItem
+                      href="/devops/githubactions"
+                      thumbnail="/svgs/githubactions.svg"
+                      tooltip="GitHub Actions"
+                    >
                       <Button
                         leftIcon={<AiOutlineDoubleRight />}
                         borderRadius="lg"

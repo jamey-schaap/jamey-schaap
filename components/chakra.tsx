@@ -24,12 +24,4 @@ const Chakra = ({ cookies, children }: ChakraProps) => {
   );
 };
 
-const GetServerSideProps = async ({ req }: any) => {
-  return {
-    props: {
-      cookies: req.headers.cookie ?? "",
-    },
-  };
-};
-
 export default Chakra;
