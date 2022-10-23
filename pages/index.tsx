@@ -2,7 +2,6 @@ import {
   Text,
   Box,
   Container,
-  Button,
   SimpleGrid,
   Tabs,
   TabList,
@@ -10,6 +9,8 @@ import {
   TabPanel,
   TabPanels,
   Link,
+  Image,
+  Tooltip,
 } from "@chakra-ui/react";
 import MainLayout from "../components/layouts/main";
 import ArticleLayout from "../components/layouts/article";
@@ -25,6 +26,7 @@ import { AiOutlineDoubleRight } from "react-icons/ai";
 import Fade from "../components/transitions/fade";
 import NextLink from "next/link";
 import TabContext from "../contexts/tab-context";
+import TabButton from "../components/tab-button";
 
 const Home: NextPageWithLayout = () => {
   const { tabIndex, setTabIndex } = useContext(TabContext);
@@ -32,6 +34,7 @@ const Home: NextPageWithLayout = () => {
   return (
     <Layout>
       <Container>
+      
         <Box
           borderRadius="lg"
           p={3}
@@ -46,17 +49,15 @@ const Home: NextPageWithLayout = () => {
           <InfoSection>
             <DateSection>
               09-2020 to{" "}
-              <Text as="i" color="teal">
+              <Text as="i" color={useColorModeValue("#3d7aed", "#ffdd99")}>
                 present{" "}
               </Text>
             </DateSection>
-            <Text as="i" color="teal">
-              Computer Science
-            </Text>
+            <Text as="i">Computer Science</Text>
             <Box pl="10.25rem">
               at{" "}
               <NextLink href="https://www.rotterdamuas.com/" passHref>
-                <Link color={useColorModeValue("#000", "#fff")} target="_blank">
+                <Link target="_blank">
                   Rotterdam University of Applied Sciences
                 </Link>
               </NextLink>
@@ -64,14 +65,12 @@ const Home: NextPageWithLayout = () => {
           </InfoSection>
           <InfoSection>
             <DateSection>09-2019 to 03-2020</DateSection>
-            <Text as="i" color="teal">
-              Human Resource Management
-            </Text>
+            <Text as="i">Human Resource Management</Text>
             <Box pl="10.25rem">
               {" "}
               at{" "}
               <NextLink href="https://www.rotterdamuas.com/" passHref>
-                <Link color={useColorModeValue("#000", "#fff")} target="_blank">
+                <Link target="_blank">
                   Rotterdam University of Applied Sciences
                 </Link>
               </NextLink>
@@ -79,14 +78,12 @@ const Home: NextPageWithLayout = () => {
           </InfoSection>
           <InfoSection>
             <DateSection>09-2018 to 12-2018</DateSection>
-            <Text as="i" color="teal">
-              Business IT management
-            </Text>
+            <Text as="i">Business IT management</Text>
             <Box pl="10.25rem">
               {" "}
               at{" "}
               <NextLink href="https://www.rotterdamuas.com/" passHref>
-                <Link color={useColorModeValue("#000", "#fff")} target="_blank">
+                <Link target="_blank">
                   Rotterdam University of Applied Sciences
                 </Link>
               </NextLink>
@@ -94,88 +91,61 @@ const Home: NextPageWithLayout = () => {
           </InfoSection>
           <InfoSection>
             <DateSection>09-2012 to 07-2017</DateSection>
-            <Text as="i" color="teal">
-              HAVO Economics and Society
-            </Text>
-            <Box pl="10.25rem">at CSG Calvijn Vreewijk</Box>
+            <Text as="i">HAVO Economics and Society</Text>
+            <Box pl="10.25rem">
+              at{" "}
+              <Tooltip label="No website exists anymore, unfortunately.">
+                <Link>Calvijn Vreewijk</Link>
+              </Tooltip>
+            </Box>
           </InfoSection>
           <br />
           <SectionHeading>Experience</SectionHeading>
           <InfoSection>
             <DateSection>
               08-2022 to{" "}
-              <Text as="i" color="teal">
+              <Text as="i" color={useColorModeValue("#3d7aed", "#ffdd99")}>
                 present{" "}
               </Text>{" "}
             </DateSection>
-            <Text as="i" color="teal">
-              (Intern) Software Engineer DevOps
-            </Text>{" "}
-            at{" "}
+            <Text as="i">(Intern) Software Engineer DevOps</Text> at{" "}
             <NextLink href="https://www.swecogroup.com/" passHref>
-              <Link color={useColorModeValue("#000", "#fff")} target="_blank">
-                Sweco
-              </Link>
+              <Link target="_blank">Sweco</Link>
             </NextLink>
           </InfoSection>
           <InfoSection>
             <DateSection>04-2019 to 09-2019</DateSection>
-            <Text as="i" color="teal">
-              Sales promotor
-            </Text>{" "}
-            at{" "}
+            <Text as="i">Sales promotor</Text> at{" "}
             <NextLink href="https://www.pepperminds.com/" passHref>
-              <Link color={useColorModeValue("#000", "#fff")} target="_blank">
-                Pepperminds
-              </Link>
+              <Link target="_blank">Pepperminds</Link>
             </NextLink>
           </InfoSection>
           <InfoSection>
             <DateSection>01-2019 to 06-2019</DateSection>
-            <Text as="i" color="teal">
-              Store clerk
-            </Text>{" "}
-            at{" "}
+            <Text as="i">Store clerk</Text> at{" "}
             <NextLink href="https://www.ah.nl/over-ah" passHref>
-              <Link color={useColorModeValue("#000", "#fff")} target="_blank">
-                Albert Heijn
-              </Link>
+              <Link target="_blank">Albert Heijn</Link>
             </NextLink>
           </InfoSection>
           <InfoSection>
             <DateSection>08-2018 to 09-2018</DateSection>
-            <Text as="i" color="teal">
-              Waiter & Bartender
-            </Text>{" "}
-            at{" "}
+            <Text as="i">Waiter & Bartender</Text> at{" "}
             <NextLink href="https://venw.com/" passHref>
-              <Link color={useColorModeValue("#000", "#fff")} target="_blank">
-                Verwiel en Wijngaard
-              </Link>
+              <Link target="_blank">Verwiel en Wijngaard</Link>
             </NextLink>
           </InfoSection>
           <InfoSection>
             <DateSection>09-2017 to 06-2018</DateSection>
-            <Text as="i" color="teal">
-              Cashier & Customer service
-            </Text>{" "}
-            at{" "}
+            <Text as="i">Cashier & Customer service</Text> at{" "}
             <NextLink href="https://www.makro.nl/over-makro" passHref>
-              <Link color={useColorModeValue("#000", "#fff")} target="_blank">
-                Marko
-              </Link>
+              <Link target="_blank">Marko</Link>
             </NextLink>
           </InfoSection>
           <InfoSection>
             <DateSection>06-2015 to 06-2017</DateSection>
-            <Text as="i" color="teal">
-              Store clerk
-            </Text>{" "}
-            at{" "}
+            <Text as="i">Store clerk</Text> at{" "}
             <NextLink href="https://www.ah.nl/over-ah" passHref>
-              <Link color={useColorModeValue("#000", "#fff")} target="_blank">
-                Albert Heijn
-              </Link>
+              <Link target="_blank">Albert Heijn</Link>
             </NextLink>
           </InfoSection>
           <br />
@@ -229,67 +199,37 @@ const Home: NextPageWithLayout = () => {
                       href="/languages/golang"
                       thumbnail="/svgs/gopher.svg"
                     >
-                      <Button
-                        leftIcon={<AiOutlineDoubleRight />}
-                        borderRadius="lg"
-                      >
-                        Golang
-                      </Button>
+                      <TabButton>Golang</TabButton>
                     </ImageGridItem>
                     <ImageGridItem
                       href="/languages/c-sharp"
                       thumbnail="/svgs/c-sharp.svg"
                     >
-                      <Button
-                        leftIcon={<AiOutlineDoubleRight />}
-                        borderRadius="lg"
-                      >
-                        C#{" "}
-                      </Button>
+                      <TabButton>C# </TabButton>
                     </ImageGridItem>
                     <ImageGridItem
                       href="/languages/python"
                       thumbnail="/svgs/python.svg"
                     >
-                      <Button
-                        leftIcon={<AiOutlineDoubleRight />}
-                        borderRadius="lg"
-                      >
-                        Python
-                      </Button>
+                      <TabButton>Python</TabButton>
                     </ImageGridItem>
                     <ImageGridItem
                       href="/languages/nodejs"
                       thumbnail="/svgs/nodejs.svg"
                     >
-                      <Button
-                        leftIcon={<AiOutlineDoubleRight />}
-                        borderRadius="lg"
-                      >
-                        Node.js
-                      </Button>
+                      <TabButton>Node.js</TabButton>
                     </ImageGridItem>
                     <ImageGridItem
                       href="/languages/sql"
                       thumbnail="/svgs/sql.svg"
                     >
-                      <Button
-                        leftIcon={<AiOutlineDoubleRight />}
-                        borderRadius="lg"
-                      >
-                        SQL
-                      </Button>
+                      <TabButton>SQL</TabButton>
                     </ImageGridItem>
                     <ImageGridItem
                       href="/languages/other"
                       thumbnail="/svgs/other.svg"
                     >
-                      <Button
-                        leftIcon={<AiOutlineDoubleRight />}
-                        borderRadius="lg"
-                      >
-                        Other
-                      </Button>
+                      <TabButton>Other</TabButton>
                     </ImageGridItem>
                   </SimpleGrid>
                 </Fade>
@@ -301,58 +241,33 @@ const Home: NextPageWithLayout = () => {
                       href="/frameworks/dotnet"
                       thumbnail="/svgs/dotnet.svg"
                     >
-                      <Button
-                        leftIcon={<AiOutlineDoubleRight />}
-                        borderRadius="lg"
-                      >
-                        .NET
-                      </Button>
+                      <TabButton>.NET</TabButton>
                     </ImageGridItem>
                     <ImageGridItem
                       href="/frameworks/aspnet-core"
                       thumbnail="/svgs/dotnet-core.svg"
                       tooltip="ASP.NET Core"
                     >
-                      <Button
-                        leftIcon={<AiOutlineDoubleRight />}
-                        borderRadius="lg"
-                      >
-                        ASP.NET ...
-                      </Button>
+                      <TabButton>ASP.NET ...</TabButton>
                     </ImageGridItem>
                     <ImageGridItem
                       href="/frameworks/ef-core"
                       thumbnail="/svgs/dotnet-core.svg"
                       tooltip="Entity Framework Core"
                     >
-                      <Button
-                        leftIcon={<AiOutlineDoubleRight />}
-                        borderRadius="lg"
-                      >
-                        Entity Fr...
-                      </Button>
+                      <TabButton>Entity Fr...</TabButton>
                     </ImageGridItem>
                     <ImageGridItem
                       href="/frameworks/react"
                       thumbnail="/svgs/react.svg"
                     >
-                      <Button
-                        leftIcon={<AiOutlineDoubleRight />}
-                        borderRadius="lg"
-                      >
-                        React
-                      </Button>
+                      <TabButton>React</TabButton>
                     </ImageGridItem>
                     <ImageGridItem
                       href="/frameworks/vue"
                       thumbnail="/svgs/vue.svg"
                     >
-                      <Button
-                        leftIcon={<AiOutlineDoubleRight />}
-                        borderRadius="lg"
-                      >
-                        Vue
-                      </Button>
+                      <TabButton>Vue</TabButton>
                     </ImageGridItem>
                   </SimpleGrid>
                 </Fade>
@@ -364,43 +279,23 @@ const Home: NextPageWithLayout = () => {
                       href="/devops/docker"
                       thumbnail="/svgs/docker.svg"
                     >
-                      <Button
-                        leftIcon={<AiOutlineDoubleRight />}
-                        borderRadius="lg"
-                      >
-                        Docker
-                      </Button>
+                      <TabButton>Docker</TabButton>
                     </ImageGridItem>
                     <ImageGridItem
                       href="/devops/kubernetes"
                       thumbnail="/svgs/kubernetes.svg"
                     >
-                      <Button
-                        leftIcon={<AiOutlineDoubleRight />}
-                        borderRadius="lg"
-                      >
-                        Kubernetes
-                      </Button>
+                      <TabButton>Kubernetes</TabButton>
                     </ImageGridItem>
                     <ImageGridItem
                       href="/devops/githubactions"
                       thumbnail="/svgs/githubactions.svg"
                       tooltip="GitHub Actions"
                     >
-                      <Button
-                        leftIcon={<AiOutlineDoubleRight />}
-                        borderRadius="lg"
-                      >
-                        GitHub Act...
-                      </Button>
+                      <TabButton>GitHub Act...</TabButton>
                     </ImageGridItem>
                     <ImageGridItem href="/" thumbnail="/svgs/githubactions.svg">
-                      <Button
-                        leftIcon={<AiOutlineDoubleRight />}
-                        borderRadius="lg"
-                      >
-                        Actions
-                      </Button>
+                      <TabButton>Actions</TabButton>
                     </ImageGridItem>
                   </SimpleGrid>
                 </Fade>

@@ -10,21 +10,21 @@ const styles = {
 };
 
 const components = {
-  Heading: {
-    variants: {
-      "section-title": {
-        fontSize: 20,
-        marginTop: 3,
-        marginBottom: 1,
-      },
-    },
-  },
   Link: {
     baseStyle: (props: any) => ({
-      color: mode("#3d7aed", "#ff63c3")(props),
+      color: mode("#3d7aed", "#ffdd99")(props),
       textUnderlineOffset: 3,
     }),
   },
+  Tooltip: {
+    baseStyle: (props: any) => ({
+      bg: mode("whiteAlpha.500", "whiteAlpha.200")(props),
+      backdropFilter: "blur(10px)",
+      color: mode("black", "white")(props),
+      borderRadius: "lg",
+      placement: "bottom"
+    })
+  }
 };
 
 const fonts = {

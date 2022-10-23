@@ -10,20 +10,13 @@ import Image from "next/image";
 import { ReactNode } from "react";
 import NextLink from "next/link";
 import { useColorModeValue } from "@chakra-ui/react";
-import styled from "@emotion/styled";
+
 type ImageGridItemProps = {
   href: string;
   title?: string;
   tooltip?: string;
   thumbnail: string;
   children?: ReactNode;
-};
-
-const OnHoverLinkStyle = {
-  "&:hover": {
-    textDecoration: "none",
-    color: "teal",
-  },
 };
 
 const ImageGridItem = ({
@@ -35,15 +28,16 @@ const ImageGridItem = ({
 }: ImageGridItemProps) => (
   <Box w="100%" textAlign="center">
     <NextLink href={href} passHref scroll={false}>
-      <Link color={useColorModeValue("black", "white")} css={OnHoverLinkStyle}>
-        <Tooltip
-          label={tooltip}
-          bg={useColorModeValue("whiteAlpha.500", "whiteAlpha.200")}
-          css={{ backdropFilter: "blur(10px)" }}
-          color={useColorModeValue("black", "white")}
-          borderRadius="lg"
-          placement="bottom"
-        >
+      <Link
+        color={useColorModeValue("black", "white")}
+        css={{
+          "&:hover": {
+            textDecoration: "none",
+            color: useColorModeValue("#3d7aed", "#ffdd99"),
+          },
+        }}
+      >
+        <Tooltip label={tooltip}>
           <LinkBox cursor="pointer">
             <Image
               src={thumbnail}
