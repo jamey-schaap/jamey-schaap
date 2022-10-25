@@ -10,9 +10,12 @@ const TabButton = ({ children }: TabButtonProps) => (
   <Button
     leftIcon={<AiOutlineDoubleRight />}
     borderRadius="lg"
+    width="7.5rem"
   >
     {children}
   </Button>
 );
+
+
 
 export default TabButton;

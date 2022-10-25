@@ -21,7 +21,7 @@ const NoContent = () => (
       ></iframe>
     </Box>
     <SectionHeading>
-      There is no content yet, place check back at a later time!
+      There is no content yet, please check back at a later time!
     </SectionHeading>
   </>
 );
