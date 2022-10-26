@@ -4,6 +4,7 @@ import MainLayout from "../../components/layouts/main";
 import ArticleLayout from "../../components/layouts/article";
 import Layout from "../../components/layouts/article";
 import NoContent from "../no-content";
+import { Router } from "next/router";
 
 const Python = () => (
   <Layout>
@@ -13,9 +14,9 @@ const Python = () => (
   </Layout>
 );
 
-Python.getLayout = (page: ReactElement) => {
+Python.getLayout = (page: ReactElement, router: Router) => {
   return (
-    <MainLayout>
+    <MainLayout router={router}>
       <ArticleLayout>{page}</ArticleLayout>
     </MainLayout>
   );

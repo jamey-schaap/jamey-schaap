@@ -50,6 +50,12 @@ const NavBar: React.FC<NavProps> = ({ path, ...props }: NavProps) => {
           <NavItem href="/projects" path={path}>
             Projects
           </NavItem>
+          <NavItem href="/languages/golang" path={path}>
+            Temp1
+          </NavItem>
+          <NavItem href="/languages/nodejs" path={path}>
+            Temp2
+          </NavItem>
         </Stack>
         {/* @ts-ignore */}
         <Box flex={1} align="right">

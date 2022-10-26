@@ -5,6 +5,7 @@ import ArticleLayout from "../components/layouts/article";
 import Layout from "../components/layouts/article";
 import { Container } from "@chakra-ui/react";
 import NoContent from "./no-content";
+import { Router } from "next/router";
 
 const Projects: NextPageWithLayout = () => {
   return (
@@ -16,9 +17,9 @@ const Projects: NextPageWithLayout = () => {
   );
 };
 
-Projects.getLayout = (page: ReactElement) => {
+Projects.getLayout = (page: ReactElement, router: Router) => {
   return (
-    <MainLayout>
+    <MainLayout router={router}>
       <ArticleLayout>{page}</ArticleLayout>
     </MainLayout>
   );

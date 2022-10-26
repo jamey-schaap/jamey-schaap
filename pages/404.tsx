@@ -13,6 +13,7 @@ import { ReactElement } from "react";
 import MainLayout from "../components/layouts/main";
 import ArticleLayout from "../components/layouts/article";
 import Layout from "../components/layouts/article";
+import { Router } from "next/router";
 
 const NotFound: NextPageWithLayout = () => {
   return (
@@ -52,9 +53,9 @@ const NotFound: NextPageWithLayout = () => {
   );
 };
 
-NotFound.getLayout = (page: ReactElement) => {
+NotFound.getLayout = (page: ReactElement, router: Router) => {
   return (
-    <MainLayout>
+    <MainLayout router={router}>
       <ArticleLayout>{page}</ArticleLayout>
     </MainLayout>
   );

@@ -5,12 +5,13 @@ import Footer from "../footer";
 import NavBar from "../nav-bar";
 
 type MainProps = {
-  router?: Router;
+  router: Router;
   children?: ReactNode;
 };
 
 const Main = ({ children, router }: MainProps) => {
   const path = router ? router.asPath : "";
+  
   return (
     <Box as="main" pb={8}>
       <meta name="viewport" content="width=device-width, initial-scale=1" />

@@ -22,9 +22,9 @@ const components = {
       backdropFilter: "blur(10px)",
       color: mode("black", "white")(props),
       borderRadius: "lg",
-      placement: "bottom"
-    })
-  }
+      placement: "bottom",
+    }),
+  },
 };
 
 const fonts = {

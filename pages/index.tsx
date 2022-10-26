@@ -31,6 +31,7 @@ import TabContext from "../contexts/tab-context";
 import TabButton from "../components/tab-button";
 import Head from "next/head";
 import TabHeader from "../components/tab-header";
+import { Router } from "next/router";
 
 const ProfileImage = chakra(Image, {
   shouldForwardProp: (prop: any) =>
@@ -253,10 +254,7 @@ const Home: NextPageWithLayout = () => {
                       >
                         <TabButton>Node.js</TabButton>
                       </TabItem>
-                      <TabItem
-                        href="/languages/sql"
-                        thumbnail="/svgs/sql.svg"
-                      >
+                      <TabItem href="/languages/sql" thumbnail="/svgs/sql.svg">
                         <TabButton>SQL</TabButton>
                       </TabItem>
                       <TabItem
@@ -297,10 +295,7 @@ const Home: NextPageWithLayout = () => {
                       >
                         <TabButton>React</TabButton>
                       </TabItem>
-                      <TabItem
-                        href="/frameworks/vue"
-                        thumbnail="/svgs/vue.svg"
-                      >
+                      <TabItem href="/frameworks/vue" thumbnail="/svgs/vue.svg">
                         <TabButton>Vue</TabButton>
                       </TabItem>
                     </SimpleGrid>
@@ -348,9 +343,9 @@ const Home: NextPageWithLayout = () => {
   );
 };
 
-Home.getLayout = (page: ReactElement) => {
+Home.getLayout = (page: ReactElement, router: Router) => {
   return (
-    <MainLayout>
+    <MainLayout router={router}>
       <ArticleLayout>{page}</ArticleLayout>
     </MainLayout>
   );

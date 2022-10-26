@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Text, useColorModeValue } from "@chakra-ui/react";
+import { Box, Text, useColorModeValue } from "@chakra-ui/react";
 import styled from "@emotion/styled";
 import { useState } from "react";
 
@@ -16,13 +16,24 @@ const LogoBox = styled.span`
 
 const Logo = () => {
   const [hover, SetHover] = useState<boolean>(false);
+  const [active, SetActive] = useState<boolean>(false);
 
   return (
     <Link href="/" scroll={false}>
-      <a>
+      <Box
+        css={{
+          "&:active p": {
+            transform: "scale(0.85)",
+            transition: "200ms ease",
+          },
+        }}
+        cursor="pointer"
+      >
         <LogoBox
           onMouseEnter={() => SetHover(true)}
           onMouseLeave={() => SetHover(false)}
+          onMouseDown={() => SetActive(true)}
+          onMouseUp={() => SetActive(false)}
         >
           <Image
             src="/svgs/coffee.svg"
@@ -33,7 +44,9 @@ const Logo = () => {
               hover
                 ? {
                     transition: "200ms ease",
-                    transform: hover ? "rotate(20deg)" : "",
+                    transform: `${hover ? "rotate(20deg)" : ""} ${
+                      active ? "scale(0.85)" : ""
+                    }`,
                   }
                 : { transition: "200ms ease" }
             }
@@ -47,7 +60,7 @@ const Logo = () => {
             Jamey Schaap
           </Text>
         </LogoBox>
-      </a>
+      </Box>
     </Link>
   );
 };

@@ -2,15 +2,12 @@ import { ReactElement } from "react";
 import { NextPageWithLayout } from "../_app";
 import MainLayout from "../../components/layouts/main";
 import ArticleLayout from "../../components/layouts/article";
-import {
-  Container,
-  useColorModeValue,
-  Link,
-} from "@chakra-ui/react";
+import { Container, useColorModeValue, Link } from "@chakra-ui/react";
 import Layout from "../../components/layouts/article";
 import NoContent from "../no-content";
 import NextLink from "next/link";
 import { AiOutlineRight } from "react-icons/ai";
+import { Router } from "next/router";
 
 const Golang: NextPageWithLayout = () => (
   <Layout>
@@ -29,9 +26,9 @@ const Golang: NextPageWithLayout = () => (
   </Layout>
 );
 
-Golang.getLayout = (page: ReactElement) => {
+Golang.getLayout = (page: ReactElement, router: Router) => {
   return (
-    <MainLayout>
+    <MainLayout router={router}>
       <ArticleLayout>{page}</ArticleLayout>
     </MainLayout>
   );
