@@ -32,6 +32,12 @@ const ImageGridItem = ({
       textAlign="center"
       onMouseEnter={() => SetHover(true)}
       onMouseLeave={() => SetHover(false)}
+      css={{
+        "&:active": {
+          transform: "scale(0.85)",
+          transition: "200ms ease",
+        },
+      }}
     >
       <NextLink href={href} passHref scroll={false}>
         <Link

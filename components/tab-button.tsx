@@ -11,12 +11,6 @@ const TabButton = ({ children }: TabButtonProps) => (
     leftIcon={<AiOutlineDoubleRight />}
     borderRadius="lg"
     width="7.5rem"
-    css={{
-      "&:active": { 
-        transform: "scale(0.85)",
-        transition: "200ms ease",
-      }
-    }}
   >
     {children}
   </Button>
