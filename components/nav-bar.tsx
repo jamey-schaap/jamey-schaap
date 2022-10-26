@@ -1,4 +1,12 @@
-import { Box, Container, Stack, useColorModeValue } from "@chakra-ui/react";
+import {
+  Box,
+  Container,
+  Flex,
+  Heading,
+  Stack,
+  useColorModeValue,
+} from "@chakra-ui/react";
+import Logo from "./logo";
 import NavItem from "./nav-item";
 import ThemeToggleButton from "./theme-toggle-button";
 
@@ -26,6 +34,11 @@ const NavBar: React.FC<NavProps> = ({ path, ...props }: NavProps) => {
         align="center"
         justify="space-between"
       >
+        <Flex align="center" mr={5}>
+          <Heading as="h1" size="lg" letterSpacing={"tighter"}>
+            <Logo />
+          </Heading>
+        </Flex>
         <Stack
           direction={{ base: "column", md: "row" }}
           display={{ base: "none", md: "flex" }}
@@ -34,9 +47,6 @@ const NavBar: React.FC<NavProps> = ({ path, ...props }: NavProps) => {
           flexGrow={1}
           mt={{ base: 4, md: 0 }}
         >
-          <NavItem href="/" path={path}>
-            Jamey Schaap
-          </NavItem>
           <NavItem href="/projects" path={path}>
             Projects
           </NavItem>

@@ -41,9 +41,9 @@ const Home: NextPageWithLayout = () => {
 
   return (
     <>
-      {/* <Head>
+      <Head key="page-title">
         <title>Jamey&apos;s Portfolio</title>
-      </Head> */}
+      </Head>
       <Layout>
         <Container>
           <Box mt={3} mb={5}>
@@ -59,7 +59,7 @@ const Home: NextPageWithLayout = () => {
                     borderRadius="xl"
                     width="100%"
                     height="100%"
-                    src="profile-picture.png"
+                    src="/images/profile-picture.png"
                     alt="Profile image"
                   />
                 </Box>
@@ -338,6 +338,7 @@ const Home: NextPageWithLayout = () => {
                       <ImageGridItem
                         href="/devops/kubernetes"
                         thumbnail="/svgs/kubernetes.svg"
+                        tooltip="Kubernetes"
                       >
                         <TabButton>Kubernet...</TabButton>
                       </ImageGridItem>
