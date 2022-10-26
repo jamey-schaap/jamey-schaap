@@ -10,7 +10,7 @@ import Image from "next/image";
 import NextLink from "next/link";
 import { ReactNode, useState } from "react";
 
-type ImageGridItemProps = {
+type TabItemProps = {
   href: string;
   title?: string;
   tooltip?: string;
@@ -18,13 +18,13 @@ type ImageGridItemProps = {
   children?: ReactNode;
 };
 
-const ImageGridItem = ({
+const TabItem = ({
   href,
   title,
   thumbnail,
   tooltip,
   children,
-}: ImageGridItemProps) => {
+}: TabItemProps) => {
   const [hover, SetHover] = useState<boolean>(false);
   return (
     <Box
@@ -79,4 +79,4 @@ const ImageGridItem = ({
   );
 };
 
-export default ImageGridItem;
+export default TabItem;

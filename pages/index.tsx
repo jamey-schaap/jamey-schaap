@@ -24,12 +24,13 @@ import Layout from "../components/layouts/article";
 import Section from "../components/section";
 import SectionHeading from "../components/section-header";
 import { InfoSection, DateSection } from "../components/sub-section";
-import ImageGridItem from "../components/image-grid-item";
+import TabItem from "../components/tab-item";
 import Fade from "../components/transitions/fade";
 import NextLink from "next/link";
 import TabContext from "../contexts/tab-context";
 import TabButton from "../components/tab-button";
 import Head from "next/head";
+import TabHeader from "../components/tab-header";
 
 const ProfileImage = chakra(Image, {
   shouldForwardProp: (prop: any) =>
@@ -214,160 +215,127 @@ const Home: NextPageWithLayout = () => {
               defaultIndex={tabIndex}
             >
               <TabList borderBottomWidth="2px" borderRadius="2px" color="gray">
-                <Tab
-                  _selected={{
-                    borderBottomColor: useColorModeValue("#525252", "#fff"),
-                    borderRadius: "2px",
-                    fontWeight: "bold",
-                    textColor: useColorModeValue("#000", "#fff"),
-                    "&:active p": {
-                      transform: "scale(0.85)",
-                      transition: "200ms ease",
-                    },
-                  }}
-                >
+                <TabHeader>
                   <Text fontSize={20}>Languages</Text>
-                </Tab>
-                <Tab
-                  _selected={{
-                    borderBottomColor: useColorModeValue("#525252", "#fff"),
-                    borderRadius: "2px",
-                    fontWeight: "bold",
-                    textColor: useColorModeValue("#000", "#fff"),
-                    "&:active p": {
-                      transform: "scale(0.85)",
-                      transition: "200ms ease",
-                    },
-                  }}
-                >
+                </TabHeader>
+                <TabHeader>
                   <Text fontSize={20}>Frameworks</Text>
-                </Tab>
-                <Tab
-                  _selected={{
-                    borderBottomColor: useColorModeValue("#525252", "#fff"),
-                    borderRadius: "2px",
-                    fontWeight: "bold",
-                    textColor: useColorModeValue("#000", "#fff"),
-                    "&:active p": {
-                      transform: "scale(0.85)",
-                      transition: "200ms ease",
-                    },
-                  }}
-                >
+                </TabHeader>
+                <TabHeader>
                   <Text fontSize={20}>DevOps</Text>
-                </Tab>
+                </TabHeader>
               </TabList>
               <TabPanels>
                 <TabPanel>
                   <Fade>
                     <SimpleGrid columns={[1, 3, 3]} gap={6}>
-                      <ImageGridItem
+                      <TabItem
                         href="/languages/golang"
                         thumbnail="/svgs/gopher.svg"
                       >
                         <TabButton>Golang</TabButton>
-                      </ImageGridItem>
-                      <ImageGridItem
+                      </TabItem>
+                      <TabItem
                         href="/languages/c-sharp"
                         thumbnail="/svgs/c-sharp.svg"
                       >
                         <TabButton>C# </TabButton>
-                      </ImageGridItem>
-                      <ImageGridItem
+                      </TabItem>
+                      <TabItem
                         href="/languages/python"
                         thumbnail="/svgs/python.svg"
                       >
                         <TabButton>Python</TabButton>
-                      </ImageGridItem>
-                      <ImageGridItem
+                      </TabItem>
+                      <TabItem
                         href="/languages/nodejs"
                         thumbnail="/svgs/nodejs.svg"
                       >
                         <TabButton>Node.js</TabButton>
-                      </ImageGridItem>
-                      <ImageGridItem
+                      </TabItem>
+                      <TabItem
                         href="/languages/sql"
                         thumbnail="/svgs/sql.svg"
                       >
                         <TabButton>SQL</TabButton>
-                      </ImageGridItem>
-                      <ImageGridItem
+                      </TabItem>
+                      <TabItem
                         href="/languages/other"
                         thumbnail="/svgs/other.svg"
                       >
                         <TabButton>Other</TabButton>
-                      </ImageGridItem>
+                      </TabItem>
                     </SimpleGrid>
                   </Fade>
                 </TabPanel>
                 <TabPanel>
                   <Fade>
                     <SimpleGrid columns={[1, 3, 3]} gap={6}>
-                      <ImageGridItem
+                      <TabItem
                         href="/frameworks/dotnet"
                         thumbnail="/svgs/dotnet.svg"
                       >
                         <TabButton>.NET</TabButton>
-                      </ImageGridItem>
-                      <ImageGridItem
+                      </TabItem>
+                      <TabItem
                         href="/frameworks/aspnet-core"
                         thumbnail="/svgs/dotnet-core.svg"
                         tooltip="ASP.NET Core"
                       >
                         <TabButton>ASP.NET ...</TabButton>
-                      </ImageGridItem>
-                      <ImageGridItem
+                      </TabItem>
+                      <TabItem
                         href="/frameworks/ef-core"
                         thumbnail="/svgs/dotnet-core.svg"
                         tooltip="Entity Framework Core"
                       >
                         <TabButton>Entity Fr...</TabButton>
-                      </ImageGridItem>
-                      <ImageGridItem
+                      </TabItem>
+                      <TabItem
                         href="/frameworks/react"
                         thumbnail="/svgs/react.svg"
                       >
                         <TabButton>React</TabButton>
-                      </ImageGridItem>
-                      <ImageGridItem
+                      </TabItem>
+                      <TabItem
                         href="/frameworks/vue"
                         thumbnail="/svgs/vue.svg"
                       >
                         <TabButton>Vue</TabButton>
-                      </ImageGridItem>
+                      </TabItem>
                     </SimpleGrid>
                   </Fade>
                 </TabPanel>
                 <TabPanel>
                   <Fade>
                     <SimpleGrid columns={[1, 3, 3]} gap={6}>
-                      <ImageGridItem
+                      <TabItem
                         href="/devops/docker"
                         thumbnail="/svgs/docker.svg"
                       >
                         <TabButton>Docker</TabButton>
-                      </ImageGridItem>
-                      <ImageGridItem
+                      </TabItem>
+                      <TabItem
                         href="/devops/kubernetes"
                         thumbnail="/svgs/kubernetes.svg"
                         tooltip="Kubernetes"
                       >
                         <TabButton>Kubernet...</TabButton>
-                      </ImageGridItem>
-                      <ImageGridItem
+                      </TabItem>
+                      <TabItem
                         href="/devops/githubactions"
                         thumbnail="/svgs/github-actions.svg"
                         tooltip="GitHub Actions"
                       >
                         <TabButton>GitHub A...</TabButton>
-                      </ImageGridItem>
-                      <ImageGridItem
+                      </TabItem>
+                      <TabItem
                         href="/devops/azure-pipelines"
                         thumbnail="/svgs/azure-pipelines.svg"
                         tooltip="Azure Pipelines"
                       >
                         <TabButton>Azure Pi...</TabButton>
-                      </ImageGridItem>
+                      </TabItem>
                     </SimpleGrid>
                   </Fade>
                 </TabPanel>

@@ -25,7 +25,7 @@ const Logo = () => {
           onMouseLeave={() => SetHover(false)}
         >
           <Image
-            src="/svgs/c2.svg"
+            src="/svgs/coffee.svg"
             alt=""
             width="24"
             height="24"
