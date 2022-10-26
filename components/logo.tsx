@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Text, useColorModeValue } from "@chakra-ui/react";
 import styled from "@emotion/styled";
+import { useState } from "react";
 
 const LogoBox = styled.span`
   font-weight: bold;
@@ -12,12 +13,6 @@ const LogoBox = styled.span`
   line-height: 20px;
   padding: 10px;
 `;
-
-const transform = {
-  transform: "rotate(20deg)",
-};
-
-import { useState } from "react";
 
 const Logo = () => {
   const [hover, SetHover] = useState<boolean>(false);

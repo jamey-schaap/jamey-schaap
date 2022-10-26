@@ -220,6 +220,10 @@ const Home: NextPageWithLayout = () => {
                     borderRadius: "2px",
                     fontWeight: "bold",
                     textColor: useColorModeValue("#000", "#fff"),
+                    "&:active p": {
+                      transform: "scale(0.85)",
+                      transition: "200ms ease",
+                    },
                   }}
                 >
                   <Text fontSize={20}>Languages</Text>
@@ -230,6 +234,10 @@ const Home: NextPageWithLayout = () => {
                     borderRadius: "2px",
                     fontWeight: "bold",
                     textColor: useColorModeValue("#000", "#fff"),
+                    "&:active p": {
+                      transform: "scale(0.85)",
+                      transition: "200ms ease",
+                    },
                   }}
                 >
                   <Text fontSize={20}>Frameworks</Text>
@@ -240,6 +248,10 @@ const Home: NextPageWithLayout = () => {
                     borderRadius: "2px",
                     fontWeight: "bold",
                     textColor: useColorModeValue("#000", "#fff"),
+                    "&:active p": {
+                      transform: "scale(0.85)",
+                      transition: "200ms ease",
+                    },
                   }}
                 >
                   <Text fontSize={20}>DevOps</Text>

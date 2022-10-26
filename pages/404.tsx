@@ -14,12 +14,6 @@ import MainLayout from "../components/layouts/main";
 import ArticleLayout from "../components/layouts/article";
 import Layout from "../components/layouts/article";
 
-const OnHoverTextStyle = {
-  "&:hover": {
-    color: "teal",
-  },
-};
-
 const NotFound: NextPageWithLayout = () => {
   return (
     <Layout>
@@ -39,7 +33,15 @@ const NotFound: NextPageWithLayout = () => {
           <NextLink href="/" passHref>
             <Button
               color={useColorModeValue("black", "white")}
-              css={OnHoverTextStyle}
+              css={{
+                "&:hover": {
+                  color: useColorModeValue("#3d7aed", "#ffdd99"),
+                },
+                "&:active": {
+                  transform: "scale(0.85)",
+                  transition: "200ms ease",
+                },
+              }}
             >
               Return to home
             </Button>
