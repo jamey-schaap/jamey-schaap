@@ -17,7 +17,6 @@ const NavItem: React.FC<NavItemProps> = ({
   const active = path === href;
   const inactiveColor = useColorModeValue("gray200", "whiteAlpha.900");
   const activeColor = useColorModeValue("#3d7aed", "#ffdd99");
-  console.log(path);
   return (
     <NextLink href={href} passHref scroll={false}>
       <Link
