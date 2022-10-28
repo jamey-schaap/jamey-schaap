@@ -36,7 +36,7 @@ import { Router } from "next/router";
 import SectionRow, {
   SectionDate,
   SectionInfo,
-} from "../components/sub-section";
+} from "../components/section-row";
 
 const ProfileImage = chakra(Image, {
   shouldForwardProp: (prop: any) =>
