@@ -23,6 +23,7 @@ const TabHeader = ({ children, ...props }: TabHeaderProps) => {
           transition: "200ms ease",
         },
       }}
+      // borderColor="#525252"
       {...props}
     >
       {children}

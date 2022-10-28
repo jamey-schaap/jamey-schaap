@@ -1,4 +1,4 @@
-import { Box, Link, useColorMode, useColorModeValue } from "@chakra-ui/react";
+import { Link, useColorModeValue } from "@chakra-ui/react";
 import { ReactNode } from "react";
 import NextLink from "next/link";
 

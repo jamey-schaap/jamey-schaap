@@ -1,12 +1,33 @@
-import { Box } from "@chakra-ui/react";
-import styled from "@emotion/styled";
+import { Grid, GridItem } from "@chakra-ui/react";
+import { ReactNode } from "react";
 
-export const InfoSection = styled(Box)`
-  padding-left: 3.4em;
-  text-indent: -3.4em;
-`;
+type BioProps = {
+  children: ReactNode;
+};
 
-export const DateSection = styled.span`
-  font-weight: bold;
-  margin-right: 1em;
-`;
+export const SectionDate = ({ children, ...props }: BioProps) => (
+  <GridItem fontWeight="bold" area={"date"} {...props}>
+    {children}
+  </GridItem>
+);
+
+export const SectionInfo = ({ children, ...props }: BioProps) => (
+  <GridItem pl="1" area={"info"} {...props}>
+    {children}
+  </GridItem>
+);
+
+const SectionRow = ({ children, ...props }: BioProps) => (
+  <Grid
+    templateAreas={`
+      "date info"
+      `}
+    gridTemplateColumns={"160px 1fr"}
+    gap="0"
+    {...props}
+  >
+    {children}
+  </Grid>
+);
+
+export default SectionRow;

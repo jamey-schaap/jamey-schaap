@@ -14,6 +14,8 @@ import {
   chakra,
   Heading,
   Divider,
+  Grid,
+  GridItem,
 } from "@chakra-ui/react";
 import MainLayout from "../components/layouts/main";
 import ArticleLayout from "../components/layouts/article";
@@ -23,7 +25,6 @@ import { useColorModeValue } from "@chakra-ui/react";
 import Layout from "../components/layouts/article";
 import Section from "../components/section";
 import SectionHeading from "../components/section-header";
-import { InfoSection, DateSection } from "../components/sub-section";
 import TabItem from "../components/tab-item";
 import Fade from "../components/transitions/fade";
 import NextLink from "next/link";
@@ -32,6 +33,10 @@ import TabButton from "../components/tab-button";
 import Head from "next/head";
 import TabHeader from "../components/tab-header";
 import { Router } from "next/router";
+import SectionRow, {
+  SectionDate,
+  SectionInfo,
+} from "../components/sub-section";
 
 const ProfileImage = chakra(Image, {
   shouldForwardProp: (prop: any) =>
@@ -49,12 +54,17 @@ const Home: NextPageWithLayout = () => {
       <Layout>
         <Container>
           <Box mt={3} mb={5}>
-            <Box display={{ md: "flex" }}>
+            <Box
+              display={{ sm: "flex" }}
+              textAlign={{ base: "center", sm: "left" }}
+            >
               <Box
                 flexShrink={0}
                 mt={{ base: 4, md: 0 }}
-                mr={{ md: 6 }}
+                mr={{ sm: 6 }}
                 textAlign="center"
+                display={{ base: "flex", sm: ""}}
+                justifyContent={{ base: "center", sm: "" }}
               >
                 <Box w="130px" h="160px">
                   <ProfileImage
@@ -96,114 +106,119 @@ const Home: NextPageWithLayout = () => {
             bg={useColorModeValue("whiteAlpha.500", "whiteAlpha.200")}
             css={{ backdropFilter: "blur(10px)" }}
           >
-            {/* Hello, I am a computer science student based in The Netherlands. */}
             Hello, I am a third-year computer science student, based in The
             Netherlands.
           </Box>
           <Section delay={0.2}>
             <SectionHeading>Education</SectionHeading>
-            <InfoSection>
-              <DateSection>
+            <SectionRow>
+              <SectionDate>
                 09-2020 to{" "}
                 <Text as="i" color={useColorModeValue("#3d7aed", "#ffdd99")}>
                   present{" "}
                 </Text>
-              </DateSection>
-              <Text as="i">Computer Science</Text>
-              <Box pl="10.25rem">
-                at{" "}
+              </SectionDate>
+              <SectionInfo>
+                <Text as="i">Computer Science</Text> at{" "}
                 <NextLink href="https://www.rotterdamuas.com/" passHref>
                   <Link target="_blank">
                     Rotterdam University of Applied Sciences
                   </Link>
                 </NextLink>
-              </Box>
-            </InfoSection>
-            <InfoSection>
-              <DateSection>09-2019 to 03-2020</DateSection>
-              <Text as="i">Human Resource Management</Text>
-              <Box pl="10.25rem">
-                {" "}
-                at{" "}
+              </SectionInfo>
+            </SectionRow>
+            <SectionRow>
+              <SectionDate>09-2019 to 03-2020</SectionDate>
+              <SectionInfo>
+                <Text as="i">Human Resource Management</Text> at{" "}
                 <NextLink href="https://www.rotterdamuas.com/" passHref>
                   <Link target="_blank">
                     Rotterdam University of Applied Sciences
                   </Link>
                 </NextLink>
-              </Box>
-            </InfoSection>
-            <InfoSection>
-              <DateSection>09-2018 to 12-2018</DateSection>
-              <Text as="i">Business IT management</Text>
-              <Box pl="10.25rem">
-                {" "}
-                at{" "}
+              </SectionInfo>
+            </SectionRow>
+            <SectionRow>
+              <SectionDate>09-2018 to 12-2018</SectionDate>
+              <SectionInfo>
+                <Text as="i">Business IT management</Text> at{" "}
                 <NextLink href="https://www.rotterdamuas.com/" passHref>
                   <Link target="_blank">
                     Rotterdam University of Applied Sciences
                   </Link>
                 </NextLink>
-              </Box>
-            </InfoSection>
-            <InfoSection>
-              <DateSection>09-2012 to 07-2017</DateSection>
-              <Text as="i">HAVO Economics and Society</Text>
-              <Box pl="10.25rem">
-                at{" "}
+              </SectionInfo>
+            </SectionRow>
+            <SectionRow>
+              <SectionDate>09-2012 to 07-2017</SectionDate>
+              <SectionInfo>
+                <Text as="i">HAVO Economics and Society</Text> at{" "}
                 <Tooltip label="No website exists anymore, unfortunately.">
                   <Link>Calvijn Vreewijk</Link>
                 </Tooltip>
-              </Box>
-            </InfoSection>
+              </SectionInfo>
+            </SectionRow>
             <br />
             <SectionHeading>Experience</SectionHeading>
-            <InfoSection>
-              <DateSection>
+            <SectionRow>
+              <SectionDate>
                 08-2022 to{" "}
                 <Text as="i" color={useColorModeValue("#3d7aed", "#ffdd99")}>
                   present{" "}
                 </Text>{" "}
-              </DateSection>
-              <Text as="i">(Intern) Software Engineer DevOps</Text> at{" "}
-              <NextLink href="https://www.swecogroup.com/" passHref>
-                <Link target="_blank">Sweco</Link>
-              </NextLink>
-            </InfoSection>
-            <InfoSection>
-              <DateSection>04-2019 to 09-2019</DateSection>
-              <Text as="i">Sales promotor</Text> at{" "}
-              <NextLink href="https://www.pepperminds.com/" passHref>
-                <Link target="_blank">Pepperminds</Link>
-              </NextLink>
-            </InfoSection>
-            <InfoSection>
-              <DateSection>01-2019 to 06-2019</DateSection>
-              <Text as="i">Store clerk</Text> at{" "}
-              <NextLink href="https://www.ah.nl/over-ah" passHref>
-                <Link target="_blank">Albert Heijn</Link>
-              </NextLink>
-            </InfoSection>
-            <InfoSection>
-              <DateSection>08-2018 to 09-2018</DateSection>
-              <Text as="i">Waiter & Bartender</Text> at{" "}
-              <NextLink href="https://venw.com/" passHref>
-                <Link target="_blank">Verwiel en Wijngaard</Link>
-              </NextLink>
-            </InfoSection>
-            <InfoSection>
-              <DateSection>09-2017 to 06-2018</DateSection>
-              <Text as="i">Cashier & Customer service</Text> at{" "}
-              <NextLink href="https://www.makro.nl/over-makro" passHref>
-                <Link target="_blank">Marko</Link>
-              </NextLink>
-            </InfoSection>
-            <InfoSection>
-              <DateSection>06-2015 to 06-2017</DateSection>
-              <Text as="i">Store clerk</Text> at{" "}
-              <NextLink href="https://www.ah.nl/over-ah" passHref>
-                <Link target="_blank">Albert Heijn</Link>
-              </NextLink>
-            </InfoSection>
+              </SectionDate>
+              <SectionInfo>
+                <Text as="i">(Intern) Software Engineer DevOps</Text> at{" "}
+                <NextLink href="https://www.swecogroup.com/" passHref>
+                  <Link target="_blank">Sweco</Link>
+                </NextLink>
+              </SectionInfo>
+            </SectionRow>
+            <SectionRow>
+              <SectionDate>04-2019 to 09-2019</SectionDate>
+              <SectionInfo>
+                <Text as="i">Sales promotor</Text> at{" "}
+                <NextLink href="https://www.pepperminds.com/" passHref>
+                  <Link target="_blank">Pepperminds</Link>
+                </NextLink>
+              </SectionInfo>
+            </SectionRow>
+            <SectionRow>
+              <SectionDate>01-2019 to 06-2019</SectionDate>
+              <SectionInfo>
+                <Text as="i">Store clerk</Text> at{" "}
+                <NextLink href="https://www.ah.nl/over-ah" passHref>
+                  <Link target="_blank">Albert Heijn</Link>
+                </NextLink>
+              </SectionInfo>
+            </SectionRow>
+            <SectionRow>
+              <SectionDate>08-2018 to 09-2018</SectionDate>
+              <SectionInfo>
+                <Text as="i">Waiter & Bartender</Text> at{" "}
+                <NextLink href="https://venw.com/" passHref>
+                  <Link target="_blank">Verwiel en Wijngaard</Link>
+                </NextLink>
+              </SectionInfo>
+            </SectionRow>
+            <SectionRow>
+              <SectionDate>09-2017 to 06-2018</SectionDate>
+              <SectionInfo>
+                <Text as="i">Cashier & Customer service</Text> at{" "}
+                <NextLink href="https://www.makro.nl/over-makro" passHref>
+                  <Link target="_blank">Marko</Link>
+                </NextLink>
+              </SectionInfo>
+            </SectionRow>
+            <SectionRow>
+              <SectionDate>06-2015 to 06-2017</SectionDate>
+              <SectionInfo>
+                <Text as="i">Store clerk</Text> at{" "}
+                <NextLink href="https://www.ah.nl/over-ah" passHref>
+                  <Link target="_blank">Albert Heijn</Link>
+                </NextLink>
+              </SectionInfo>
+            </SectionRow>
             <br />
             <Tabs
               isLazy
@@ -217,19 +232,19 @@ const Home: NextPageWithLayout = () => {
             >
               <TabList borderBottomWidth="2px" borderRadius="2px" color="gray">
                 <TabHeader>
-                  <Text fontSize={20}>Languages</Text>
+                  <Text fontSize={{ base: "18", md: "20" }}>Languages</Text>
                 </TabHeader>
                 <TabHeader>
-                  <Text fontSize={20}>Frameworks</Text>
+                  <Text fontSize={{ base: "18", md: "20" }}>Frameworks</Text>
                 </TabHeader>
                 <TabHeader>
-                  <Text fontSize={20}>DevOps</Text>
+                  <Text fontSize={{ base: "18", md: "20" }}>DevOps</Text>
                 </TabHeader>
               </TabList>
               <TabPanels>
                 <TabPanel>
                   <Fade>
-                    <SimpleGrid columns={[1, 3, 3]} gap={6}>
+                    <SimpleGrid minChildWidth="120px" gap={6}>
                       <TabItem
                         href="/languages/golang"
                         thumbnail="/svgs/gopher.svg"
@@ -268,7 +283,7 @@ const Home: NextPageWithLayout = () => {
                 </TabPanel>
                 <TabPanel>
                   <Fade>
-                    <SimpleGrid columns={[1, 3, 3]} gap={6}>
+                    <SimpleGrid minChildWidth="120px" gap={6}>
                       <TabItem
                         href="/frameworks/dotnet"
                         thumbnail="/svgs/dotnet.svg"
@@ -303,7 +318,7 @@ const Home: NextPageWithLayout = () => {
                 </TabPanel>
                 <TabPanel>
                   <Fade>
-                    <SimpleGrid columns={[1, 3, 3]} gap={6}>
+                    <SimpleGrid minChildWidth="120px" gap={6}>
                       <TabItem
                         href="/devops/docker"
                         thumbnail="/svgs/docker.svg"
