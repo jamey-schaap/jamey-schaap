@@ -13,11 +13,45 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import Logo from "./logo";
-import NavItem from "./nav-item";
 import ThemeToggleButton from "./theme-toggle-button";
 import NextLink from "next/link";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import { IoLogoGithub } from "react-icons/io5";
+import { ReactNode } from "react";
+
+type NavItemProps = {
+  href: string;
+  path: string;
+  children: ReactNode;
+};
+
+const NavItem: React.FC<NavItemProps> = ({
+  href,
+  path,
+  children,
+  ...props
+}) => {
+  const active = path === href;
+  const inactiveColor = useColorModeValue("gray200", "whiteAlpha.900");
+  const activeColor = useColorModeValue("#3d7aed", "#ffdd99");
+  return (
+    <NextLink href={href} passHref scroll={false}>
+      <Link
+        p={2}
+        color={active ? activeColor : inactiveColor}
+        css={{
+          "&:active": {
+            transform: "scale(0.85)",
+            transition: "200ms ease",
+          },
+        }}
+        {...props}
+      >
+        {children}
+      </Link>
+    </NextLink>
+  );
+};
 
 type NavProps = {
   path: string;
@@ -59,8 +93,8 @@ const NavBar: React.FC<NavProps> = ({ path, ...props }: NavProps) => {
           <NavItem href="/projects" path={path}>
             Projects
           </NavItem>
-          <NavItem href="/languages" path={path}>
-            Languages
+          <NavItem href="/experience" path={path}>
+            Experience
           </NavItem>
           <NavItem
             href="https://github.com/jaim-io/jaim-io"
@@ -91,12 +125,12 @@ const NavBar: React.FC<NavProps> = ({ path, ...props }: NavProps) => {
                 <NextLink href="/projects" passHref>
                   <MenuItem as={Link}>Projects</MenuItem>
                 </NextLink>
-                <NextLink href="/languages" passHref>
-                  <MenuItem as={Link}>Languages</MenuItem>
+                <NextLink href="/experience" passHref>
+                  <MenuItem as={Link}>Experience</MenuItem>
                 </NextLink>
                 <NextLink href="https://github.com/jaim-io/jaim-io" passHref>
                   <MenuItem
-                    as={Link} 
+                    as={Link}
                     display="inline-flex"
                     alignItems="center"
                     style={{ gap: 4 }}
