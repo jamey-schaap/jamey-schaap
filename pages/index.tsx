@@ -247,77 +247,77 @@ const Home: NextPageWithLayout = () => {
               <TabPanels>
                 <TabPanel>
                   <Fade>
-                    <SimpleGrid minChildWidth="120px" gap={6}>
+                    <SimpleGrid columns={[2, 3, 3]} gap={6}>
                       <TabItem
-                        href="/languages/golang"
+                        href="https://go.dev/"
                         thumbnail="/svgs/gopher.svg"
                       >
                         <TabButton>Golang</TabButton>
                       </TabItem>
                       <TabItem
-                        href="/languages/c-sharp"
+                        href="https://learn.microsoft.com/en-us/dotnet/csharp/"
                         thumbnail="/svgs/c-sharp.svg"
                       >
                         <TabButton>C# </TabButton>
                       </TabItem>
                       <TabItem
-                        href="/languages/python"
+                        href="https://www.python.org/"
                         thumbnail="/svgs/python.svg"
                       >
                         <TabButton>Python</TabButton>
                       </TabItem>
                       <TabItem
-                        href="/languages/nodejs"
-                        thumbnail="/svgs/nodejs.svg"
+                        href="https://www.typescriptlang.org/"
+                        thumbnail="/svgs/typescript.svg"
                       >
-                        <TabButton>Node.js</TabButton>
-                      </TabItem>
-                      <TabItem href="/languages/sql" thumbnail="/svgs/sql.svg">
-                        <TabButton>SQL</TabButton>
+                        <TabButton>Typescript</TabButton>
                       </TabItem>
                       <TabItem
-                        href="/languages/other"
-                        thumbnail="/svgs/other.svg"
+                        href="https://en.wikipedia.org/wiki/SQL"
+                        thumbnail="/svgs/sql.svg"
                       >
-                        <TabButton>Other</TabButton>
+                        <TabButton>SQL</TabButton>
                       </TabItem>
                     </SimpleGrid>
                   </Fade>
                 </TabPanel>
                 <TabPanel>
                   <Fade>
-                    <SimpleGrid minChildWidth="120px" gap={6}>
+                    <SimpleGrid columns={[2, 3, 3]} gap={6}>
                       <TabItem
-                        href="/frameworks/dotnet"
+                        href="https://dotnet.microsoft.com/en-us/"
                         thumbnail="/svgs/dotnet.svg"
                       >
                         <TabButton>.NET</TabButton>
                       </TabItem>
                       <TabItem
-                        href="/frameworks/aspnet-core"
+                        href="https://dotnet.microsoft.com/en-us/apps/aspnet"
                         thumbnail="/svgs/dotnet-core.svg"
                         tooltip="ASP.NET Core"
                       >
                         <TabButton>ASP.NET ...</TabButton>
                       </TabItem>
                       <TabItem
-                        href="/frameworks/ef-core"
+                        href="https://learn.microsoft.com/en-us/ef/core/"
                         thumbnail="/svgs/dotnet-core.svg"
                         tooltip="Entity Framework Core"
                       >
                         <TabButton>Entity Fr...</TabButton>
                       </TabItem>
                       <TabItem
-                        href="/frameworks/react"
+                        href="https://reactjs.org/"
                         thumbnail="/svgs/react.svg"
                       >
                         <TabButton>React</TabButton>
                       </TabItem>
-                      <TabItem href="/frameworks/vue" thumbnail="/svgs/vue.svg">
+                      <TabItem
+                        href="https://vuejs.org/"
+                        thumbnail="/svgs/vue.svg"
+                      >
                         <TabButton>Vue</TabButton>
                       </TabItem>
                       <TabItem
-                        href="/frameworks/nextjs"
+                        href="https://nextjs.org/"
                         thumbnail={useColorModeValue(
                           "/svgs/nextjs-black.svg",
                           "/svgs/nextjs-white.svg"
@@ -330,29 +330,29 @@ const Home: NextPageWithLayout = () => {
                 </TabPanel>
                 <TabPanel>
                   <Fade>
-                    <SimpleGrid minChildWidth="120px" gap={6}>
+                    <SimpleGrid columns={[2, 3, 3]} gap={6}>
                       <TabItem
-                        href="/devops/docker"
+                        href="https://www.docker.com/"
                         thumbnail="/svgs/docker.svg"
                       >
                         <TabButton>Docker</TabButton>
                       </TabItem>
                       <TabItem
-                        href="/devops/kubernetes"
+                        href="https://kubernetes.io/"
                         thumbnail="/svgs/kubernetes.svg"
                         tooltip="Kubernetes"
                       >
                         <TabButton>Kubernet...</TabButton>
                       </TabItem>
                       <TabItem
-                        href="/devops/githubactions"
+                        href="https://github.com/features/actions"
                         thumbnail="/svgs/github-actions.svg"
                         tooltip="GitHub Actions"
                       >
                         <TabButton>GitHub A...</TabButton>
                       </TabItem>
                       <TabItem
-                        href="/devops/azure-pipelines"
+                        href="https://azure.microsoft.com/en-us/products/devops/pipelines/"
                         thumbnail="/svgs/azure-pipelines.svg"
                         tooltip="Azure Pipelines"
                       >

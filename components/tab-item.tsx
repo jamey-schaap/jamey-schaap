@@ -42,6 +42,7 @@ const TabItem = ({
     >
       <NextLink href={href} passHref scroll={false}>
         <Link
+          target="_blank"
           color={useColorModeValue("black", "white")}
           css={{
             "&:hover": {

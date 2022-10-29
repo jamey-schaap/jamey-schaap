@@ -21,7 +21,6 @@ const NavItem: React.FC<NavItemProps> = ({
     <NextLink href={href} passHref scroll={false}>
       <Link
         p={2}
-        // bg={active ? "whiteAlpha.900" : undefined}
         color={active ? activeColor : inactiveColor}
         css={{
           "&:active": {

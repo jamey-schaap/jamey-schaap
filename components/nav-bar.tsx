@@ -17,6 +17,7 @@ import NavItem from "./nav-item";
 import ThemeToggleButton from "./theme-toggle-button";
 import NextLink from "next/link";
 import { HamburgerIcon } from "@chakra-ui/icons";
+import { IoLogoGithub } from "react-icons/io5";
 
 type NavProps = {
   path: string;
@@ -61,8 +62,17 @@ const NavBar: React.FC<NavProps> = ({ path, ...props }: NavProps) => {
           <NavItem href="/languages" path={path}>
             Languages
           </NavItem>
-          <NavItem href="/devops" path={path}>
-            DevOps
+          <NavItem
+            href="https://github.com/jaim-io/jaim-io"
+            path={path}
+            // @ts-ignore
+            display="inline-flex"
+            alignItems="center"
+            style={{ gap: 4 }}
+            pl={2}
+          >
+            <IoLogoGithub />
+            Source
           </NavItem>
         </Stack>
         {/* @ts-ignore */}
@@ -84,8 +94,17 @@ const NavBar: React.FC<NavProps> = ({ path, ...props }: NavProps) => {
                 <NextLink href="/languages" passHref>
                   <MenuItem as={Link}>Languages</MenuItem>
                 </NextLink>
-                <NextLink href="/devops" passHref>
-                  <MenuItem as={Link}>DevOps</MenuItem>
+                <NextLink href="https://github.com/jaim-io/jaim-io" passHref>
+                  <MenuItem
+                    as={Link} 
+                    display="inline-flex"
+                    alignItems="center"
+                    style={{ gap: 4 }}
+                    pl={2}
+                  >
+                    <IoLogoGithub />
+                    Source
+                  </MenuItem>
                 </NextLink>
               </MenuList>
             </Menu>

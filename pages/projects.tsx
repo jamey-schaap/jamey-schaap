@@ -5,7 +5,7 @@ import ArticleLayout from "../components/layouts/article";
 import Layout from "../components/layouts/article";
 import { Container } from "@chakra-ui/react";
 import NoContent from "./no-content";
-import { Router } from "next/router";
+import { Router, useRouter } from "next/router";
 
 const Projects: NextPageWithLayout = () => {
   return (
