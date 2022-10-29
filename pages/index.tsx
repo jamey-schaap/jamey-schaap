@@ -37,6 +37,7 @@ import SectionRow, {
   SectionDate,
   SectionInfo,
 } from "../components/section-row";
+import Unselectable from "../components/unselectable";
 
 const ProfileImage = chakra(Image, {
   shouldForwardProp: (prop: any) =>
@@ -63,17 +64,19 @@ const Home: NextPageWithLayout = () => {
                 mt={{ base: 4, md: 0 }}
                 mr={{ sm: 6 }}
                 textAlign="center"
-                display={{ base: "flex", sm: ""}}
+                display={{ base: "flex", sm: "" }}
                 justifyContent={{ base: "center", sm: "" }}
               >
                 <Box w="130px" h="160px">
-                  <ProfileImage
-                    borderRadius="xl"
-                    width="100%"
-                    height="100%"
-                    src="/images/profile-picture.png"
-                    alt="Profile image"
-                  />
+                  <Unselectable>
+                    <ProfileImage
+                      borderRadius="xl"
+                      width="100%"
+                      height="100%"
+                      src="/images/profile-picture.png"
+                      alt="Profile image"
+                    />
+                  </Unselectable>
                 </Box>
               </Box>
               <Box flexGrow={1}>
@@ -312,6 +315,15 @@ const Home: NextPageWithLayout = () => {
                       </TabItem>
                       <TabItem href="/frameworks/vue" thumbnail="/svgs/vue.svg">
                         <TabButton>Vue</TabButton>
+                      </TabItem>
+                      <TabItem
+                        href="/frameworks/nextjs"
+                        thumbnail={useColorModeValue(
+                          "/svgs/nextjs-black.svg",
+                          "/svgs/nextjs-white.svg"
+                        )}
+                      >
+                        <TabButton>Next.js</TabButton>
                       </TabItem>
                     </SimpleGrid>
                   </Fade>

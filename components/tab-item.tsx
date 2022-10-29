@@ -9,6 +9,7 @@ import {
 import Image from "next/image";
 import NextLink from "next/link";
 import { ReactNode, useState } from "react";
+import Unselectable from "./unselectable";
 
 type TabItemProps = {
   href: string;
@@ -51,22 +52,24 @@ const TabItem = ({
         >
           <Tooltip label={tooltip}>
             <LinkBox cursor="pointer">
-              <Image
-                src={thumbnail}
-                alt={title}
-                // Resolution 1920x1080
-                width="180"
-                height="101.25"
-                style={
-                  hover
-                    ? {
-                        transition: "200ms ease",
-                        transform: hover ? "scale(0.85)" : "",
-                      }
-                    : { transition: "200ms ease" }
-                }
-                loading="lazy"
-              />
+              <Unselectable>
+                <Image
+                  src={thumbnail}
+                  alt={title}
+                  // Resolution 1920x1080
+                  width="180"
+                  height="101.25"
+                  loading="lazy"
+                  style={
+                    hover
+                      ? {
+                          transition: "200ms ease",
+                          transform: hover ? "scale(0.85)" : "",
+                        }
+                      : { transition: "200ms ease" }
+                  }
+                />
+              </Unselectable>
               <Text mt={2} overflow="visible">
                 {title}
               </Text>
