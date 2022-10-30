@@ -7,7 +7,7 @@ import {
   useColorModeValue,
   ModalFooter,
 } from "@chakra-ui/react";
-import { ReactNode, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import Overlay from "./overlay";
 import Section from "./section";
 import { BiLeftArrow, BiRightArrow } from "react-icons/bi";
@@ -38,30 +38,53 @@ type ModalGridManagerProps = {
 
 export const ModalGridManager = ({ children }: ModalGridManagerProps) => {
   const [count, setCount] = useState<number>(0);
+  const [decreaseDisabled, setDecreaseDisabled] = useState<boolean>(true);
+  const [increaseDisabled, setIncreaseDisabled] = useState<boolean>(false);
 
   const base = 1;
   const other = 2;
   const [isMd] = useMediaQuery("(min-width: 48em)");
   const multiplier = isMd ? other : base;
 
-  const increaseCount = () => {
-    const condition = count + 1 < children.length / multiplier;
-    if (condition) {
-      setCount(count + 1);
-      if (!condition) {
-        
+  useEffect(() => {
+    // From SM -> MD  | Math.floor(SM / 2) = MD
+    if (isMd) {
+      const newValue = Math.floor(count / 2);
+      setCount(newValue);
+      if (newValue <= 0) {
+        setDecreaseDisabled(true);
       }
+    }
+    // From MD -> SM  | MD * 2 = SM
+    else {
+      const newValue = count * 2;
+      setCount(newValue);
+      if (newValue + 1 < children.length / multiplier) {
+        setIncreaseDisabled(false);
+      }
+    }
+  }, [isMd]);
+
+  const increaseCount = () => {
+    if (count + 1 < children.length / multiplier) {
+      setCount(count + 1);
+      if (count + 2 >= children.length / multiplier) {
+        setIncreaseDisabled(true);
+      }
+      setDecreaseDisabled(false);
     }
   };
   const decreaseCount = () => {
     if (count - 1 >= 0) {
       setCount(count - 1);
+      if (count - 1 <= 0) {
+        setDecreaseDisabled(true);
+      }
+      setIncreaseDisabled(false);
     }
   };
 
-  const decreaseDisabled = (): boolean => count - 1 < 0;
-  const increaseDisabled = (): boolean =>
-    count + 1 >= children.length / multiplier;
+  const hoverColor = useColorModeValue("#3d7aed", "#ffdd99");
 
   return (
     <>
@@ -75,34 +98,44 @@ export const ModalGridManager = ({ children }: ModalGridManagerProps) => {
             <SimpleGrid columns={2} gap={6} pt={4}>
               <Button
                 onClick={() => decreaseCount()}
-                isDisabled={decreaseDisabled()}
-                css={{
-                  "&:hover": {
-                    // eslint-disable-next-line react-hooks/rules-of-hooks
-                    color: useColorModeValue("#3d7aed", "#ffdd99"),
-                  },
-                  "&:active": {
-                    transform: "scale(0.85)",
-                    transition: "200ms ease",
-                  },
-                }}
+                isDisabled={decreaseDisabled}
+                css={
+                  decreaseDisabled
+                    ? {}
+                    : {
+                        "&:hover": {
+                          color: hoverColor,
+                          transition: "300ms ease",
+                          transform: "scale(0.95)",
+                        },
+                        "&:active": {
+                          transform: "scale(0.85)",
+                          transition: "200ms ease",
+                        },
+                      }
+                }
               >
                 <BiLeftArrow />
               </Button>
 
               <Button
                 onClick={() => increaseCount()}
-                isDisabled={increaseDisabled()}
-                css={{
-                  "&:hover": {
-                    // eslint-disable-next-line react-hooks/rules-of-hooks
-                    color: useColorModeValue("#3d7aed", "#ffdd99"),
-                  },
-                  "&:active": {
-                    transform: "scale(0.85)",
-                    transition: "200ms ease",
-                  },
-                }}
+                isDisabled={increaseDisabled}
+                css={
+                  increaseDisabled
+                    ? {}
+                    : {
+                        "&:hover": {
+                          color: hoverColor,
+                          transition: "300ms ease",
+                          transform: "scale(0.95)",
+                        },
+                        "&:active": {
+                          transform: "scale(0.85)",
+                          transition: "200ms ease",
+                        },
+                      }
+                }
               >
                 <BiRightArrow />
               </Button>

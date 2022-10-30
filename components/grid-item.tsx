@@ -31,7 +31,13 @@ export const ProjectGridItem = ({
     css={{
       "&:hover": {
         color: useColorModeValue("#3d7aed", "#ffdd99"),
+        transition: "300ms ease",
+        transform: "scale(0.95)",
       },
+      "&:active": {
+        transform: "scale(0.95)",
+        transition: "200ms ease",
+      }
     }}
   >
     <NextLink href={`/projects/${id}`} passHref scroll={false}>
@@ -49,7 +55,7 @@ export const ProjectGridItem = ({
             {title}
           </Text>
         </LinkOverlay>
-        <Text fontSize={14}>{children}</Text>
+        <Text fontSize={14} mx={2}>{children}</Text>
       </LinkBox>
     </NextLink>
   </Box>
