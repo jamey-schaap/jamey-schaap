@@ -6,11 +6,13 @@ import {
   Text,
   Tooltip,
   useColorModeValue,
+  useDisclosure,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import { ReactNode, useState } from "react";
 import { AiOutlineDoubleRight } from "react-icons/ai";
 import Modal from "./modal";
+import Overlay from "./overlay";
 import Unselectable from "./unselectable";
 
 type TabItemProps = {
@@ -29,13 +31,23 @@ const TabItem = ({
   children,
 }: TabItemProps) => {
   const [hover, SetHover] = useState<boolean>(false);
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const [, setOverlay] = useState(<Overlay />);
+
   return (
-    <Modal title={title} content={modalContent}>
+    <>
+      <Modal isOpen={isOpen} onOpen={onOpen} onClose={onClose}>
+        {modalContent}
+      </Modal>
       <Box
         w="100%"
         textAlign="center"
         onMouseEnter={() => SetHover(true)}
         onMouseLeave={() => SetHover(false)}
+        onClick={() => {
+          setOverlay(<Overlay />);
+          onOpen();
+        }}
         css={{
           "&:active": {
             transform: "scale(0.85)",
@@ -79,7 +91,7 @@ const TabItem = ({
           </LinkBox>
         </Tooltip>
       </Box>
-    </Modal>
+    </>
   );
 };
 

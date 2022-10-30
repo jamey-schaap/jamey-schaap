@@ -5,7 +5,6 @@ import {
   SimpleGrid,
   Tabs,
   TabList,
-  Tab,
   TabPanel,
   TabPanels,
   Link,
@@ -14,8 +13,7 @@ import {
   chakra,
   Heading,
   Divider,
-  Grid,
-  GridItem,
+  useDisclosure,
 } from "@chakra-ui/react";
 import MainLayout from "../components/layouts/main";
 import ArticleLayout from "../components/layouts/article";
@@ -23,21 +21,25 @@ import { NextPageWithLayout } from "./_app";
 import { ReactElement, useContext } from "react";
 import { useColorModeValue } from "@chakra-ui/react";
 import Layout from "../components/layouts/article";
-import Section from "../components/section";
-import SectionHeading from "../components/section-header";
-import TabItem from "../components/tab-item";
+import Section, {
+  SectionHeading,
+  SectionRow,
+  SectionDate,
+  SectionInfo,
+} from "../components/section";
+import TabItem, { TabButton, TabHeader } from "../components/tab";
 import Fade from "../components/transitions/fade";
 import NextLink from "next/link";
 import TabContext from "../contexts/tab-context";
-import TabButton from "../components/tab-button";
 import Head from "next/head";
-import TabHeader from "../components/tab-header";
 import { Router } from "next/router";
-import SectionRow, {
-  SectionDate,
-  SectionInfo,
-} from "../components/section-row";
 import Unselectable from "../components/unselectable";
+import {
+  CSharpModal,
+  GolangModal,
+  PythonModal,
+  TypescriptModal,
+} from "../components/modal-content/language-modals";
 
 const ProfileImage = chakra(Image, {
   shouldForwardProp: (prop: any) =>
@@ -46,6 +48,7 @@ const ProfileImage = chakra(Image, {
 
 const Home: NextPageWithLayout = () => {
   const { tabIndex, setTabIndex } = useContext(TabContext);
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
     <>
@@ -249,33 +252,34 @@ const Home: NextPageWithLayout = () => {
                   <Fade>
                     <SimpleGrid columns={[2, 3, 3]} gap={6}>
                       <TabItem
-                        href="https://go.dev/"
-                        thumbnail="/svgs/gopher.svg"
+                        thumbnail="/svgs/languages/gopher.svg"
+                        title="Golang"
+                        modalContent={<GolangModal />}
                       >
                         <TabButton>Golang</TabButton>
                       </TabItem>
                       <TabItem
-                        href="https://learn.microsoft.com/en-us/dotnet/csharp/"
-                        thumbnail="/svgs/c-sharp.svg"
+                        thumbnail="/svgs/languages/c-sharp.svg"
+                        title="C#"
+                        modalContent={<CSharpModal />}
                       >
                         <TabButton>C# </TabButton>
                       </TabItem>
                       <TabItem
-                        href="https://www.python.org/"
-                        thumbnail="/svgs/python.svg"
+                        thumbnail="/svgs/languages/python.svg"
+                        title="Python"
+                        modalContent={<PythonModal />}
                       >
                         <TabButton>Python</TabButton>
                       </TabItem>
                       <TabItem
-                        href="https://www.typescriptlang.org/"
-                        thumbnail="/svgs/typescript.svg"
+                        thumbnail="/svgs/languages/typescript.svg"
+                        title="Typescript"
+                        modalContent={<TypescriptModal />}
                       >
                         <TabButton>Typescript</TabButton>
                       </TabItem>
-                      <TabItem
-                        href="https://en.wikipedia.org/wiki/SQL"
-                        thumbnail="/svgs/sql.svg"
-                      >
+                      <TabItem thumbnail="/svgs/languages/sql.svg">
                         <TabButton>SQL</TabButton>
                       </TabItem>
                     </SimpleGrid>
@@ -284,43 +288,31 @@ const Home: NextPageWithLayout = () => {
                 <TabPanel>
                   <Fade>
                     <SimpleGrid columns={[2, 3, 3]} gap={6}>
-                      <TabItem
-                        href="https://dotnet.microsoft.com/en-us/"
-                        thumbnail="/svgs/dotnet.svg"
-                      >
+                      <TabItem thumbnail="/svgs/frameworks/dotnet.svg">
                         <TabButton>.NET</TabButton>
                       </TabItem>
                       <TabItem
-                        href="https://dotnet.microsoft.com/en-us/apps/aspnet"
-                        thumbnail="/svgs/dotnet-core.svg"
+                        thumbnail="/svgs/frameworks/dotnet-core.svg"
                         tooltip="ASP.NET Core"
                       >
                         <TabButton>ASP.NET ...</TabButton>
                       </TabItem>
                       <TabItem
-                        href="https://learn.microsoft.com/en-us/ef/core/"
-                        thumbnail="/svgs/dotnet-core.svg"
+                        thumbnail="/svgs/frameworks/dotnet-core.svg"
                         tooltip="Entity Framework Core"
                       >
                         <TabButton>Entity Fr...</TabButton>
                       </TabItem>
-                      <TabItem
-                        href="https://reactjs.org/"
-                        thumbnail="/svgs/react.svg"
-                      >
+                      <TabItem thumbnail="/svgs/frameworks/react.svg">
                         <TabButton>React</TabButton>
                       </TabItem>
-                      <TabItem
-                        href="https://vuejs.org/"
-                        thumbnail="/svgs/vue.svg"
-                      >
+                      <TabItem thumbnail="/svgs/frameworks/vue.svg">
                         <TabButton>Vue</TabButton>
                       </TabItem>
                       <TabItem
-                        href="https://nextjs.org/"
                         thumbnail={useColorModeValue(
-                          "/svgs/nextjs-black.svg",
-                          "/svgs/nextjs-white.svg"
+                          "/svgs/frameworks/nextjs-black.svg",
+                          "/svgs/frameworks/nextjs-white.svg"
                         )}
                       >
                         <TabButton>Next.js</TabButton>
@@ -331,29 +323,23 @@ const Home: NextPageWithLayout = () => {
                 <TabPanel>
                   <Fade>
                     <SimpleGrid columns={[2, 3, 3]} gap={6}>
-                      <TabItem
-                        href="https://www.docker.com/"
-                        thumbnail="/svgs/docker.svg"
-                      >
+                      <TabItem thumbnail="/svgs/devops/docker.svg">
                         <TabButton>Docker</TabButton>
                       </TabItem>
                       <TabItem
-                        href="https://kubernetes.io/"
-                        thumbnail="/svgs/kubernetes.svg"
+                        thumbnail="/svgs/devops/kubernetes.svg"
                         tooltip="Kubernetes"
                       >
                         <TabButton>Kubernet...</TabButton>
                       </TabItem>
                       <TabItem
-                        href="https://github.com/features/actions"
-                        thumbnail="/svgs/github-actions.svg"
+                        thumbnail="/svgs/devops/github-actions.svg"
                         tooltip="GitHub Actions"
                       >
                         <TabButton>GitHub A...</TabButton>
                       </TabItem>
                       <TabItem
-                        href="https://azure.microsoft.com/en-us/products/devops/pipelines/"
-                        thumbnail="/svgs/azure-pipelines.svg"
+                        thumbnail="/svgs/devops/azure-pipelines.svg"
                         tooltip="Azure Pipelines"
                       >
                         <TabButton>Azure Pi...</TabButton>
