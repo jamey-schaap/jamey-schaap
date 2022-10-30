@@ -38,6 +38,7 @@ import {
   CSharpModal,
   GolangModal,
   PythonModal,
+  SQLModal,
   TypescriptModal,
 } from "../components/modal-content/language-modals";
 
@@ -261,25 +262,29 @@ const Home: NextPageWithLayout = () => {
                       <TabItem
                         thumbnail="/svgs/languages/c-sharp.svg"
                         title="C#"
-                        modalContent={<CSharpModal />}
+                        // modalContent={<CSharpModal />}
                       >
                         <TabButton>C# </TabButton>
                       </TabItem>
                       <TabItem
                         thumbnail="/svgs/languages/python.svg"
                         title="Python"
-                        modalContent={<PythonModal />}
+                        // modalContent={<PythonModal />}
                       >
                         <TabButton>Python</TabButton>
                       </TabItem>
                       <TabItem
                         thumbnail="/svgs/languages/typescript.svg"
                         title="Typescript"
-                        modalContent={<TypescriptModal />}
+                        // modalContent={<TypescriptModal />}
                       >
                         <TabButton>Typescript</TabButton>
                       </TabItem>
-                      <TabItem thumbnail="/svgs/languages/sql.svg">
+                      <TabItem
+                        thumbnail="/svgs/languages/sql.svg"
+                        title="SQL"
+                        // modalContent={<SQLModal />}
+                      >
                         <TabButton>SQL</TabButton>
                       </TabItem>
                     </SimpleGrid>
@@ -288,25 +293,33 @@ const Home: NextPageWithLayout = () => {
                 <TabPanel>
                   <Fade>
                     <SimpleGrid columns={[2, 3, 3]} gap={6}>
-                      <TabItem thumbnail="/svgs/frameworks/dotnet.svg">
+                      <TabItem
+                        thumbnail="/svgs/frameworks/dotnet.svg"
+                        title=".NET"
+                      >
                         <TabButton>.NET</TabButton>
                       </TabItem>
                       <TabItem
                         thumbnail="/svgs/frameworks/dotnet-core.svg"
                         tooltip="ASP.NET Core"
+                        title="ASP.NET Core"
                       >
                         <TabButton>ASP.NET ...</TabButton>
                       </TabItem>
                       <TabItem
                         thumbnail="/svgs/frameworks/dotnet-core.svg"
                         tooltip="Entity Framework Core"
+                        title="Entity Framework Core"
                       >
                         <TabButton>Entity Fr...</TabButton>
                       </TabItem>
-                      <TabItem thumbnail="/svgs/frameworks/react.svg">
+                      <TabItem
+                        thumbnail="/svgs/frameworks/react.svg"
+                        title="React"
+                      >
                         <TabButton>React</TabButton>
                       </TabItem>
-                      <TabItem thumbnail="/svgs/frameworks/vue.svg">
+                      <TabItem thumbnail="/svgs/frameworks/vue.svg" title="Vue">
                         <TabButton>Vue</TabButton>
                       </TabItem>
                       <TabItem
@@ -314,6 +327,7 @@ const Home: NextPageWithLayout = () => {
                           "/svgs/frameworks/nextjs-black.svg",
                           "/svgs/frameworks/nextjs-white.svg"
                         )}
+                        title="Next.js"
                       >
                         <TabButton>Next.js</TabButton>
                       </TabItem>
@@ -323,24 +337,27 @@ const Home: NextPageWithLayout = () => {
                 <TabPanel>
                   <Fade>
                     <SimpleGrid columns={[2, 3, 3]} gap={6}>
-                      <TabItem thumbnail="/svgs/devops/docker.svg">
+                      <TabItem thumbnail="/svgs/devops/docker.svg" title="Docker">
                         <TabButton>Docker</TabButton>
                       </TabItem>
                       <TabItem
                         thumbnail="/svgs/devops/kubernetes.svg"
                         tooltip="Kubernetes"
+                        title="Kubernetes"
                       >
                         <TabButton>Kubernet...</TabButton>
                       </TabItem>
                       <TabItem
                         thumbnail="/svgs/devops/github-actions.svg"
                         tooltip="GitHub Actions"
+                        title="GitHub Actions"
                       >
                         <TabButton>GitHub A...</TabButton>
                       </TabItem>
                       <TabItem
                         thumbnail="/svgs/devops/azure-pipelines.svg"
                         tooltip="Azure Pipelines"
+                        title="Azure Pipelines"
                       >
                         <TabButton>Azure Pi...</TabButton>
                       </TabItem>

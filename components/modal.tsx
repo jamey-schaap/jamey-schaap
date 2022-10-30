@@ -5,7 +5,6 @@ import {
   SimpleGrid,
   useMediaQuery,
   useColorModeValue,
-  ModalFooter,
 } from "@chakra-ui/react";
 import { ReactNode, useEffect, useState } from "react";
 import Overlay from "./overlay";
@@ -63,6 +62,7 @@ export const ModalGridManager = ({ children }: ModalGridManagerProps) => {
         setIncreaseDisabled(false);
       }
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isMd]);
 
   const increaseCount = () => {

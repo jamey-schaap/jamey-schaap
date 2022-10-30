@@ -7,6 +7,7 @@ import {
   Tooltip,
   useColorModeValue,
   useDisclosure,
+  useToast,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import { ReactNode, useState } from "react";
@@ -34,19 +35,39 @@ const TabItem = ({
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [, setOverlay] = useState(<Overlay />);
 
+  // TEMPORARY
+  const toast = useToast();
+  const toastId = `no-modal-toast-${title}`;
   return (
     <>
-      <Modal isOpen={isOpen} onOpen={onOpen} onClose={onClose}>
-        {modalContent}
-      </Modal>
+      {/* TEMPORARY */}
+      {modalContent && (
+        <Modal isOpen={isOpen} onOpen={onOpen} onClose={onClose}>
+          {modalContent}
+        </Modal>
+      )}
       <Box
         w="100%"
         textAlign="center"
         onMouseEnter={() => SetHover(true)}
         onMouseLeave={() => SetHover(false)}
         onClick={() => {
-          setOverlay(<Overlay />);
-          onOpen();
+          // TEMPORARY
+          if (modalContent) {
+            setOverlay(<Overlay />);
+            onOpen();
+          } else if (!toast.isActive(toastId)) {
+            toast({
+              id: toastId,
+              title: `No modal available for ${title}.`,
+              description: "Work in progresss!",
+              status: "error",
+              isClosable: true,
+              duration: 5000,
+              variant: "subtle",
+              position: "bottom-right",
+            });
+          }
         }}
         css={{
           "&:active": {
