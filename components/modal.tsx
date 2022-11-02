@@ -53,6 +53,9 @@ export const ModalGridManager = ({ children }: ModalGridManagerProps) => {
       if (newValue <= 0) {
         setDecreaseDisabled(true);
       }
+      else if (newValue >= children.length / multiplier) {
+        setIncreaseDisabled(true);
+      }
     }
     // From MD -> SM  | MD * 2 = SM
     else {
@@ -62,7 +65,7 @@ export const ModalGridManager = ({ children }: ModalGridManagerProps) => {
         setIncreaseDisabled(false);
       }
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isMd]);
 
   const increaseCount = () => {

@@ -7,23 +7,29 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { ReactNode } from "react";
-import { ProjectGridItem } from "../grid-item";
+import Experience from "../../pages/experience";
 import { ModalGridManager } from "../modal";
 import Section, { SectionHeading } from "../section";
 
 type TemplateProps = {
-  Title: string;
-  Description: ReactNode;
-  ProjectGridItems: ReactNode[];
+  title: string;
+  description: ReactNode;
+  projectGridItems?: ReactNode[];
+  experience?: ReactNode;
 };
 
-const ModalTemplate = ({ Title, Description, ProjectGridItems }: TemplateProps) => {
+const ModalTemplate = ({
+  title,
+  description,
+  projectGridItems,
+  experience,
+}: TemplateProps) => {
   return (
     <>
       <ModalContent bg={useColorModeValue("#f0e7db", "#202023")}>
         <ModalHeader pb={0}>
           <Section delay={0.1}>
-            <SectionHeading>{Title}</SectionHeading>
+            <SectionHeading>{title}</SectionHeading>
           </Section>
         </ModalHeader>
         <ModalCloseButton
@@ -35,10 +41,20 @@ const ModalTemplate = ({ Title, Description, ProjectGridItems }: TemplateProps) 
         />
         <ModalBody pt={0}>
           <Section delay={0.1}>
-            <Box mb={5}>{Description}</Box>
-            <SectionHeading>Projects</SectionHeading>
+            <Box mb={5}>{description}</Box>
+            {experience && (
+              <>
+                <SectionHeading>Experience</SectionHeading>
+                <Box mb={5}>{experience}</Box>
+              </>
+            )}
+            {projectGridItems && (
+              <>
+                <SectionHeading>Projects</SectionHeading>
+                <ModalGridManager>{projectGridItems}</ModalGridManager>
+              </>
+            )}
           </Section>
-          <ModalGridManager>{ProjectGridItems}</ModalGridManager>
         </ModalBody>
       </ModalContent>
     </>

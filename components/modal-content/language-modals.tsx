@@ -1,12 +1,25 @@
-import { Text } from "@chakra-ui/react";
+import { Link, ListItem, List, Text, ListIcon } from "@chakra-ui/react";
 import { ProjectGridItem } from "../grid-item";
 import Section from "../section";
 import ModalTemplate from "./modal-template";
+import NextLink from "next/link";
+import { IoMdSchool } from "react-icons/io";
+import {
+  AlbumAPIPreview,
+  Analysis8AssignmentPreview,
+  ArcadePreview,
+  BookstoreAPIPreview,
+  GoFitnessPreview,
+  JaimIOPreview,
+  ProjectCPreview,
+  ProjectDPreview,
+  SongAPIPreview,
+} from "../previews/project-previews";
 
 export const GolangModal = () => (
   <ModalTemplate
-    Title="Golang"
-    Description={
+    title="Golang"
+    description={
       <Text>
         Golang is the most recent programming language I started learning. I
         have got around 3-4 months experience with the language. At this point
@@ -14,33 +27,15 @@ export const GolangModal = () => (
         couple of my projects.
       </Text>
     }
-    ProjectGridItems={[
+    projectGridItems={[
       <Section delay={0.1} key="sect-1">
-        <ProjectGridItem
-          thumbnail="/svgs/projects/arcade.svg"
-          title="Arcade"
-          id="arcade"
-        >
-          Arcade is an arcade which has a couple of games like Hangman.
-        </ProjectGridItem>
+        <ArcadePreview />
       </Section>,
       <Section delay={0.1} key="sect-2">
-        <ProjectGridItem
-          thumbnail="/svgs/projects/go-fitness.svg"
-          title="Go Fitness"
-          id="go-fitness"
-        >
-          Go Fitness is a platform to catalog and view exercises.
-        </ProjectGridItem>
+        <GoFitnessPreview />
       </Section>,
       <Section delay={0.1} key="sect-3">
-        <ProjectGridItem
-          thumbnail="/svgs/projects/go-fitness.svg"
-          title="Bookstore API"
-          id="bookstore-api"
-        >
-          Go Fitness is a platform to catalog and view exercises.
-        </ProjectGridItem>
+        <BookstoreAPIPreview />
       </Section>,
     ]}
   />
@@ -48,48 +43,36 @@ export const GolangModal = () => (
 
 export const CSharpModal = () => (
   <ModalTemplate
-    Title="C#"
-    Description={
-      <Text as="mark">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam luctus
-        rhoncus velit ac sollicitudin. Vivamus imperdiet mauris ac nisl maximus,
-        vitae consectetur lorem aliquam. Suspendisse et aliquam mauris, eu
-        pulvinar lectus. Vestibulum maximus est eu bibendum congue.
+    title="C#"
+    description={
+      <Text>
+        During the first 2 years of my computer science studies, I worked with
+        and created a number of project with C#. C# together with Python is the
+        language I am most familliar with, having around 2 years of expierence
+        with the language.
       </Text>
     }
-    ProjectGridItems={[
+    experience={
+      <List>
+        <ListItem>
+          <ListIcon as={IoMdSchool} />
+          <NextLink href="https://www.rotterdamuas.com/" passHref>
+            <Link target="_blank">
+              Rotterdam University of Applied Sciences
+            </Link>
+          </NextLink>
+        </ListItem>
+      </List>
+    }
+    projectGridItems={[
       <Section delay={0.1} key="sect-1">
-        <ProjectGridItem
-          thumbnail="/svgs/projects/arcade.svg"
-          title="Album API"
-          id="album-api"
-        >
-          <Text as="mark">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </Text>
-        </ProjectGridItem>
+        <AlbumAPIPreview />
       </Section>,
       <Section delay={0.1} key="sect-2">
-        <ProjectGridItem
-          thumbnail="/svgs/projects/go-fitness.svg"
-          title="Song API"
-          id="song-api"
-        >
-          <Text as="mark">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </Text>
-        </ProjectGridItem>
+        <SongAPIPreview />
       </Section>,
       <Section delay={0.1} key="sect-3">
-        <ProjectGridItem
-          thumbnail="/svgs/projects/arcade.svg"
-          title="Project C"
-          id="project-c"
-        >
-          <Text as="mark">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </Text>
-        </ProjectGridItem>
+        <ProjectCPreview />
       </Section>,
     ]}
   />
@@ -97,37 +80,33 @@ export const CSharpModal = () => (
 
 export const PythonModal = () => (
   <ModalTemplate
-    Title="Python"
-    Description={
-      <Text as="mark">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam luctus
-        rhoncus velit ac sollicitudin. Vivamus imperdiet mauris ac nisl maximus,
-        vitae consectetur lorem aliquam. Suspendisse et aliquam mauris, eu
-        pulvinar lectus. Vestibulum maximus est eu bibendum congue.
+    title="Python"
+    description={
+      <Text>
+        During the first 2 years of my computer science studies, I worked with
+        and created a number of project with Python. Python together with C# is
+        the language I am most familliar with, having around 2.5 years of
+        expierence with the language.
       </Text>
     }
-    ProjectGridItems={[
+    experience={
+      <List>
+        <ListItem>
+          <ListIcon as={IoMdSchool} />
+          <NextLink href="https://www.rotterdamuas.com/" passHref>
+            <Link target="_blank">
+              Rotterdam University of Applied Sciences
+            </Link>
+          </NextLink>
+        </ListItem>
+      </List>
+    }
+    projectGridItems={[
       <Section delay={0.1} key="sect-1">
-        <ProjectGridItem
-          thumbnail="/svgs/projects/arcade.svg"
-          title="Project D"
-          id="project-d"
-        >
-          <Text as="mark">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </Text>
-        </ProjectGridItem>
+        <ProjectDPreview />
       </Section>,
       <Section delay={0.1} key="sect-2">
-        <ProjectGridItem
-          thumbnail="/svgs/projects/arcade.svg"
-          title="Analysis 8 Assignment"
-          id="anaylis-8-assignment"
-        >
-          <Text as="mark">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </Text>
-        </ProjectGridItem>
+        <Analysis8AssignmentPreview />
       </Section>,
     ]}
   />
@@ -135,48 +114,36 @@ export const PythonModal = () => (
 
 export const TypescriptModal = () => (
   <ModalTemplate
-    Title="Typescript"
-    Description={
-      <Text as="mark">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam luctus
-        rhoncus velit ac sollicitudin. Vivamus imperdiet mauris ac nisl maximus,
-        vitae consectetur lorem aliquam. Suspendisse et aliquam mauris, eu
-        pulvinar lectus. Vestibulum maximus est eu bibendum congue.
+    title="Typescript"
+    description={
+      <Text>
+        I have been working with Typescript (and Javascript) for around 1.5
+        years, using it in all my frontend projects. Personally, I prefer
+        Typescript over Javascript. Typescript provides a rich and robust typing
+        system, which I love to use.
       </Text>
     }
-    ProjectGridItems={[
+    experience={
+      <List>
+        <ListItem>
+          <ListIcon as={IoMdSchool} />
+          <NextLink href="https://www.rotterdamuas.com/" passHref>
+            <Link target="_blank">
+              Rotterdam University of Applied Sciences
+            </Link>
+          </NextLink>
+        </ListItem>
+      </List>
+    }
+    projectGridItems={[
       <Section delay={0.1} key="sect-1">
-        <ProjectGridItem
-          thumbnail="/svgs/projects/arcade.svg"
-          title="Jaim-IO"
-          id="jaim-io"
-        >
-          <Text as="mark">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </Text>
-        </ProjectGridItem>
+        <JaimIOPreview />
       </Section>,
       <Section delay={0.1} key="sect-2">
-        <ProjectGridItem
-          thumbnail="/svgs/projects/go-fitness.svg"
-          title="Project C"
-          id="project-c"
-        >
-          <Text as="mark">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </Text>
-        </ProjectGridItem>
+        <ProjectCPreview />
       </Section>,
       <Section delay={0.1} key="sect-3">
-        <ProjectGridItem
-          thumbnail="/svgs/projects/go-fitness.svg"
-          title="Go Fitness"
-          id="go-fitness"
-        >
-          <Text as="mark">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </Text>
-        </ProjectGridItem>
+        <GoFitnessPreview />
       </Section>,
     ]}
   />
@@ -184,48 +151,34 @@ export const TypescriptModal = () => (
 
 export const SQLModal = () => (
   <ModalTemplate
-    Title="SQL"
-    Description={
-      <Text as="mark">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam luctus
-        rhoncus velit ac sollicitudin. Vivamus imperdiet mauris ac nisl maximus,
-        vitae consectetur lorem aliquam. Suspendisse et aliquam mauris, eu
-        pulvinar lectus. Vestibulum maximus est eu bibendum congue.
+    title="SQL"
+    description={
+      <Text>
+        I have been working with SQL for around 1.5
+        years. I learned it in the first semeter of my second year of my computer sciences studies and I have been using it ever since.
       </Text>
     }
-    ProjectGridItems={[
+    experience={
+      <List>
+        <ListItem>
+          <ListIcon as={IoMdSchool} />
+          <NextLink href="https://www.rotterdamuas.com/" passHref>
+            <Link target="_blank">
+              Rotterdam University of Applied Sciences
+            </Link>
+          </NextLink>
+        </ListItem>
+      </List>
+    }
+    projectGridItems={[
       <Section delay={0.1} key="sect-1">
-        <ProjectGridItem
-          thumbnail="/svgs/projects/arcade.svg"
-          title="Project D"
-          id="project-d"
-        >
-          <Text as="mark">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </Text>
-        </ProjectGridItem>
+        <ProjectDPreview />
       </Section>,
       <Section delay={0.1} key="sect-2">
-        <ProjectGridItem
-          thumbnail="/svgs/projects/arcade.svg"
-          title="Analysis 8 Assignment"
-          id="anaylis-8-assignment"
-        >
-          <Text as="mark">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </Text>
-        </ProjectGridItem>
+        <Analysis8AssignmentPreview />
       </Section>,
       <Section delay={0.1} key="sect-3">
-        <ProjectGridItem
-          thumbnail="/svgs/projects/go-fitness.svg"
-          title="Go Fitness"
-          id="go-fitness"
-        >
-          <Text as="mark">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </Text>
-        </ProjectGridItem>
+        <GoFitnessPreview />
       </Section>,
     ]}
   />
