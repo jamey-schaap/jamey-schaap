@@ -2,16 +2,44 @@ import { NextPageWithLayout } from "./_app";
 import MainLayout from "../components/layouts/main";
 import ArticleLayout from "../components/layouts/article";
 import Layout from "../components/layouts/article";
-import { Container } from "@chakra-ui/react";
-import { ReactElement, useContext } from "react";
+import { Container, SimpleGrid } from "@chakra-ui/react";
+import { ReactElement } from "react";
 import { Router } from "next/router";
-import TabContext from "../contexts/tab-context";
+import Section, { SectionHeading } from "../components/section";
+import { ReactNode } from "react";
+import {
+  CalvijnVreewijkPreview,
+  HogeschoolRotterdamPreview,
+  SwecoPreview,
+} from "../components/previews/experience-previews";
 
 const Experience: NextPageWithLayout = () => {
-  const { tabIndex, setTabIndex } = useContext(TabContext);
+  const work: ReactNode[] = [<SwecoPreview key="sweco" />];
+  const education: ReactNode[] = [
+    <CalvijnVreewijkPreview key="calvijn-vreewijk" />,
+    <HogeschoolRotterdamPreview key="hogeschool-rotterdam" />,
+  ];
+
   return (
     <Layout>
-      <Container></Container>
+      <Container>
+        <SectionHeading>Work</SectionHeading>
+        <SimpleGrid columns={[1, 1, 2]} gap={6} pb={5}>
+          {work.map((project, index) => (
+            <Section delay={0.1} key={`work-${index}`}>
+              {project}
+            </Section>
+          ))}
+        </SimpleGrid>
+        <SectionHeading>Education</SectionHeading>
+        <SimpleGrid columns={[1, 1, 2]} gap={6} pb={5}>
+          {education.map((project, index) => (
+            <Section delay={0.1} key={`education-${index}`}>
+              {project}
+            </Section>
+          ))}
+        </SimpleGrid>
+      </Container>
     </Layout>
   );
 };

@@ -35,12 +35,10 @@ const TabItem = ({
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [, setOverlay] = useState(<Overlay />);
 
-  // TEMPORARY
   const toast = useToast();
   const toastId = `no-modal-toast-${title}`;
   return (
     <>
-      {/* TEMPORARY */}
       {modalContent && (
         <Modal isOpen={isOpen} onOpen={onOpen} onClose={onClose}>
           {modalContent}
@@ -52,7 +50,6 @@ const TabItem = ({
         onMouseEnter={() => SetHover(true)}
         onMouseLeave={() => SetHover(false)}
         onClick={() => {
-          // TEMPORARY
           if (modalContent) {
             setOverlay(<Overlay />);
             onOpen();
