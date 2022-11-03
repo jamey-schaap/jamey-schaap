@@ -10,14 +10,14 @@ import NextLink from "next/link";
 import Image from "next/image";
 
 type ProjectGridItemProps = {
-  id: string;
+  path: string;
   title: string;
   thumbnail: string;
   children: ReactNode;
 };
 
 export const ProjectGridItem = ({
-  id,
+  path,
   title,
   thumbnail,
   children,
@@ -37,10 +37,10 @@ export const ProjectGridItem = ({
       "&:active": {
         transform: "scale(0.95)",
         transition: "200ms ease",
-      }
+      },
     }}
   >
-    <NextLink href={`/projects/${id}`} passHref scroll={false}>
+    <NextLink href={path} passHref scroll={false}>
       <LinkBox cursor="pointer">
         <Image
           src={thumbnail}
@@ -50,12 +50,14 @@ export const ProjectGridItem = ({
           height="101.25"
           // placeholder="blur"
         />
-        <LinkOverlay href={`/projects/${id}`}>
+        <LinkOverlay href={path}>
           <Text mt={2} fontSize={20}>
             {title}
           </Text>
         </LinkOverlay>
-        <Text fontSize={14} mx={2}>{children}</Text>
+        <Text fontSize={14} mx={2}>
+          {children}
+        </Text>
       </LinkBox>
     </NextLink>
   </Box>

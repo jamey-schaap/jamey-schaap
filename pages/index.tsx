@@ -41,6 +41,15 @@ import {
   SQLModal,
   TypescriptModal,
 } from "../components/modal-content/language-modals";
+import {
+  ASPNETCoreModal,
+  DotNetModal,
+  EFCoreModal,
+  NextJSModal,
+  ReactModal,
+  VueModal,
+} from "../components/modal-content/framework-modals";
+import { AzurePipelinesModal, DockerModal, GitHubActionsModal, KubernetesModal } from "../components/modal-content/devops-modals";
 
 const ProfileImage = chakra(Image, {
   shouldForwardProp: (prop: any) =>
@@ -49,7 +58,6 @@ const ProfileImage = chakra(Image, {
 
 const Home: NextPageWithLayout = () => {
   const { tabIndex, setTabIndex } = useContext(TabContext);
-  const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
     <>
@@ -262,28 +270,28 @@ const Home: NextPageWithLayout = () => {
                       <TabItem
                         thumbnail="/svgs/languages/c-sharp.svg"
                         title="C#"
-                        // modalContent={<CSharpModal />}
+                        modalContent={<CSharpModal />}
                       >
                         <TabButton>C# </TabButton>
                       </TabItem>
                       <TabItem
                         thumbnail="/svgs/languages/python.svg"
                         title="Python"
-                        // modalContent={<PythonModal />}
+                        modalContent={<PythonModal />}
                       >
                         <TabButton>Python</TabButton>
                       </TabItem>
                       <TabItem
                         thumbnail="/svgs/languages/typescript.svg"
                         title="Typescript"
-                        // modalContent={<TypescriptModal />}
+                        modalContent={<TypescriptModal />}
                       >
                         <TabButton>Typescript</TabButton>
                       </TabItem>
                       <TabItem
                         thumbnail="/svgs/languages/sql.svg"
                         title="SQL"
-                        // modalContent={<SQLModal />}
+                        modalContent={<SQLModal />}
                       >
                         <TabButton>SQL</TabButton>
                       </TabItem>
@@ -296,6 +304,7 @@ const Home: NextPageWithLayout = () => {
                       <TabItem
                         thumbnail="/svgs/frameworks/dotnet.svg"
                         title=".NET"
+                        modalContent={<DotNetModal />}
                       >
                         <TabButton>.NET</TabButton>
                       </TabItem>
@@ -303,6 +312,7 @@ const Home: NextPageWithLayout = () => {
                         thumbnail="/svgs/frameworks/dotnet-core.svg"
                         tooltip="ASP.NET Core"
                         title="ASP.NET Core"
+                        modalContent={<ASPNETCoreModal />}
                       >
                         <TabButton>ASP.NET ...</TabButton>
                       </TabItem>
@@ -310,17 +320,23 @@ const Home: NextPageWithLayout = () => {
                         thumbnail="/svgs/frameworks/dotnet-core.svg"
                         tooltip="Entity Framework Core"
                         title="Entity Framework Core"
+                        modalContent={<EFCoreModal />}
                       >
                         <TabButton>Entity Fr...</TabButton>
                       </TabItem>
                       <TabItem
                         thumbnail="/svgs/frameworks/react.svg"
                         title="React"
+                        modalContent={<ReactModal />}
                       >
                         <TabButton>React</TabButton>
                       </TabItem>
-                      <TabItem thumbnail="/svgs/frameworks/vue.svg" title="Vue">
-                        <TabButton>Vue</TabButton>
+                      <TabItem
+                        thumbnail="/svgs/frameworks/vuejs.svg"
+                        title="Vue.js"
+                        modalContent={<VueModal />}
+                      >
+                        <TabButton>Vue.js</TabButton>
                       </TabItem>
                       <TabItem
                         thumbnail={useColorModeValue(
@@ -328,6 +344,7 @@ const Home: NextPageWithLayout = () => {
                           "/svgs/frameworks/nextjs-white.svg"
                         )}
                         title="Next.js"
+                        modalContent={<NextJSModal />}
                       >
                         <TabButton>Next.js</TabButton>
                       </TabItem>
@@ -337,13 +354,18 @@ const Home: NextPageWithLayout = () => {
                 <TabPanel>
                   <Fade>
                     <SimpleGrid columns={[2, 3, 3]} gap={6}>
-                      <TabItem thumbnail="/svgs/devops/docker.svg" title="Docker">
+                      <TabItem
+                        thumbnail="/svgs/devops/docker.svg"
+                        title="Docker"
+                        modalContent={<DockerModal />}
+                      >
                         <TabButton>Docker</TabButton>
                       </TabItem>
                       <TabItem
                         thumbnail="/svgs/devops/kubernetes.svg"
                         tooltip="Kubernetes"
                         title="Kubernetes"
+                        modalContent={<KubernetesModal />}
                       >
                         <TabButton>Kubernet...</TabButton>
                       </TabItem>
@@ -351,6 +373,7 @@ const Home: NextPageWithLayout = () => {
                         thumbnail="/svgs/devops/github-actions.svg"
                         tooltip="GitHub Actions"
                         title="GitHub Actions"
+                        modalContent={<GitHubActionsModal />}
                       >
                         <TabButton>GitHub A...</TabButton>
                       </TabItem>
@@ -358,6 +381,7 @@ const Home: NextPageWithLayout = () => {
                         thumbnail="/svgs/devops/azure-pipelines.svg"
                         tooltip="Azure Pipelines"
                         title="Azure Pipelines"
+                        modalContent={<AzurePipelinesModal />}
                       >
                         <TabButton>Azure Pi...</TabButton>
                       </TabItem>
