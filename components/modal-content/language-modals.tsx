@@ -5,7 +5,7 @@ import ModalTemplate from "./modal-template";
 import NextLink from "next/link";
 import { IoMdSchool } from "react-icons/io";
 import {
-  AlbumAPIPreview,
+  AlbumViewerPreview,
   Analysis8AssignmentPreview,
   ArcadePreview,
   BookstoreAPIPreview,
@@ -66,7 +66,7 @@ export const CSharpModal = () => (
     }
     projectGridItems={[
       <Section delay={0.1} key="sect-1">
-        <AlbumAPIPreview />
+        <AlbumViewerPreview />
       </Section>,
       <Section delay={0.1} key="sect-2">
         <SongAPIPreview />

@@ -122,6 +122,9 @@ const NavBar: React.FC<NavProps> = ({ path, ...props }: NavProps) => {
                 aria-label="options"
               />
               <MenuList bg={useColorModeValue("#f0e7db", "#202023")}>
+                <NextLink href="/" passHref>
+                  <MenuItem as={Link}>About</MenuItem>
+                </NextLink>
                 <NextLink href="/projects" passHref>
                   <MenuItem as={Link}>Projects</MenuItem>
                 </NextLink>

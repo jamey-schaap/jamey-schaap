@@ -1,4 +1,11 @@
-import { chakra, Divider, Grid, GridItem, Heading, shouldForwardProp } from "@chakra-ui/react";
+import {
+  chakra,
+  Divider,
+  Grid,
+  GridItem,
+  Heading,
+  shouldForwardProp,
+} from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { ReactNode } from "react";
 
@@ -56,6 +63,7 @@ export const SectionRow = ({ children, ...props }: BioProps) => (
 type SectionHeadingProps = {
   children: ReactNode | undefined;
 };
+
 export const SectionHeading = ({ children, ...props }: SectionHeadingProps) => (
   <>
     <Heading
@@ -77,6 +85,5 @@ export const SectionHeading = ({ children, ...props }: SectionHeadingProps) => (
     />
   </>
 );
-
 
 export default Section;

@@ -13,7 +13,6 @@ import {
   chakra,
   Heading,
   Divider,
-  useDisclosure,
 } from "@chakra-ui/react";
 import MainLayout from "../components/layouts/main";
 import ArticleLayout from "../components/layouts/article";
@@ -83,6 +82,9 @@ const Home: NextPageWithLayout = () => {
                   <Unselectable>
                     <ProfileImage
                       borderRadius="xl"
+                      borderColor="whiteAlpha.800"
+                      borderWidth={2}
+                      borderStyle="solid"
                       width="100%"
                       height="100%"
                       src="/images/profile-picture.png"

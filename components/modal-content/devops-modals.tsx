@@ -5,8 +5,7 @@ import NextLink from "next/link";
 import { GiSuitcase } from "react-icons/gi";
 import { IoMdSchool } from "react-icons/io";
 import {
-  AlbumAPIPreview,
-  AlbumFrontendPreview,
+  AlbumViewerPreview,
   BookstoreAPIPreview,
   GoFitnessPreview,
   ProjectDPreview,
@@ -42,11 +41,8 @@ export const DockerModal = () => (
       <Section delay={0.1} key="sect-2">
         <ProjectDPreview />
       </Section>,
-      <Section delay={0.1} key="sect-3">
-        <AlbumAPIPreview />
-      </Section>,
       <Section delay={0.1} key="sect-4">
-        <AlbumFrontendPreview />
+        <AlbumViewerPreview />
       </Section>,
       <Section delay={0.1} key="sect-5">
         <BookstoreAPIPreview />
@@ -99,11 +95,8 @@ export const GitHubActionsModal = () => (
       <Section delay={0.1} key="sect-2">
         <SongAPIPreview />
       </Section>,
-      <Section delay={0.1} key="sect-3">
-        <AlbumAPIPreview />
-      </Section>,
       <Section delay={0.1} key="sect-4">
-        <AlbumFrontendPreview />
+        <AlbumViewerPreview />
       </Section>,
       <Section delay={0.1} key="sect-5">
         <ProjectDPreview />

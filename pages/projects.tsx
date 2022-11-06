@@ -8,8 +8,7 @@ import { Router } from "next/router";
 import Section, { SectionHeading } from "../components/section";
 import { ReactNode } from "react";
 import {
-  AlbumAPIPreview,
-  AlbumFrontendPreview,
+  AlbumViewerPreview,
   Analysis8AssignmentPreview,
   ArcadePreview,
   BookstoreAPIPreview,
@@ -29,11 +28,10 @@ const Projects: NextPageWithLayout = () => {
     <BookstoreAPIPreview key="bookstore-api" />,
   ];
 
-  const schoolProjects: ReactNode[] = [
+  const universityProjects: ReactNode[] = [
     <ProjectCPreview key="project-c" />,
     <ProjectDPreview key="project-d" />,
-    <AlbumAPIPreview key="album-api" />,
-    <AlbumFrontendPreview key="album-frontend" />,
+    <AlbumViewerPreview key="album-viewer" />,
     <Analysis8AssignmentPreview key="analysis-8-assignment" />,
   ];
   return (
@@ -47,9 +45,9 @@ const Projects: NextPageWithLayout = () => {
             </Section>
           ))}
         </SimpleGrid>
-        <SectionHeading>School Projects</SectionHeading>
+        <SectionHeading>University Projects</SectionHeading>
         <SimpleGrid columns={[1, 1, 2]} gap={6} pb={5}>
-          {schoolProjects.map((project, index) => (
+          {universityProjects.map((project, index) => (
             <Section delay={0.1} key={`school-${index}`}>
               {project}
             </Section>

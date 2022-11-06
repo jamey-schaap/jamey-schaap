@@ -32,31 +32,13 @@ export const BookstoreAPIPreview = () => (
   </ProjectGridItem>
 );
 
-export const AlbumAPIPreview = () => (
+export const AlbumViewerPreview = () => (
   <ProjectGridItem
     thumbnail="/svgs/projects/album-viewer.svg"
-    title="Album API"
+    title="Album Viewer"
     path="/projects/album-viewer"
   >
-    together with{" "}
-    <NextLink href="/projects/album-viewer" passHref>
-      <Link>Album Frontend</Link>
-    </NextLink>{" "}
-    creates an album viewer app.
-  </ProjectGridItem>
-);
-
-export const AlbumFrontendPreview = () => (
-  <ProjectGridItem
-    thumbnail="/svgs/projects/album-viewer.svg"
-    title="Album Frontend"
-    path="/projects/album-viewer"
-  >
-    together with{" "}
-    <NextLink href="/projects/album-viewer" passHref>
-      <Link>Album API</Link>
-    </NextLink>{" "}
-    creates an album viewer app.
+    is an application to view music albums.
   </ProjectGridItem>
 );
 
@@ -104,9 +86,9 @@ export const ProjectDPreview = () => (
 
 export const Analysis8AssignmentPreview = () => (
   <ProjectGridItem
-    thumbnail="/svgs/projects/anaylis-8-assignment.svg"
+    thumbnail="/svgs/projects/analysis-8-assignment.svg"
     title="Analysis 8 Assignment"
-    path="/projects/anaylis-8-assignment"
+    path="/projects/analysis-8-assignment"
   >
     is a joint project. It is an application that safely implements SQL
     handling.

@@ -4,8 +4,7 @@ import ModalTemplate from "./modal-template";
 import NextLink from "next/link";
 import { IoMdSchool } from "react-icons/io";
 import {
-  AlbumAPIPreview,
-  AlbumFrontendPreview,
+  AlbumViewerPreview,
   GoFitnessPreview,
   JaimIOPreview,
   ProjectCPreview,
@@ -36,7 +35,7 @@ export const DotNetModal = () => (
     }
     projectGridItems={[
       <Section delay={0.1} key="sect-1">
-        <AlbumAPIPreview />
+        <AlbumViewerPreview />
       </Section>,
       <Section delay={0.1} key="sect-2">
         <SongAPIPreview />
@@ -72,7 +71,7 @@ export const ASPNETCoreModal = () => (
     }
     projectGridItems={[
       <Section delay={0.1} key="sect-1">
-        <AlbumAPIPreview />
+        <AlbumViewerPreview />
       </Section>,
       <Section delay={0.1} key="sect-2">
         <SongAPIPreview />
@@ -108,7 +107,7 @@ export const EFCoreModal = () => (
     }
     projectGridItems={[
       <Section delay={0.1} key="sect-1">
-        <AlbumAPIPreview />
+        <AlbumViewerPreview />
       </Section>,
       <Section delay={0.1} key="sect-2">
         <SongAPIPreview />
@@ -147,7 +146,7 @@ export const ReactModal = () => (
         <SongAPIPreview />
       </Section>,
       <Section delay={0.1} key="sect-3">
-        <AlbumFrontendPreview />
+        <AlbumViewerPreview />
       </Section>,
       <Section delay={0.1} key="sect-4">
         <GoFitnessPreview />
@@ -191,7 +190,7 @@ export const NextJSModal = () => (
     description={
       <Text>
         Next.js is the framework I most recently picked up. This portfolio is my
-        first project in Next.js and at the moment this is my favorite frontend
+        first project in Next.js (v12.3.1) and at the moment this is my favorite frontend
         framework. I am looking forward to Next.js 13!
       </Text>
     }
