@@ -36,6 +36,7 @@ import Unselectable from "../components/unselectable";
 import {
   CSharpModal,
   GolangModal,
+  PowershellModal,
   PythonModal,
   SQLModal,
   TypescriptModal,
@@ -48,7 +49,12 @@ import {
   ReactModal,
   VueModal,
 } from "../components/modal-content/framework-modals";
-import { AzurePipelinesModal, DockerModal, GitHubActionsModal, KubernetesModal } from "../components/modal-content/devops-modals";
+import {
+  AzurePipelinesModal,
+  DockerModal,
+  GitHubActionsModal,
+  KubernetesModal,
+} from "../components/modal-content/devops-modals";
 
 const ProfileImage = chakra(Image, {
   shouldForwardProp: (prop: any) =>
@@ -296,6 +302,13 @@ const Home: NextPageWithLayout = () => {
                         modalContent={<SQLModal />}
                       >
                         <TabButton>SQL</TabButton>
+                      </TabItem>
+                      <TabItem
+                        thumbnail="/svgs/languages/powershell.svg"
+                        title="Powershell"
+                        modalContent={<PowershellModal />}
+                      >
+                        <TabButton>Powershell</TabButton>
                       </TabItem>
                     </SimpleGrid>
                   </Fade>

@@ -12,7 +12,7 @@ const Calvijn: NextPageWithLayout = () => {
   return (
     <Layout title="Calvijn">
       <Container>
-        <HeadingImage id="Calvijn" />
+        <HeadingImage id="calvijn" />
         <Title>
           CSG Calvijn Vreewijk <Badge>08/2012 - 07/2017</Badge>
         </Title>

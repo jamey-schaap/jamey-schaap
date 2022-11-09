@@ -15,6 +15,7 @@ import {
   ProjectDPreview,
   SongAPIPreview,
 } from "../previews/project-previews";
+import { GiSuitcase } from "react-icons/gi";
 
 export const GolangModal = () => (
   <ModalTemplate
@@ -154,8 +155,9 @@ export const SQLModal = () => (
     title="SQL"
     description={
       <Text>
-        I have been working with SQL for around 1.5
-        years. I learned it in the first semeter of my second year of my computer sciences studies and I have been using it ever since.
+        I have been working with SQL for around 1.5 years. I learned it in the
+        first semeter of my second year of my computer sciences studies and I
+        have been using it ever since.
       </Text>
     }
     experience={
@@ -181,5 +183,28 @@ export const SQLModal = () => (
         <GoFitnessPreview />
       </Section>,
     ]}
+  />
+);
+
+export const PowershellModal = () => (
+  <ModalTemplate
+    title="Powershell"
+    description={
+      <Text>
+        During my internship at Sweco I created a Powershell plugin in order to
+        send notifications of the statuses of Jenkins jobs to our Microsoft
+        Teams Channel.
+      </Text>
+    }
+    experience={
+      <List>
+        <ListItem>
+          <ListIcon as={GiSuitcase} />
+          <NextLink href="https://www.swecogroup.com/" passHref>
+            <Link target="_blank">Sweco</Link>
+          </NextLink>
+        </ListItem>
+      </List>
+    }
   />
 );
