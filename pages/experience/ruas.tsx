@@ -34,58 +34,56 @@ const Ruas: NextPageWithLayout = () => {
         <Text as="p">
           A good foundation has been built in the first year, here I learned the
           following concepts:
-          <SimpleGrid columns={[1, 2, 2]}>
-            <UnorderedList pl={4}>
-              <ListItem>Basic programming;</ListItem>
-              <ListItem>Set theory;</ListItem>
-              <ListItem>Lambda&apos;s, recursion and HOF&apos;s;</ListItem>
-            </UnorderedList>{" "}
-            <UnorderedList pl={4}>
-              <ListItem>OOP;</ListItem>
-              <ListItem>UML modeling;</ListItem>
-              <ListItem>Agile Scrum;</ListItem>
-            </UnorderedList>{" "}
-          </SimpleGrid>
         </Text>
-        <Text as="p" my={4}>
+        <SimpleGrid columns={[1, 2, 2]}>
+          <UnorderedList pl={4}>
+            <ListItem>Basic programming;</ListItem>
+            <ListItem>Set theory;</ListItem>
+            <ListItem>Lambda&apos;s, recursion and HOF&apos;s;</ListItem>
+          </UnorderedList>{" "}
+          <UnorderedList pl={4}>
+            <ListItem>OOP;</ListItem>
+            <ListItem>UML modeling;</ListItem>
+            <ListItem>Agile Scrum;</ListItem>
+          </UnorderedList>{" "}
+        </SimpleGrid>
+        <Text as="p" mt={4}>
           The second year expanded upon this with:
-          <SimpleGrid columns={[1, 2, 2]}>
-            <UnorderedList pl={4}>
-              <ListItem>SQL;</ListItem>
-              <ListItem>Networking;</ListItem>
-              <ListItem>Concurrency;</ListItem>
-              <ListItem>Software design and analysis;</ListItem>
-              <ListItem>Testings;</ListItem>
-            </UnorderedList>
-            <UnorderedList pl={4}>
-              <ListItem>Web development;</ListItem>
-              <ListItem>Web security;</ListItem>
-              <ListItem>Cloud development;</ListItem>
-              <ListItem>Algorithms and data structures;</ListItem>
-            </UnorderedList>
-          </SimpleGrid>
         </Text>
-        <Text my={4}>
-          Over the two years I have also worked with:
-          <List pl={4}>
-            <ListItem>
-              <Meta>Languages</Meta>
-              Python, C#, Javascript, Typescript & SQL
-            </ListItem>{" "}
-            <ListItem>
-              <Meta>Scripting</Meta>
-              Bash
-            </ListItem>
-            <ListItem>
-              <Meta>Frameworks</Meta>
-              .NET, ASP.NET Core, Entity Framework Core, React & Vue.js
-            </ListItem>
-            <ListItem>
-              <Meta>DevOps</Meta>
-              Docker, GitHub Actions & AWS
-            </ListItem>
-          </List>
-        </Text>
+        <SimpleGrid columns={[1, 2, 2]}>
+          <UnorderedList pl={4}>
+            <ListItem>SQL;</ListItem>
+            <ListItem>Networking;</ListItem>
+            <ListItem>Concurrency;</ListItem>
+            <ListItem>Software design and analysis;</ListItem>
+            <ListItem>Testings;</ListItem>
+          </UnorderedList>
+          <UnorderedList pl={4}>
+            <ListItem>Web development;</ListItem>
+            <ListItem>Web security;</ListItem>
+            <ListItem>Cloud development;</ListItem>
+            <ListItem>Algorithms and data structures;</ListItem>
+          </UnorderedList>
+        </SimpleGrid>
+        <Text mt={4}>Over the two years I have also worked with:</Text>
+        <List pl={4}>
+          <ListItem>
+            <Meta>Languages</Meta>
+            Python, C#, Javascript, Typescript & SQL
+          </ListItem>{" "}
+          <ListItem>
+            <Meta>Scripting</Meta>
+            Bash
+          </ListItem>
+          <ListItem>
+            <Meta>Frameworks</Meta>
+            .NET, ASP.NET Core, Entity Framework Core, React & Vue.js
+          </ListItem>
+          <ListItem>
+            <Meta>DevOps</Meta>
+            Docker, GitHub Actions & AWS
+          </ListItem>
+        </List>
         <Text my={4}>
           I am currently working an internship and in februari 2023 I am
           starting a minor in Software Engineering.

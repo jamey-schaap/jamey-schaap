@@ -39,25 +39,24 @@ const Sweco: NextPageWithLayout = () => {
           </NextLink>
           , a web-based management system.
         </Text>
-        <Text as="p" my={4}>
+        <Text as="p" mt={4}>
           During my internship I:
-          <UnorderedList pl={4}>
-            <ListItem>
-              researched and created an advisory report regarding three
-              different DevOps platforms (Jenkins, Azure DevOps and GitHub
-              Actions);
-            </ListItem>
-            <ListItem>
-              researched and created POCs for CVE detection. For SCA (Snyk) and
-              for DAST (OWASP Zap);
-            </ListItem>
-            <ListItem>
-              setup a number of multi pipline projects in Jenkins;
-            </ListItem>
-            <ListItem>created a custom plugin in Powershell;</ListItem>
-            <ListItem>worked on other work items from the scrumboard.</ListItem>
-          </UnorderedList>
         </Text>
+        <UnorderedList pl={4}>
+          <ListItem>
+            researched and created an advisory report regarding three different
+            DevOps platforms (Jenkins, Azure DevOps and GitHub Actions);
+          </ListItem>
+          <ListItem>
+            researched and created POCs for CVE detection. For SCA (Snyk) and
+            for DAST (OWASP Zap);
+          </ListItem>
+          <ListItem>
+            setup a number of multi pipline projects in Jenkins;
+          </ListItem>
+          <ListItem>created a custom plugin in Powershell;</ListItem>
+          <ListItem>worked on other work items from the scrumboard.</ListItem>
+        </UnorderedList>
         <List my={4}>
           <ListItem>
             <Meta>Scripting</Meta>
