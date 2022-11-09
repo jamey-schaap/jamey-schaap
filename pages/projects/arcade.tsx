@@ -44,13 +44,20 @@ const Arcade: NextPageWithLayout = () => {
             </NextLink>
           </ListItem>
         </List>
-        <SimpleGrid columns={[1, 1, 2]} display="flex" justifyContent="center" gap={6} mt={6}>
+        <SimpleGrid
+          columns={[1, 1, 2]}
+          display="flex"
+          justifyContent="center"
+          gap={6}
+          mt={6}
+        >
           <Box>
             <Image
               src="/images/projects/arcade/hangman-lose.png"
               alt="hangman-lose"
               width="192"
               height="292"
+              loading="lazy"
             />
           </Box>
           <Box>
@@ -59,6 +66,7 @@ const Arcade: NextPageWithLayout = () => {
               alt="hangman-win"
               width="192"
               height="292"
+              loading="lazy"
             />
           </Box>
         </SimpleGrid>
