@@ -191,9 +191,12 @@ export const PowershellModal = () => (
     title="Powershell"
     description={
       <Text>
-        During my internship at Sweco I created a Powershell plugin in order to
-        send notifications of the statuses of Jenkins jobs to our Microsoft
-        Teams Channel.
+        During my internship at{" "}
+        <NextLink href="https://www.swecogroup.com/" passHref>
+          <Link target="_blank">Sweco</Link>
+        </NextLink>{" "}
+        I created a Powershell plugin in order to send notifications of the
+        statuses of Jenkins jobs to our Microsoft Teams Channel.
       </Text>
     }
     experience={
@@ -202,6 +205,41 @@ export const PowershellModal = () => (
           <ListIcon as={GiSuitcase} />
           <NextLink href="https://www.swecogroup.com/" passHref>
             <Link target="_blank">Sweco</Link>
+          </NextLink>
+        </ListItem>
+      </List>
+    }
+  />
+);
+
+export const BashModal = () => (
+  <ModalTemplate
+    title="Bash"
+    description={
+      <Text>
+        I followed a course in bash scripting in the first year of my computer
+        science studies. Next to this I have done some minor bash scripting in
+        personal projects and at{" "}
+        <NextLink href="https://www.swecogroup.com/" passHref>
+          <Link target="_blank">Sweco</Link>
+        </NextLink>
+        .
+      </Text>
+    }
+    experience={
+      <List>
+        <ListItem>
+          <ListIcon as={GiSuitcase} />
+          <NextLink href="https://www.swecogroup.com/" passHref>
+            <Link target="_blank">Sweco</Link>
+          </NextLink>
+        </ListItem>
+        <ListItem>
+          <ListIcon as={IoMdSchool} />
+          <NextLink href="https://www.rotterdamuas.com/" passHref>
+            <Link target="_blank">
+              Rotterdam University of Applied Sciences
+            </Link>
           </NextLink>
         </ListItem>
       </List>

@@ -113,7 +113,11 @@ export const AzurePipelinesModal = () => (
     title="Azure Pipelines"
     description={
       <Text>
-        During my internship at Sweco, I setup a couple of proof of concept pipelines.
+        During my internship at{" "}
+        <NextLink href="https://www.swecogroup.com/" passHref>
+          <Link target="_blank">Sweco</Link>
+        </NextLink>
+        , I setup a couple of proof of concept pipelines.
       </Text>
     }
     experience={
