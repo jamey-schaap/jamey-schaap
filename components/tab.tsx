@@ -1,20 +1,172 @@
 import {
   Box,
   Button,
+  Center,
+  Fade,
   LinkBox,
+  SimpleGrid,
   Tab,
   Text,
   Tooltip,
   useColorModeValue,
   useDisclosure,
+  useMediaQuery,
   useToast,
 } from "@chakra-ui/react";
 import Image from "next/image";
-import { ReactNode, useState } from "react";
+import { ReactElement, ReactNode, useState } from "react";
 import { AiOutlineDoubleRight } from "react-icons/ai";
 import Modal from "./modal";
 import Overlay from "./overlay";
 import Unselectable from "./unselectable";
+import { BiChevronDown, BiChevronUp } from "react-icons/bi";
+import Section from "./section";
+import { IconType } from "react-icons";
+
+type TabButtonProps = {
+  children: ReactNode;
+};
+
+export const TabButton = ({ children, ...props }: TabButtonProps) => (
+  <Button
+    leftIcon={<AiOutlineDoubleRight />}
+    borderRadius="lg"
+    width="7.5rem"
+    {...props}
+  >
+    {children}
+  </Button>
+);
+
+type TabButtonMoreProps = {
+  title: string;
+  icon: ReactElement<IconType>;
+  onClick: () => void;
+};
+
+export const TabActionButton = ({
+  title,
+  icon,
+  onClick,
+  ...props
+}: TabButtonMoreProps) => {
+  const hoverColor = useColorModeValue("#3d7aed", "#ffdd99");
+  return (
+    <Button
+      borderRadius="lg"
+      width="100%"
+      height="2rem"
+      onClick={() => onClick()}
+      css={{
+        "&:hover": {
+          color: hoverColor,
+          transform: "scale(0.90)",
+          transition: "200ms ease",
+        },
+        "&:hover:active": {
+          transform: "scale(0.80)",
+          transition: "200ms ease",
+        },
+      }}
+      {...props}
+    >
+      {title}
+      {icon}
+    </Button>
+  );
+};
+
+type TabItemManagerProps = {
+  children: ReactNode[];
+};
+
+export const TabItemManager = ({ children }: TabItemManagerProps) => {
+  const [index, setIndex] = useState<number>(2);
+
+  const base = 2;
+  const other = 3;
+  const [isSm] = useMediaQuery("(min-width: 30em)");
+  const cols = isSm ? other : base;
+
+  const overflow =
+    !(children.length % cols == 0 && children.length - 3 <= index) &&
+    children.length > index * cols;
+
+  const increaseIndex = () => {
+    if (children.length > index * cols) {
+      if (overflow) setIndex(index + 1);
+    }
+  };
+  const decreaseIndex = () => {
+    if (index - 1 >= 0) setIndex(index - 1);
+  };
+  let shownItems = children.slice(0, index * cols);
+
+  let keyCounter = 0;
+  const delay = 0.1;
+  return (
+    <>
+      <SimpleGrid columns={[base, other, other]} gap={6} pb={4}>
+        {shownItems.map((item) => (
+          <Section delay={0.1} key={`tab-item-sect-${keyCounter++}`}>
+            {item}
+          </Section>
+        ))}
+      </SimpleGrid>
+      {!(index * cols === cols * 2) && (
+        <Section delay={delay}>
+          <TabActionButton
+            onClick={decreaseIndex}
+            title="Show less"
+            icon={<BiChevronUp />}
+            // @ts-ignore
+            mt={2}
+          />
+        </Section>
+      )}
+      {overflow && (
+        <Section delay={delay}>
+          <TabActionButton
+            onClick={increaseIndex}
+            title="Show more"
+            icon={<BiChevronDown />}
+            // @ts-ignore
+            mt={2}
+          />
+        </Section>
+      )}
+    </>
+  );
+};
+
+type TabHeaderProps = {
+  children: ReactNode;
+};
+
+export const TabHeader = ({ children, ...props }: TabHeaderProps) => {
+  const [active, SetActive] = useState<boolean>(false);
+  return (
+    <Tab
+      _selected={{
+        borderBottomColor: useColorModeValue("#525252", "#fff"),
+        borderRadius: "2px",
+        fontWeight: "bold",
+        textColor: useColorModeValue("#000", "#fff"),
+      }}
+      onMouseDown={() => SetActive(true)}
+      onMouseUp={() => SetActive(false)}
+      css={{
+        p: {
+          transform: active ? "scale(0.85)" : "scale(1)",
+          transition: "200ms ease",
+        },
+      }}
+      {...props}
+    >
+      {children}
+    </Tab>
+  );
+};
 
 type TabItemProps = {
   title?: string;
@@ -110,45 +262,6 @@ const TabItem = ({
         </Tooltip>
       </Box>
     </>
-  );
-};
-
-type TabButtonProps = {
-  children: ReactNode;
-};
-
-export const TabButton = ({ children }: TabButtonProps) => (
-  <Button leftIcon={<AiOutlineDoubleRight />} borderRadius="lg" width="7.5rem">
-    {children}
-  </Button>
-);
-
-type TabHeaderProps = {
-  children: ReactNode;
-};
-
-export const TabHeader = ({ children, ...props }: TabHeaderProps) => {
-  const [active, SetActive] = useState<boolean>(false);
-  return (
-    <Tab
-      _selected={{
-        borderBottomColor: useColorModeValue("#525252", "#fff"),
-        borderRadius: "2px",
-        fontWeight: "bold",
-        textColor: useColorModeValue("#000", "#fff"),
-      }}
-      onMouseDown={() => SetActive(true)}
-      onMouseUp={() => SetActive(false)}
-      css={{
-        p: {
-          transform: active ? "scale(0.85)" : "scale(1)",
-          transition: "200ms ease",
-        },
-      }}
-      {...props}
-    >
-      {children}
-    </Tab>
   );
 };
 

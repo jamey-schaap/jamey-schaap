@@ -13,11 +13,13 @@ import {
   chakra,
   Heading,
   Divider,
+  Center,
+  Button,
 } from "@chakra-ui/react";
 import MainLayout from "../components/layouts/main";
 import ArticleLayout from "../components/layouts/article";
 import { NextPageWithLayout } from "./_app";
-import { ReactElement, useContext } from "react";
+import { ReactElement, useContext, useState } from "react";
 import { useColorModeValue } from "@chakra-ui/react";
 import Layout from "../components/layouts/article";
 import Section, {
@@ -26,7 +28,12 @@ import Section, {
   SectionDate,
   SectionInfo,
 } from "../components/section";
-import TabItem, { TabButton, TabHeader } from "../components/tab";
+import TabItem, {
+  TabButton,
+  TabActionButton,
+  TabHeader,
+  TabItemManager,
+} from "../components/tab";
 import Fade from "../components/transitions/fade";
 import NextLink from "next/link";
 import TabContext from "../contexts/tab-context";
@@ -34,6 +41,7 @@ import Head from "next/head";
 import { Router } from "next/router";
 import Unselectable from "../components/unselectable";
 import {
+  BashModal,
   CSharpModal,
   GolangModal,
   PowershellModal,
@@ -63,6 +71,7 @@ const ProfileImage = chakra(Image, {
 
 const Home: NextPageWithLayout = () => {
   const { tabIndex, setTabIndex } = useContext(TabContext);
+  const [index, setIndex] = useState<number>(0);
 
   return (
     <>
@@ -266,142 +275,143 @@ const Home: NextPageWithLayout = () => {
               </TabList>
               <TabPanels>
                 <TabPanel>
-                  <Fade>
-                    <SimpleGrid columns={[2, 3, 3]} gap={6}>
-                      <TabItem
-                        thumbnail="/svgs/languages/gopher.svg"
-                        title="Golang"
-                        modalContent={<GolangModal />}
-                      >
-                        <TabButton>Golang</TabButton>
-                      </TabItem>
-                      <TabItem
-                        thumbnail="/svgs/languages/c-sharp.svg"
-                        title="C#"
-                        modalContent={<CSharpModal />}
-                      >
-                        <TabButton>C# </TabButton>
-                      </TabItem>
-                      <TabItem
-                        thumbnail="/svgs/languages/python.svg"
-                        title="Python"
-                        modalContent={<PythonModal />}
-                      >
-                        <TabButton>Python</TabButton>
-                      </TabItem>
-                      <TabItem
-                        thumbnail="/svgs/languages/typescript.svg"
-                        title="Typescript"
-                        modalContent={<TypescriptModal />}
-                      >
-                        <TabButton>Typescript</TabButton>
-                      </TabItem>
-                      <TabItem
-                        thumbnail="/svgs/languages/sql.svg"
-                        title="SQL"
-                        modalContent={<SQLModal />}
-                      >
-                        <TabButton>SQL</TabButton>
-                      </TabItem>
-                      <TabItem
-                        thumbnail="/svgs/languages/powershell.svg"
-                        title="Powershell"
-                        modalContent={<PowershellModal />}
-                      >
-                        <TabButton>Powershell</TabButton>
-                      </TabItem>
-                    </SimpleGrid>
-                  </Fade>
+                  <TabItemManager>
+                    <TabItem
+                      thumbnail="/svgs/languages/gopher.svg"
+                      title="Golang"
+                      modalContent={<GolangModal />}
+                    >
+                      <TabButton>Golang</TabButton>
+                    </TabItem>
+                    <TabItem
+                      thumbnail="/svgs/languages/c-sharp.svg"
+                      title="C#"
+                      modalContent={<CSharpModal />}
+                    >
+                      <TabButton>C# </TabButton>
+                    </TabItem>
+                    <TabItem
+                      thumbnail="/svgs/languages/python.svg"
+                      title="Python"
+                      modalContent={<PythonModal />}
+                    >
+                      <TabButton>Python</TabButton>
+                    </TabItem>
+                    <TabItem
+                      thumbnail="/svgs/languages/typescript.svg"
+                      title="Typescript"
+                      modalContent={<TypescriptModal />}
+                    >
+                      <TabButton>Typescript</TabButton>
+                    </TabItem>
+                    <TabItem
+                      thumbnail="/svgs/languages/sql.svg"
+                      title="SQL"
+                      modalContent={<SQLModal />}
+                    >
+                      <TabButton>SQL</TabButton>
+                    </TabItem>
+                    <TabItem
+                      thumbnail="/svgs/languages/powershell.svg"
+                      title="Powershell"
+                      modalContent={<PowershellModal />}
+                    >
+                      <TabButton>Powershell</TabButton>
+                    </TabItem>
+                    <TabItem
+                      thumbnail="/svgs/languages/bash.svg"
+                      title="Bash"
+                      modalContent={<BashModal />}
+                    >
+                      <TabButton>Bash</TabButton>
+                    </TabItem>
+                  </TabItemManager>
                 </TabPanel>
                 <TabPanel>
-                  <Fade>
-                    <SimpleGrid columns={[2, 3, 3]} gap={6}>
-                      <TabItem
-                        thumbnail="/svgs/frameworks/dotnet.svg"
-                        title=".NET"
-                        modalContent={<DotNetModal />}
-                      >
-                        <TabButton>.NET</TabButton>
-                      </TabItem>
-                      <TabItem
-                        thumbnail="/svgs/frameworks/dotnet-core.svg"
-                        tooltip="ASP.NET Core"
-                        title="ASP.NET Core"
-                        modalContent={<ASPNETCoreModal />}
-                      >
-                        <TabButton>ASP.NET ...</TabButton>
-                      </TabItem>
-                      <TabItem
-                        thumbnail="/svgs/frameworks/dotnet-core.svg"
-                        tooltip="Entity Framework Core"
-                        title="Entity Framework Core"
-                        modalContent={<EFCoreModal />}
-                      >
-                        <TabButton>Entity Fr...</TabButton>
-                      </TabItem>
-                      <TabItem
-                        thumbnail="/svgs/frameworks/react.svg"
-                        title="React"
-                        modalContent={<ReactModal />}
-                      >
-                        <TabButton>React</TabButton>
-                      </TabItem>
-                      <TabItem
-                        thumbnail="/svgs/frameworks/vuejs.svg"
-                        title="Vue.js"
-                        modalContent={<VueModal />}
-                      >
-                        <TabButton>Vue.js</TabButton>
-                      </TabItem>
-                      <TabItem
-                        thumbnail={useColorModeValue(
-                          "/svgs/frameworks/nextjs-black.svg",
-                          "/svgs/frameworks/nextjs-white.svg"
-                        )}
-                        title="Next.js"
-                        modalContent={<NextJSModal />}
-                      >
-                        <TabButton>Next.js</TabButton>
-                      </TabItem>
-                    </SimpleGrid>
-                  </Fade>
+                  <TabItemManager>
+                    <TabItem
+                      thumbnail="/svgs/frameworks/dotnet.svg"
+                      title=".NET"
+                      modalContent={<DotNetModal />}
+                    >
+                      <TabButton>.NET</TabButton>
+                    </TabItem>
+                    <TabItem
+                      thumbnail="/svgs/frameworks/dotnet-core.svg"
+                      tooltip="ASP.NET Core"
+                      title="ASP.NET Core"
+                      modalContent={<ASPNETCoreModal />}
+                    >
+                      <TabButton>ASP.NET ...</TabButton>
+                    </TabItem>
+                    <TabItem
+                      thumbnail="/svgs/frameworks/dotnet-core.svg"
+                      tooltip="Entity Framework Core"
+                      title="Entity Framework Core"
+                      modalContent={<EFCoreModal />}
+                    >
+                      <TabButton>Entity Fr...</TabButton>
+                    </TabItem>
+                    <TabItem
+                      thumbnail="/svgs/frameworks/react.svg"
+                      title="React"
+                      modalContent={<ReactModal />}
+                    >
+                      <TabButton>React</TabButton>
+                    </TabItem>
+                    <TabItem
+                      thumbnail="/svgs/frameworks/vuejs.svg"
+                      title="Vue.js"
+                      modalContent={<VueModal />}
+                    >
+                      <TabButton>Vue.js</TabButton>
+                    </TabItem>
+                    <TabItem
+                      thumbnail={useColorModeValue(
+                        "/svgs/frameworks/nextjs-black.svg",
+                        "/svgs/frameworks/nextjs-white.svg"
+                      )}
+                      title="Next.js"
+                      modalContent={<NextJSModal />}
+                    >
+                      <TabButton>Next.js</TabButton>
+                    </TabItem>
+                  </TabItemManager>
                 </TabPanel>
                 <TabPanel>
-                  <Fade>
-                    <SimpleGrid columns={[2, 3, 3]} gap={6}>
-                      <TabItem
-                        thumbnail="/svgs/devops/docker.svg"
-                        title="Docker"
-                        modalContent={<DockerModal />}
-                      >
-                        <TabButton>Docker</TabButton>
-                      </TabItem>
-                      <TabItem
-                        thumbnail="/svgs/devops/kubernetes.svg"
-                        tooltip="Kubernetes"
-                        title="Kubernetes"
-                        modalContent={<KubernetesModal />}
-                      >
-                        <TabButton>Kubernet...</TabButton>
-                      </TabItem>
-                      <TabItem
-                        thumbnail="/svgs/devops/github-actions.svg"
-                        tooltip="GitHub Actions"
-                        title="GitHub Actions"
-                        modalContent={<GitHubActionsModal />}
-                      >
-                        <TabButton>GitHub A...</TabButton>
-                      </TabItem>
-                      <TabItem
-                        thumbnail="/svgs/devops/azure-pipelines.svg"
-                        tooltip="Azure Pipelines"
-                        title="Azure Pipelines"
-                        modalContent={<AzurePipelinesModal />}
-                      >
-                        <TabButton>Azure Pi...</TabButton>
-                      </TabItem>
-                    </SimpleGrid>
-                  </Fade>
+                  <TabItemManager>
+                    <TabItem
+                      thumbnail="/svgs/devops/docker.svg"
+                      title="Docker"
+                      modalContent={<DockerModal />}
+                    >
+                      <TabButton>Docker</TabButton>
+                    </TabItem>
+                    <TabItem
+                      thumbnail="/svgs/devops/kubernetes.svg"
+                      tooltip="Kubernetes"
+                      title="Kubernetes"
+                      modalContent={<KubernetesModal />}
+                    >
+                      <TabButton>Kubernet...</TabButton>
+                    </TabItem>
+                    <TabItem
+                      thumbnail="/svgs/devops/github-actions.svg"
+                      tooltip="GitHub Actions"
+                      title="GitHub Actions"
+                      modalContent={<GitHubActionsModal />}
+                    >
+                      <TabButton>GitHub A...</TabButton>
+                    </TabItem>
+                    <TabItem
+                      thumbnail="/svgs/devops/azure-pipelines.svg"
+                      tooltip="Azure Pipelines"
+                      title="Azure Pipelines"
+                      modalContent={<AzurePipelinesModal />}
+                    >
+                      <TabButton>Azure Pi...</TabButton>
+                    </TabItem>
+                  </TabItemManager>
                 </TabPanel>
               </TabPanels>
             </Tabs>
