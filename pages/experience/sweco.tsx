@@ -48,8 +48,8 @@ const Sweco: NextPageWithLayout = () => {
             DevOps platforms (Jenkins, Azure DevOps and GitHub Actions);
           </ListItem>
           <ListItem>
-            researched and created POCs for CVE detection. For SCA (Snyk and Mend bolt) and
-            for DAST (OWASP Zap Proxy and Probely);
+            researched and created POCs for CVE detection. For SCA (Snyk and
+            Mend bolt) and for DAST (OWASP Zap Proxy and Probely);
           </ListItem>
           <ListItem>
             setup a number of multi pipline projects in Jenkins;

@@ -36,8 +36,8 @@ const ProjectC: NextPageWithLayout = () => {
           open source app framework in Python.
         </Text>
         <Text as="p" mt={4}>
-          In the project I was responsible for the middleware, the layout of the downloadable
-          PDF, the event map and the Docker integration.
+          In the project I was responsible for the middleware, the layout of the
+          downloadable PDF, the event map and the Docker integration.
         </Text>
         <List my={4}>
           <ListItem>

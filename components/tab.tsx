@@ -81,7 +81,7 @@ type TabItemManagerProps = {
 };
 
 export const TabItemManager = ({ children }: TabItemManagerProps) => {
-  const [index, setIndex] = useState<number>(2);
+  const [rows, setRows] = useState<number>(2);
 
   const base = 2;
   const other = 3;
@@ -89,18 +89,18 @@ export const TabItemManager = ({ children }: TabItemManagerProps) => {
   const cols = isSm ? other : base;
 
   const overflow =
-    !(children.length % cols == 0 && children.length - 3 <= index) &&
-    children.length > index * cols;
+    !(children.length % cols == 0 && children.length - cols <= rows) &&
+    children.length > rows * cols;
 
   const increaseIndex = () => {
-    if (children.length > index * cols) {
-      if (overflow) setIndex(index + 1);
+    if (children.length > rows * cols) {
+      if (overflow) setRows(rows + 1);
     }
   };
   const decreaseIndex = () => {
-    if (index - 1 >= 0) setIndex(index - 1);
+    if (rows - 1 >= 0) setRows(rows - 1);
   };
-  let shownItems = children.slice(0, index * cols);
+  let shownItems = children.slice(0, rows * cols);
 
   let keyCounter = 0;
   const delay = 0.1;
@@ -113,7 +113,7 @@ export const TabItemManager = ({ children }: TabItemManagerProps) => {
           </Section>
         ))}
       </SimpleGrid>
-      {!(index * cols === cols * 2) && (
+      {!(cols * rows === cols * 2) && (
         <Section delay={delay}>
           <TabActionButton
             onClick={decreaseIndex}

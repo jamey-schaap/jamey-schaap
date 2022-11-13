@@ -19,8 +19,8 @@ const Analysis8Assignment: NextPageWithLayout = () => {
         <Text as="p">
           This project was a part of the web security course I followed in the
           last quarter of my second year in my computer science studies. In this
-          course I learned input validation, output validation, HTTPS, SQL- and shell
-          injection, XSS and cryptography.
+          course I learned input validation, output validation, HTTPS, SQL- and
+          shell injection, XSS and cryptography.
         </Text>
         <Text as="p" mt={4}>
           The project is a user managment application, with roles that have

@@ -190,8 +190,8 @@ export const NextJSModal = () => (
     description={
       <Text>
         Next.js is the framework I most recently picked up. This portfolio is my
-        first project in Next.js (v12.3.1) and at the moment this is my favorite frontend
-        framework. I am looking forward to Next.js 13!
+        first project in Next.js (v12.3.1) and at the moment this is my favorite
+        frontend framework. I am looking forward to Next.js 13!
       </Text>
     }
     projectGridItems={[

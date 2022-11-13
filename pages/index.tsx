@@ -195,7 +195,7 @@ const Home: NextPageWithLayout = () => {
               <SectionInfo>
                 <Text as="i">HAVO Economics and Society</Text> at{" "}
                 <Tooltip label="No website exists anymore, unfortunately.">
-                  <Link>Calvijn Vreewijk</Link>
+                  <Link>CSG Calvijn Vreewijk</Link>
                 </Tooltip>
               </SectionInfo>
             </SectionRow>

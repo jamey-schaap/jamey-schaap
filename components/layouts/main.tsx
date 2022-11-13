@@ -11,7 +11,7 @@ type MainProps = {
 
 const Main = ({ children, router }: MainProps) => {
   const path = router ? router.asPath : "";
-  
+
   return (
     <Box as="main" pb={8}>
       <meta name="viewport" content="width=device-width, initial-scale=1" />

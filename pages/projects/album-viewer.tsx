@@ -24,10 +24,10 @@ const AlbumViewer: NextPageWithLayout = () => {
           practicum part, which I finished with a 9.8/10.
         </Text>
         <Text as="p" mt={4}>
-          The project consits of a front- and backend (API), which gets build and
-          tested in a GitHub Actions pipeline. A container image then gets build
-          of this build and gets pushed to AWS ECR. The frontend is deployed on
-          and by AWS S3 and the API gets deployed by AWS CodeDeploy.
+          The project consits of a front- and backend (API), which gets build
+          and tested in a GitHub Actions pipeline. A container image then gets
+          build of this build and gets pushed to AWS ECR. The frontend is
+          deployed on and by AWS S3 and the API gets deployed by AWS CodeDeploy.
         </Text>
         <List my={4}>
           <ListItem>

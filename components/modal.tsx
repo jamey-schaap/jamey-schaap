@@ -52,8 +52,7 @@ export const ModalGridManager = ({ children }: ModalGridManagerProps) => {
       setCount(newValue);
       if (newValue <= 0) {
         setDecreaseDisabled(true);
-      }
-      else if (newValue >= children.length / multiplier) {
+      } else if (newValue >= children.length / multiplier) {
         setIncreaseDisabled(true);
       }
     }
