@@ -36,7 +36,7 @@ const Logo = () => {
           onMouseUp={() => SetActive(false)}
         >
           <Image
-            src="/svgs/coffee.svg"
+            src="/svgs/poker.svg"
             alt=""
             width="24"
             height="24"

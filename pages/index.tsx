@@ -15,6 +15,7 @@ import {
   Divider,
   Center,
   Button,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import MainLayout from "../components/layouts/main";
 import ArticleLayout from "../components/layouts/article";
@@ -63,6 +64,7 @@ import {
   GitHubActionsModal,
   KubernetesModal,
 } from "../components/modal-content/devops-modals";
+import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
 
 const ProfileImage = chakra(Image, {
   shouldForwardProp: (prop: any) =>
@@ -71,7 +73,8 @@ const ProfileImage = chakra(Image, {
 
 const Home: NextPageWithLayout = () => {
   const { tabIndex, setTabIndex } = useContext(TabContext);
-  const [index, setIndex] = useState<number>(0);
+  const [isSm] = useMediaQuery("(min-width: 30em)");
+  const dividerColor = useColorModeValue("#525252", "inherit");
 
   return (
     <>
@@ -113,21 +116,27 @@ const Home: NextPageWithLayout = () => {
                   Jamey Schaap
                 </Heading>
                 <Text as="i">Third-year computer science student</Text>
-                <Divider
-                  borderColor={useColorModeValue("#525252", "inherit")}
-                />
+                <Divider borderColor={dividerColor} />
                 <Text as="i">Intern Software Engineer DevOps</Text>
-                <Divider
-                  borderColor={useColorModeValue("#525252", "inherit")}
-                />
-                <br />
-                <Divider
-                  borderColor={useColorModeValue("#525252", "inherit")}
-                />
-                <br />
-                <Divider
-                  borderColor={useColorModeValue("#525252", "inherit")}
-                />
+                <Divider borderColor={dividerColor} />
+                <Text as="i">Fitness & programming enthusiast</Text>
+                <Divider borderColor={dividerColor} />
+                <Text display="inline-flex" alignItems="center" gap={1} pr={10}>
+                  <IoLogoGithub />
+                  <NextLink href="https://github.com/jaim-io" passHref>
+                    <Link target="_blank">GitHub</Link>
+                  </NextLink>
+                </Text>
+                <Text display="inline-flex" alignItems="center" gap={1}>
+                  <IoLogoLinkedin />
+                  <NextLink
+                    href="https://www.linkedin.com/in/jamey-schaap/"
+                    passHref
+                  >
+                    <Link target="_blank">LinkedIn</Link>
+                  </NextLink>
+                </Text>
+                <Divider borderColor={dividerColor} />
               </Box>
             </Box>
           </Box>
