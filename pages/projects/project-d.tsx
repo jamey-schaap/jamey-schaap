@@ -3,7 +3,15 @@ import { NextPageWithLayout } from "../_app";
 import MainLayout from "../../components/layouts/main";
 import ArticleLayout from "../../components/layouts/article";
 import Layout from "../../components/layouts/article";
-import { Badge, Container, Link, List, ListItem, Text } from "@chakra-ui/react";
+import {
+  AspectRatio,
+  Badge,
+  Container,
+  Link,
+  List,
+  ListItem,
+  Text,
+} from "@chakra-ui/react";
 import { Router } from "next/router";
 import { HeadingImage, Meta, Title } from "../../components/projects";
 import NextLink from "next/link";
@@ -43,7 +51,7 @@ const ProjectC: NextPageWithLayout = () => {
           <ListItem>
             <Meta>Stack</Meta>
             Python 3.9 &{" "}
-            <NextLink href=" https://streamlit.io/" passHref>
+            <NextLink href="https://streamlit.io/" passHref>
               <Link target="_blank">Streamlit</Link>
             </NextLink>{" "}
             and SQLite
@@ -60,7 +68,22 @@ const ProjectC: NextPageWithLayout = () => {
               </Link>
             </NextLink>
           </ListItem>
+          <ListItem>
+            <Meta>Demo</Meta>
+            <NextLink href="https://youtu.be/ewKxmAW7dcM" passHref>
+              <Link target="_blank">https://youtu.be/ewKxmAW7dcM</Link>
+            </NextLink>
+          </ListItem>
         </List>
+        <AspectRatio ratio={16 / 9}>
+          <iframe
+            src="https://www.youtube.com/embed/ewKxmAW7dcM?rel=0"
+            title="Project D Demo"
+            frameBorder="0"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </AspectRatio>
       </Container>
     </Layout>
   );

@@ -3,7 +3,15 @@ import { NextPageWithLayout } from "../_app";
 import MainLayout from "../../components/layouts/main";
 import ArticleLayout from "../../components/layouts/article";
 import Layout from "../../components/layouts/article";
-import { Badge, Container, Link, List, ListItem, Text } from "@chakra-ui/react";
+import {
+  AspectRatio,
+  Badge,
+  Container,
+  Link,
+  List,
+  ListItem,
+  Text,
+} from "@chakra-ui/react";
 import { Router } from "next/router";
 import { HeadingImage, Meta, Title } from "../../components/projects";
 import NextLink from "next/link";
@@ -43,7 +51,22 @@ const ProjectC: NextPageWithLayout = () => {
               </Link>
             </NextLink>
           </ListItem>
+          <ListItem>
+            <Meta>Demo</Meta>
+            <NextLink href="https://youtu.be/6_TGA3oigoQ" passHref>
+              <Link target="_blank">https://youtu.be/6_TGA3oigoQ</Link>
+            </NextLink>
+          </ListItem>
         </List>
+        <AspectRatio ratio={16 / 9}>
+          <iframe
+            src="https://www.youtube.com/embed/6_TGA3oigoQ?rel=0"
+            title="Project C Demo"
+            frameBorder="0"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </AspectRatio>
       </Container>
     </Layout>
   );
