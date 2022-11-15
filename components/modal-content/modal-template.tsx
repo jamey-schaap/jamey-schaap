@@ -16,12 +16,14 @@ type TemplateProps = {
   description: ReactNode;
   projectGridItems?: ReactNode[];
   experience?: ReactNode;
+  certificates?: ReactNode;
 };
 
 const ModalTemplate = ({
   title,
   description,
   projectGridItems,
+  certificates,
   experience,
 }: TemplateProps) => {
   return (
@@ -46,6 +48,12 @@ const ModalTemplate = ({
               <>
                 <SectionHeading>Experience</SectionHeading>
                 <Box mb={5}>{experience}</Box>
+              </>
+            )}
+            {certificates && (
+              <>
+                <SectionHeading>Certificates</SectionHeading>
+                <Box mb={5}>{certificates}</Box>
               </>
             )}
             {projectGridItems && (

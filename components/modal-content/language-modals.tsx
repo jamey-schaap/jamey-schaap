@@ -53,6 +53,43 @@ export const CSharpModal = () => (
         with the language.
       </Text>
     }
+    certificates={
+      <List>
+        <ListItem>
+          <ListIcon as={IoMdSchool} />
+          <NextLink
+            href="https://www.udemy.com/certificate/UC-2624a9a1-0560-429c-a2c6-51f9784365d4/"
+            passHref
+          >
+            <Link target="_blank">
+              C# Basics for Beginners: Learn C# Fundamentals by Coding
+            </Link>
+          </NextLink>
+        </ListItem>
+        <ListItem>
+          <ListIcon as={IoMdSchool} />
+          <NextLink
+            href="https://www.udemy.com/certificate/UC-e484720a-0081-43b8-895f-137890c601b5/"
+            passHref
+          >
+            <Link target="_blank">
+              C# Intermediate: Classes, Interfaces and OOP
+            </Link>
+          </NextLink>
+        </ListItem>
+        <ListItem>
+          <ListIcon as={IoMdSchool} />
+          <NextLink
+            href="https://www.udemy.com/certificate/UC-cfec9deb-dcad-4353-90e1-14cba7797642/"
+            passHref
+          >
+            <Link target="_blank">
+              C# Advanced Topics: Prepare for Technical Interviews
+            </Link>
+          </NextLink>
+        </ListItem>
+      </List>
+    }
     experience={
       <List>
         <ListItem>
@@ -159,6 +196,21 @@ export const SQLModal = () => (
         first semeter of my second year of my computer sciences studies and I
         have been using it ever since.
       </Text>
+    }
+    certificates={
+      <List>
+        <ListItem>
+          <ListIcon as={IoMdSchool} />
+          <NextLink
+            href="https://www.udemy.com/certificate/UC-50f4e1df-7750-4371-a1b4-aef72cbcd49f/"
+            passHref
+          >
+            <Link target="_blank">
+              The Complete SQL bootcamp 2022: Go from Zero to Hero
+            </Link>
+          </NextLink>
+        </ListItem>
+      </List>
     }
     experience={
       <List>

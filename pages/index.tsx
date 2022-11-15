@@ -107,6 +107,7 @@ const Home: NextPageWithLayout = () => {
                       height="100%"
                       src="/images/profile-picture.png"
                       alt="Profile image"
+                      placeholder
                     />
                   </Unselectable>
                 </Box>
