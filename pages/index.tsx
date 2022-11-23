@@ -73,8 +73,13 @@ const ProfileImage = chakra(Image, {
 
 const Home: NextPageWithLayout = () => {
   const { tabIndex, setTabIndex } = useContext(TabContext);
-  const [isSm] = useMediaQuery("(min-width: 30em)");
   const dividerColor = useColorModeValue("#525252", "inherit");
+  const certificateLinkStyle = {
+    color: useColorModeValue("black", "white"),
+    "&:hover": {
+      color: useColorModeValue("#3d7aed", "#ffdd99"),
+    },
+  };
 
   return (
     <>
@@ -100,7 +105,7 @@ const Home: NextPageWithLayout = () => {
                   <Unselectable>
                     <ProfileImage
                       borderRadius="xl"
-                      borderColor="whiteAlpha.800"
+                      borderColor="whiteAlpha.700"
                       borderWidth={2}
                       borderStyle="solid"
                       width="100%"
@@ -153,114 +158,235 @@ const Home: NextPageWithLayout = () => {
           </Box>
           <Section delay={0.2}>
             <SectionHeading>Education</SectionHeading>
-            <SectionRow>
-              <SectionDate>
-                09-2020 to{" "}
-                <Text as="i" color={useColorModeValue("#3d7aed", "#ffdd99")}>
-                  present{" "}
-                </Text>
-              </SectionDate>
-              <SectionInfo>
-                <Text as="i">Computer Science</Text> at{" "}
-                <NextLink href="https://www.rotterdamuas.com/" passHref>
-                  <Link target="_blank">
-                    Rotterdam University of Applied Sciences
-                  </Link>
-                </NextLink>
-              </SectionInfo>
-            </SectionRow>
-            <SectionRow>
-              <SectionDate>09-2019 to 03-2020</SectionDate>
-              <SectionInfo>
-                <Text as="i">Human Resource Management</Text> at{" "}
-                <NextLink href="https://www.rotterdamuas.com/" passHref>
-                  <Link target="_blank">
-                    Rotterdam University of Applied Sciences
-                  </Link>
-                </NextLink>
-              </SectionInfo>
-            </SectionRow>
-            <SectionRow>
-              <SectionDate>09-2018 to 12-2018</SectionDate>
-              <SectionInfo>
-                <Text as="i">Business IT management</Text> at{" "}
-                <NextLink href="https://www.rotterdamuas.com/" passHref>
-                  <Link target="_blank">
-                    Rotterdam University of Applied Sciences
-                  </Link>
-                </NextLink>
-              </SectionInfo>
-            </SectionRow>
-            <SectionRow>
-              <SectionDate>09-2012 to 07-2017</SectionDate>
-              <SectionInfo>
-                <Text as="i">HAVO Economics and Society</Text> at{" "}
-                <Tooltip label="No website exists anymore, unfortunately.">
-                  <Link>CSG Calvijn Vreewijk</Link>
-                </Tooltip>
-              </SectionInfo>
-            </SectionRow>
+            <Section>
+              <SectionRow>
+                <SectionDate>
+                  09-2020 to{" "}
+                  <Text as="i" color={useColorModeValue("#3d7aed", "#ffdd99")}>
+                    present{" "}
+                  </Text>
+                </SectionDate>
+                <SectionInfo>
+                  <Text as="i">Computer Science</Text> at{" "}
+                  <NextLink href="https://www.rotterdamuas.com/" passHref>
+                    <Link target="_blank">
+                      Rotterdam University of Applied Sciences
+                    </Link>
+                  </NextLink>
+                </SectionInfo>
+              </SectionRow>
+              <SectionRow>
+                <SectionDate>09-2019 to 03-2020</SectionDate>
+                <SectionInfo>
+                  <Text as="i">Human Resource Management</Text> at{" "}
+                  <NextLink href="https://www.rotterdamuas.com/" passHref>
+                    <Link target="_blank">
+                      Rotterdam University of Applied Sciences
+                    </Link>
+                  </NextLink>
+                </SectionInfo>
+              </SectionRow>
+              <SectionRow>
+                <SectionDate>09-2018 to 12-2018</SectionDate>
+                <SectionInfo>
+                  <Text as="i">Business IT management</Text> at{" "}
+                  <NextLink href="https://www.rotterdamuas.com/" passHref>
+                    <Link target="_blank">
+                      Rotterdam University of Applied Sciences
+                    </Link>
+                  </NextLink>
+                </SectionInfo>
+              </SectionRow>
+              <SectionRow>
+                <SectionDate>09-2012 to 07-2017</SectionDate>
+                <SectionInfo>
+                  <Text as="i">HAVO Economics and Society</Text> at{" "}
+                  <Tooltip label="No website exists anymore, unfortunately.">
+                    <Link>CSG Calvijn Vreewijk</Link>
+                  </Tooltip>
+                </SectionInfo>
+              </SectionRow>
+            </Section>
             <br />
-            <SectionHeading>Experience</SectionHeading>
-            <SectionRow>
-              <SectionDate>
-                08-2022 to{" "}
-                <Text as="i" color={useColorModeValue("#3d7aed", "#ffdd99")}>
-                  present{" "}
-                </Text>{" "}
-              </SectionDate>
-              <SectionInfo>
-                <Text as="i">(Intern) Software Engineer DevOps</Text> at{" "}
-                <NextLink href="https://www.swecogroup.com/" passHref>
-                  <Link target="_blank">Sweco</Link>
-                </NextLink>
-              </SectionInfo>
-            </SectionRow>
-            <SectionRow>
-              <SectionDate>04-2019 to 09-2019</SectionDate>
-              <SectionInfo>
-                <Text as="i">Sales promotor</Text> at{" "}
-                <NextLink href="https://www.pepperminds.com/" passHref>
-                  <Link target="_blank">Pepperminds</Link>
-                </NextLink>
-              </SectionInfo>
-            </SectionRow>
-            <SectionRow>
-              <SectionDate>01-2019 to 06-2019</SectionDate>
-              <SectionInfo>
-                <Text as="i">Store clerk</Text> at{" "}
-                <NextLink href="https://www.ah.nl/over-ah" passHref>
-                  <Link target="_blank">Albert Heijn</Link>
-                </NextLink>
-              </SectionInfo>
-            </SectionRow>
-            <SectionRow>
-              <SectionDate>08-2018 to 09-2018</SectionDate>
-              <SectionInfo>
-                <Text as="i">Waiter & Bartender</Text> at{" "}
-                <NextLink href="https://venw.com/" passHref>
-                  <Link target="_blank">Verwiel en Wijngaard</Link>
-                </NextLink>
-              </SectionInfo>
-            </SectionRow>
-            <SectionRow>
-              <SectionDate>09-2017 to 06-2018</SectionDate>
-              <SectionInfo>
-                <Text as="i">Cashier & Customer service</Text> at{" "}
-                <NextLink href="https://www.makro.nl/over-makro" passHref>
-                  <Link target="_blank">Marko</Link>
-                </NextLink>
-              </SectionInfo>
-            </SectionRow>
-            <SectionRow>
-              <SectionDate>06-2015 to 06-2017</SectionDate>
-              <SectionInfo>
-                <Text as="i">Store clerk</Text> at{" "}
-                <NextLink href="https://www.ah.nl/over-ah" passHref>
-                  <Link target="_blank">Albert Heijn</Link>
-                </NextLink>
-              </SectionInfo>
-            </SectionRow>
+            <Tabs
+              isLazy
+              isFitted
+              variant="line"
+              colorScheme={useColorModeValue("#000", "#fff")}
+              borderColor={useColorModeValue("white", "#525252")}
+              onChange={(index) => setTabIndex(index)}
+            >
+              <TabList borderBottomWidth="2px" borderRadius="2px" color="gray">
+                <TabHeader>
+                  <Text fontSize={{ base: "18", md: "20" }}>Experience</Text>
+                </TabHeader>
+                <TabHeader>
+                  <Text fontSize={{ base: "18", md: "20" }}>Certificates</Text>
+                </TabHeader>
+              </TabList>
+              <TabPanels>
+                <TabPanel pl={0} pr={0} pb={0} pt={2.5}>
+                  <Section>
+                    <SectionRow>
+                      <SectionDate>
+                        08-2022 to{" "}
+                        <Text
+                          as="i"
+                          color={useColorModeValue("#3d7aed", "#ffdd99")}
+                        >
+                          present{" "}
+                        </Text>{" "}
+                      </SectionDate>
+                      <SectionInfo>
+                        <Text as="i">(Intern) Software Engineer DevOps</Text> at{" "}
+                        <NextLink href="https://www.swecogroup.com/" passHref>
+                          <Link target="_blank">Sweco</Link>
+                        </NextLink>
+                      </SectionInfo>
+                    </SectionRow>
+
+                    <SectionRow>
+                      <SectionDate>04-2019 to 09-2019</SectionDate>
+                      <SectionInfo>
+                        <Text as="i">Sales promotor</Text> at{" "}
+                        <NextLink href="https://www.pepperminds.com/" passHref>
+                          <Link target="_blank">Pepperminds</Link>
+                        </NextLink>
+                      </SectionInfo>
+                    </SectionRow>
+                    <SectionRow>
+                      <SectionDate>01-2019 to 06-2019</SectionDate>
+                      <SectionInfo>
+                        <Text as="i">Store clerk</Text> at{" "}
+                        <NextLink href="https://www.ah.nl/over-ah" passHref>
+                          <Link target="_blank">Albert Heijn</Link>
+                        </NextLink>
+                      </SectionInfo>
+                    </SectionRow>
+                    <SectionRow>
+                      <SectionDate>08-2018 to 09-2018</SectionDate>
+                      <SectionInfo>
+                        <Text as="i">Waiter & Bartender</Text> at{" "}
+                        <NextLink href="https://venw.com/" passHref>
+                          <Link target="_blank">Verwiel en Wijngaard</Link>
+                        </NextLink>
+                      </SectionInfo>
+                    </SectionRow>
+                    <SectionRow>
+                      <SectionDate>09-2017 to 06-2018</SectionDate>
+                      <SectionInfo>
+                        <Text as="i">Cashier & Customer service</Text> at{" "}
+                        <NextLink
+                          href="https://www.makro.nl/over-makro"
+                          passHref
+                        >
+                          <Link target="_blank">Marko</Link>
+                        </NextLink>
+                      </SectionInfo>
+                    </SectionRow>
+                    <SectionRow>
+                      <SectionDate>06-2015 to 06-2017</SectionDate>
+                      <SectionInfo>
+                        <Text as="i">Store clerk</Text> at{" "}
+                        <NextLink href="https://www.ah.nl/over-ah" passHref>
+                          <Link target="_blank">Albert Heijn</Link>
+                        </NextLink>
+                      </SectionInfo>
+                    </SectionRow>
+                  </Section>
+                </TabPanel>
+                <TabPanel pl={0} pr={0} pb={0} pt={2.5}>
+                  <Section>
+                    <SectionRow columnWith={70}>
+                      <SectionDate>11-2022</SectionDate>
+                      <SectionInfo>
+                        <Text as="i">
+                          Propedeutic Certificate in Computer Science
+                        </Text>
+                      </SectionInfo>
+                    </SectionRow>
+                    <SectionRow columnWith={70}>
+                      <SectionDate>08-2022</SectionDate>
+                      <SectionInfo>
+                        <NextLink
+                          href="https://www.udemy.com/certificate/UC-b512d857-2377-4f19-a6aa-15b1a09474ce/"
+                          passHref
+                        >
+                          <Link target="_blank" css={certificateLinkStyle}>
+                            <Text as="i">
+                              Kubernetes for the Absolute Beginners - Hands-on
+                            </Text>
+                          </Link>
+                        </NextLink>
+                      </SectionInfo>
+                    </SectionRow>
+                    <SectionRow columnWith={70}>
+                      <SectionDate>10-2022</SectionDate>
+                      <SectionInfo>
+                        <NextLink
+                          href="https://ude.my/UC-50f4e1df-7750-4371-a1b4-aef72cbcd49f/"
+                          passHref
+                        >
+                          <Link target="_blank" css={certificateLinkStyle}>
+                            <Text as="i">
+                              The Complete SQL bootcamp 2022: Go from Zero to
+                              Hero
+                            </Text>
+                          </Link>
+                        </NextLink>
+                      </SectionInfo>
+                    </SectionRow>
+                    <SectionRow columnWith={70}>
+                      <SectionDate>01-2022</SectionDate>
+                      <SectionInfo>
+                        <NextLink
+                          href="https://ude.my/UC-cfec9deb-dcad-4353-90e1-14cba7797642/"
+                          passHref
+                        >
+                          <Link target="_blank" css={certificateLinkStyle}>
+                            <Text as="i">
+                              C# Advanced Topics: Prepare for Technical
+                              Interviews
+                            </Text>
+                          </Link>
+                        </NextLink>
+                      </SectionInfo>
+                    </SectionRow>
+                    <SectionRow columnWith={70}>
+                      <SectionDate>01-2022</SectionDate>
+                      <SectionInfo>
+                        <NextLink
+                          href="https://ude.my/UC-e484720a-0081-43b8-895f-137890c601b5/"
+                          passHref
+                        >
+                          <Link target="_blank" css={certificateLinkStyle}>
+                            <Text as="i">
+                              C# Intermediate: Classes, Interfaces and OOP
+                            </Text>
+                          </Link>
+                        </NextLink>
+                      </SectionInfo>
+                    </SectionRow>
+                    <SectionRow columnWith={70}>
+                      <SectionDate>10-2021</SectionDate>
+                      <SectionInfo>
+                        <NextLink
+                          href="https://ude.my/UC-2624a9a1-0560-429c-a2c6-51f9784365d4/"
+                          passHref
+                        >
+                          <Link target="_blank" css={certificateLinkStyle}>
+                            <Text as="i">
+                              C# Basics for Beginners: Learn C# Fundamentals by
+                              Coding
+                            </Text>
+                          </Link>
+                        </NextLink>
+                      </SectionInfo>
+                    </SectionRow>
+                  </Section>
+                </TabPanel>
+              </TabPanels>
+            </Tabs>
             <br />
             <Tabs
               isLazy

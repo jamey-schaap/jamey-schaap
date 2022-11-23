@@ -59,9 +59,24 @@ export const KubernetesModal = () => (
     title="Kubernetes"
     description={
       <Text>
-        I have got no experience in Kubernetes right now, but I am going to
-        start studying it in the near feature.
+        I recently completed a beginner course in Kubernetes and I am planning
+        to use Kubernetes in my next project.
       </Text>
+    }
+    certificates={
+      <List>
+        <ListItem>
+          <ListIcon as={IoMdSchool} />
+          <NextLink
+            href="https://www.udemy.com/certificate/UC-b512d857-2377-4f19-a6aa-15b1a09474ce/"
+            passHref
+          >
+            <Link target="_blank">
+              Kubernetes for the Absolute Beginners - Hands-on
+            </Link>
+          </NextLink>
+        </ListItem>
+      </List>
     }
   />
 );
@@ -117,7 +132,7 @@ export const AzurePipelinesModal = () => (
         <NextLink href="https://www.swecogroup.com/" passHref>
           <Link target="_blank">Sweco</Link>
         </NextLink>
-        , I setup a couple of proof of concept pipelines.
+        , I setup a couple of proof of concept pipelines in Azure Pipelines.
       </Text>
     }
     experience={

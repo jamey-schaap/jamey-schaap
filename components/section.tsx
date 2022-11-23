@@ -47,12 +47,18 @@ export const SectionInfo = ({ children, ...props }: BioProps) => (
   </GridItem>
 );
 
-export const SectionRow = ({ children, ...props }: BioProps) => (
+type SectionRowProps = { columnWith?: number } & BioProps;
+
+export const SectionRow = ({
+  children,
+  columnWith = 160,
+  ...props
+}: SectionRowProps) => (
   <Grid
     templateAreas={`
       "date info"
       `}
-    gridTemplateColumns={"160px 1fr"}
+    gridTemplateColumns={`${columnWith}px 1fr`}
     gap="0"
     {...props}
   >
