@@ -302,11 +302,17 @@ const Home: NextPageWithLayout = () => {
                       <SectionInfo>
                         <Text as="i">
                           Propedeutic Certificate in Computer Science
-                        </Text>
+                        </Text>{" "}
+                        at{" "}
+                        <NextLink href="https://www.rotterdamuas.com/" passHref>
+                          <Link target="_blank">
+                            Rotterdam University of Applied Sciences
+                          </Link>
+                        </NextLink>
                       </SectionInfo>
                     </SectionRow>
                     <SectionRow columnWith={70}>
-                      <SectionDate>08-2022</SectionDate>
+                      <SectionDate>11-2022</SectionDate>
                       <SectionInfo>
                         <NextLink
                           href="https://www.udemy.com/certificate/UC-b512d857-2377-4f19-a6aa-15b1a09474ce/"
@@ -315,7 +321,14 @@ const Home: NextPageWithLayout = () => {
                           <Link target="_blank" css={certificateLinkStyle}>
                             <Text as="i">
                               Kubernetes for the Absolute Beginners - Hands-on
-                            </Text>
+                            </Text>{" "}
+                            at{" "}
+                            <NextLink
+                              href="https://www.udemy.com/course/learn-kubernetes/"
+                              passHref
+                            >
+                              <Link target="_blank">Udemy</Link>
+                            </NextLink>
                           </Link>
                         </NextLink>
                       </SectionInfo>
@@ -332,6 +345,13 @@ const Home: NextPageWithLayout = () => {
                               The Complete SQL bootcamp 2022: Go from Zero to
                               Hero
                             </Text>
+                            at{" "}
+                            <NextLink
+                              href="https://www.udemy.com/course/the-complete-sql-bootcamp/"
+                              passHref
+                            >
+                              <Link target="_blank">Udemy</Link>
+                            </NextLink>
                           </Link>
                         </NextLink>
                       </SectionInfo>
@@ -347,7 +367,14 @@ const Home: NextPageWithLayout = () => {
                             <Text as="i">
                               C# Advanced Topics: Prepare for Technical
                               Interviews
-                            </Text>
+                            </Text>{" "}
+                            at{" "}
+                            <NextLink
+                              href="https://www.udemy.com/course/csharp-advanced/"
+                              passHref
+                            >
+                              <Link target="_blank">Udemy</Link>
+                            </NextLink>
                           </Link>
                         </NextLink>
                       </SectionInfo>
@@ -362,7 +389,14 @@ const Home: NextPageWithLayout = () => {
                           <Link target="_blank" css={certificateLinkStyle}>
                             <Text as="i">
                               C# Intermediate: Classes, Interfaces and OOP
-                            </Text>
+                            </Text>{" "}
+                            at{" "}
+                            <NextLink
+                              href="https://www.udemy.com/course/csharp-intermediate-classes-interfaces-and-oop/"
+                              passHref
+                            >
+                              <Link target="_blank">Udemy</Link>
+                            </NextLink>
                           </Link>
                         </NextLink>
                       </SectionInfo>
@@ -378,7 +412,14 @@ const Home: NextPageWithLayout = () => {
                             <Text as="i">
                               C# Basics for Beginners: Learn C# Fundamentals by
                               Coding
-                            </Text>
+                            </Text>{" "}
+                            at{" "}
+                            <NextLink
+                              href="https://www.udemy.com/course/csharp-tutorial-for-beginners/"
+                              passHref
+                            >
+                              <Link target="_blank">Udemy</Link>
+                            </NextLink>
                           </Link>
                         </NextLink>
                       </SectionInfo>
