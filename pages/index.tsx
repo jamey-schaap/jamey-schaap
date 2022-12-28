@@ -62,6 +62,7 @@ import {
   AzurePipelinesModal,
   DockerModal,
   GitHubActionsModal,
+  JenkinsModal,
   KubernetesModal,
 } from "../components/modal-content/devops-modals";
 import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
@@ -579,6 +580,13 @@ const Home: NextPageWithLayout = () => {
                       modalContent={<GitHubActionsModal />}
                     >
                       <TabButton>GitHub A...</TabButton>
+                    </TabItem>
+                    <TabItem
+                      thumbnail="/svgs/devops/jenkins.svg"
+                      title="Jenkins"
+                      modalContent={<JenkinsModal />}
+                    >
+                      <TabButton>Jenkins</TabButton>
                     </TabItem>
                     <TabItem
                       thumbnail="/svgs/devops/azure-pipelines.svg"

@@ -132,7 +132,32 @@ export const AzurePipelinesModal = () => (
         <NextLink href="https://www.swecogroup.com/" passHref>
           <Link target="_blank">Sweco</Link>
         </NextLink>
-        , I setup a couple of proof of concept pipelines in Azure Pipelines.
+        , I setup a number of proof of concept pipelines in Azure Pipelines.
+      </Text>
+    }
+    experience={
+      <List>
+        <ListItem>
+          <ListIcon as={GiSuitcase} />
+          <NextLink href="https://www.swecogroup.com/" passHref>
+            <Link target="_blank">Sweco</Link>
+          </NextLink>
+        </ListItem>
+      </List>
+    }
+  />
+);
+
+export const JenkinsModal = () => (
+  <ModalTemplate
+    title="Jenkins"
+    description={
+      <Text>
+        During my internship at{" "}
+        <NextLink href="https://www.swecogroup.com/" passHref>
+          <Link target="_blank">Sweco</Link>
+        </NextLink>
+        , I created and worked on multiple Jenkins pipelines regarding CI/CD and automation processes.
       </Text>
     }
     experience={

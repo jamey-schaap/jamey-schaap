@@ -247,8 +247,14 @@ export const PowershellModal = () => (
         <NextLink href="https://www.swecogroup.com/" passHref>
           <Link target="_blank">Sweco</Link>
         </NextLink>{" "}
-        I created a Powershell plugin in order to send notifications of the
-        statuses of Jenkins jobs to our Microsoft Teams Channel.
+        I created a Powershell notification application that sends a notification based on the
+        status of a Jenkins job that has finished. This notification is a
+        message in our Microsoft Teams team.
+        <br />
+        <br />
+        The project started off in Powershell Desktop 5, but I later migrated the
+        project to Powershell Core 7, since we were planning to use it on both
+        Windows and Linux machines.
       </Text>
     }
     experience={
@@ -269,7 +275,7 @@ export const BashModal = () => (
     title="Bash"
     description={
       <Text>
-        I followed a course in bash scripting in the first year of my computer
+        I followed a course in Bash scripting in the first year of my computer
         science studies. Next to this I have done some minor bash scripting in
         personal projects and at{" "}
         <NextLink href="https://www.swecogroup.com/" passHref>

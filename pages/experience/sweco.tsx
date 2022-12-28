@@ -40,22 +40,22 @@ const Sweco: NextPageWithLayout = () => {
           , a web-based management system.
         </Text>
         <Text as="p" mt={4}>
-          During my internship I:
+          What I worked on during my internship:
         </Text>
         <UnorderedList pl={4}>
           <ListItem>
-            researched and created an advisory report regarding three different
+            Conducted research and created an advisory report regarding three
             DevOps platforms (Jenkins, Azure DevOps and GitHub Actions);
           </ListItem>
           <ListItem>
-            researched and created POCs for CVE detection. For SCA (Snyk and
-            Mend bolt) and for DAST (OWASP Zap Proxy and Probely);
+            Conducted research and createds POCs (Proof of Concepts) for CVE detection regarding SCA (Software Composition Analysis) and DAST (Dynamic Application Security Scanning) scanning. For SCA (Retire.js, Owasp Dependency Check, Grype, Debricked, Snyk and
+            Mend bolt) and for DAST (OWASP Zap Proxy, StackHawk and Probely);
           </ListItem>
           <ListItem>
-            setup a number of multi pipline projects in Jenkins;
+            Setup a number of multi pipline projects in Jenkins;
           </ListItem>
-          <ListItem>created a custom plugin in Powershell;</ListItem>
-          <ListItem>worked on other work items from the scrumboard.</ListItem>
+          <ListItem>Created a notification application in Powershell;</ListItem>
+          <ListItem>Worked on other work items from the scrumboard.</ListItem>
         </UnorderedList>
         <List my={4}>
           <ListItem>
@@ -64,7 +64,11 @@ const Sweco: NextPageWithLayout = () => {
           </ListItem>
           <ListItem>
             <Meta>DevOps</Meta>
-            Jenkins & Azure DevOps
+            Ansible (IaC), Jenkins & Azure DevOps
+          </ListItem>
+          <ListItem>
+            <Meta>Security</Meta>
+            SCA, SBOM, SAST & DAST
           </ListItem>
           <ListItem>
             <Meta>Scrum</Meta>
