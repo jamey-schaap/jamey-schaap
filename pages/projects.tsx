@@ -14,6 +14,7 @@ import {
   BookstoreAPIPreview,
   GoFitnessPreview,
   JaimIOPreview,
+  JenkinsMSTeamsIntegrationPreview,
   ProjectCPreview,
   ProjectDPreview,
   SongAPIPreview,
@@ -26,6 +27,7 @@ const Projects: NextPageWithLayout = () => {
     <ArcadePreview key="arcade" />,
     <GoFitnessPreview key="go-fitness" />,
     <BookstoreAPIPreview key="bookstore-api" />,
+    <JenkinsMSTeamsIntegrationPreview key="jenkins-msteams-integration" />,
   ];
 
   const universityProjects: ReactNode[] = [
@@ -34,6 +36,7 @@ const Projects: NextPageWithLayout = () => {
     <AlbumViewerPreview key="album-viewer" />,
     <Analysis8AssignmentPreview key="analysis-8-assignment" />,
   ];
+
   return (
     <Layout>
       <Container>

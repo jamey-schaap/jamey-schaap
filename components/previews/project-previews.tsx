@@ -104,3 +104,13 @@ export const JaimIOPreview = () => (
     is the website your looking at right now! My portfolio.
   </ProjectGridItem>
 );
+
+export const JenkinsMSTeamsIntegrationPreview = () => (
+  <ProjectGridItem
+    thumbnail="/svgs/projects/jenkins-msteams-integration.svg"
+    title="Jenkins & Microsoft Teams integration"
+    path="/projects/jenkins-msteams-integration"
+  >
+    is an integration between Jenkins and Microsoft Teams.
+  </ProjectGridItem>
+);

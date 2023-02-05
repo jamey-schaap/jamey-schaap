@@ -124,9 +124,9 @@ const Home: NextPageWithLayout = () => {
                 </Heading>
                 <Text as="i">Third-year computer science student</Text>
                 <Divider borderColor={dividerColor} />
-                <Text as="i">Intern Software Engineer DevOps</Text>
-                <Divider borderColor={dividerColor} />
                 <Text as="i">Fitness & programming enthusiast</Text>
+                <Divider borderColor={dividerColor} />
+                <br />
                 <Divider borderColor={dividerColor} />
                 <Text display="inline-flex" alignItems="center" gap={1} pr={10}>
                   <IoLogoGithub />
@@ -162,13 +162,29 @@ const Home: NextPageWithLayout = () => {
             <Section>
               <SectionRow>
                 <SectionDate>
+                  02-2023 to{" "}
+                  <Text as="i" color={useColorModeValue("#3d7aed", "#ffdd99")}>
+                    present{" "}
+                  </Text>
+                </SectionDate>
+                <SectionInfo>
+                  <Text as="i">Minor Software Engineering</Text> at{" "}
+                  <NextLink href="https://www.rotterdamuas.com/" passHref>
+                    <Link target="_blank">
+                      Rotterdam University of Applied Sciences
+                    </Link>
+                  </NextLink>
+                </SectionInfo>
+              </SectionRow>
+              <SectionRow>
+                <SectionDate>
                   09-2020 to{" "}
                   <Text as="i" color={useColorModeValue("#3d7aed", "#ffdd99")}>
                     present{" "}
                   </Text>
                 </SectionDate>
                 <SectionInfo>
-                  <Text as="i">Computer Science</Text> at{" "}
+                  <Text as="i">BSc Computer Science</Text> at{" "}
                   <NextLink href="https://www.rotterdamuas.com/" passHref>
                     <Link target="_blank">
                       Rotterdam University of Applied Sciences
@@ -179,7 +195,7 @@ const Home: NextPageWithLayout = () => {
               <SectionRow>
                 <SectionDate>09-2019 to 03-2020</SectionDate>
                 <SectionInfo>
-                  <Text as="i">Human Resource Management</Text> at{" "}
+                  <Text as="i">BSc Human Resource Management</Text> at{" "}
                   <NextLink href="https://www.rotterdamuas.com/" passHref>
                     <Link target="_blank">
                       Rotterdam University of Applied Sciences
@@ -190,7 +206,7 @@ const Home: NextPageWithLayout = () => {
               <SectionRow>
                 <SectionDate>09-2018 to 12-2018</SectionDate>
                 <SectionInfo>
-                  <Text as="i">Business IT management</Text> at{" "}
+                  <Text as="i">BSc Business IT management</Text> at{" "}
                   <NextLink href="https://www.rotterdamuas.com/" passHref>
                     <Link target="_blank">
                       Rotterdam University of Applied Sciences
@@ -229,15 +245,7 @@ const Home: NextPageWithLayout = () => {
                 <TabPanel pl={0} pr={0} pb={0} pt={2.5}>
                   <Section>
                     <SectionRow>
-                      <SectionDate>
-                        08-2022 to{" "}
-                        <Text
-                          as="i"
-                          color={useColorModeValue("#3d7aed", "#ffdd99")}
-                        >
-                          present{" "}
-                        </Text>{" "}
-                      </SectionDate>
+                      <SectionDate>08-2022 to 03-2023</SectionDate>
                       <SectionInfo>
                         <Text as="i">(Intern) Software Engineer DevOps</Text> at{" "}
                         <NextLink href="https://www.swecogroup.com/" passHref>

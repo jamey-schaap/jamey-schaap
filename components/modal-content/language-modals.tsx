@@ -11,6 +11,7 @@ import {
   BookstoreAPIPreview,
   GoFitnessPreview,
   JaimIOPreview,
+  JenkinsMSTeamsIntegrationPreview,
   ProjectCPreview,
   ProjectDPreview,
   SongAPIPreview,
@@ -247,14 +248,13 @@ export const PowershellModal = () => (
         <NextLink href="https://www.swecogroup.com/" passHref>
           <Link target="_blank">Sweco</Link>
         </NextLink>{" "}
-        I created a Powershell notification application that sends a notification based on the
-        status of a Jenkins job that has finished. This notification is a
-        message in our Microsoft Teams team.
+        I created an integration between Microsoft Teams and Jenkins in order to
+        inform the developers about the results of Jenkins builds.
         <br />
         <br />
-        The project started off in Powershell Desktop 5, but I later migrated the
-        project to Powershell Core 7, since we were planning to use it on both
-        Windows and Linux machines.
+        Next to this project I used PowerShell scripting to amount automate
+        certian tasks, like creating an estimation of lines of codes of certain
+        repos using CLOC. 
       </Text>
     }
     experience={
@@ -267,6 +267,11 @@ export const PowershellModal = () => (
         </ListItem>
       </List>
     }
+    projectGridItems={[
+      <Section delay={0.1} key="sect-1">
+        <JenkinsMSTeamsIntegrationPreview />
+      </Section>,
+    ]}
   />
 );
 
@@ -277,7 +282,7 @@ export const BashModal = () => (
       <Text>
         I followed a course in Bash scripting in the first year of my computer
         science studies. Next to this I have done some minor bash scripting in
-        personal projects and at{" "}
+        personal projects and during my internship at{" "}
         <NextLink href="https://www.swecogroup.com/" passHref>
           <Link target="_blank">Sweco</Link>
         </NextLink>

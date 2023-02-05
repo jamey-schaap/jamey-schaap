@@ -24,23 +24,31 @@ const Sweco: NextPageWithLayout = () => {
       <Container>
         <HeadingImage id={useColorModeValue("sweco-black", "sweco-white")} />
         <Title>
-          Sweco <Badge>08/2022 - present</Badge>
+          Sweco <Badge>08/2022 - 02/2023</Badge>
         </Title>
         <Text as="p">
-          I am currently working an internship at{" "}
+          From August 2022 to Febuary 2023, I worked an internship at{" "}
           <NextLink href="https://www.swecogroup.com/" passHref>
             <Link target="_blank">Sweco</Link>
           </NextLink>{" "}
-          as a Software Engineer DevOps. I work in the GIS & IT department in
-          team Obsurv Software. Team Obsurv Software develops a number of
-          products, one of which{" "}
+          as a Software Engineer DevOps. I worked within the DevSecOps team of
+          Obsurv Software which falls under the GIS & ICT department. Team
+          Obsurv Software develops a number of products, one of which{" "}
           <NextLink href="https://obsurv.nl/" passHref>
             <Link target="_blank">Obsurv</Link>
           </NextLink>
           , a web-based management system.
+          <br />
+          <br />
+          During my internship I mainly focused on ten learning objectives,
+          which were linked to six competencies (manage and control, analysing,
+          advising, designing, realizing and professional skills) and created a
+          portfolio about this. In addition to this I also worked on the product
+          backlog. These were diverse tasks such as automation, working on the
+          CI/CD infrastructure and executing many different Scrum Spikes.
         </Text>
         <Text as="p" mt={4}>
-          What I worked on during my internship:
+          These were some things I did in order to complete my learning objectives:
         </Text>
         <UnorderedList pl={4}>
           <ListItem>
@@ -48,19 +56,21 @@ const Sweco: NextPageWithLayout = () => {
             DevOps platforms (Jenkins, Azure DevOps and GitHub Actions);
           </ListItem>
           <ListItem>
-            Conducted research and createds POCs (Proof of Concepts) for CVE detection regarding SCA (Software Composition Analysis) and DAST (Dynamic Application Security Scanning) scanning. For SCA (Retire.js, Owasp Dependency Check, Grype, Debricked, Snyk and
-            Mend bolt) and for DAST (OWASP Zap Proxy, StackHawk and Probely);
+            Conducted research and createds POCs (Proof of Concepts) for CVE
+            detection regarding SCA (Software Composition Analysis) and DAST
+            (Dynamic Application Security Scanning) scanning. For SCA
+            (Retire.js, Owasp Dependency Check, Grype, Debricked, Snyk and Mend
+            bolt) and for DAST (OWASP Zap Proxy, StackHawk and Probely);
           </ListItem>
           <ListItem>
             Setup a number of multi pipline projects in Jenkins;
           </ListItem>
-          <ListItem>Created a notification application in Powershell;</ListItem>
-          <ListItem>Worked on other work items from the scrumboard.</ListItem>
+          <ListItem>Created an integration between Jenkins and Microsoft Teams in PowerShell Core;</ListItem>
         </UnorderedList>
         <List my={4}>
           <ListItem>
             <Meta>Scripting</Meta>
-            Powershell
+            Powershell, Bash & Batch
           </ListItem>
           <ListItem>
             <Meta>DevOps</Meta>
