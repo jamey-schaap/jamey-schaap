@@ -114,3 +114,13 @@ export const JenkinsMSTeamsIntegrationPreview = () => (
     is an integration between Jenkins and Microsoft Teams.
   </ProjectGridItem>
 );
+
+export const SpartanFitnessPreview = () => (
+  <ProjectGridItem
+    thumbnail="/svgs/projects/spartan-fitness.svg"
+    title="SpartanFitness"
+    path="/projects/spartan-fitness"
+  >
+    is platform to catalog exercises, muscle groups and workouts.
+  </ProjectGridItem>
+);

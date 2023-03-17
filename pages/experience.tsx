@@ -21,7 +21,7 @@ const Experience: NextPageWithLayout = () => {
   ];
 
   return (
-    <Layout>
+    <Layout title="Experience">
       <Container>
         <SectionHeading>Work</SectionHeading>
         <SimpleGrid columns={[1, 1, 2]} gap={6} pb={5}>

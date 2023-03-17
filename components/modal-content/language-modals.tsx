@@ -15,6 +15,7 @@ import {
   ProjectCPreview,
   ProjectDPreview,
   SongAPIPreview,
+  SpartanFitnessPreview,
 } from "../previews/project-previews";
 import { GiSuitcase } from "react-icons/gi";
 
@@ -50,7 +51,7 @@ export const CSharpModal = () => (
       <Text>
         During the first 2 years of my computer science studies, I worked with
         and created a number of project with C#. C# together with Python is the
-        language I am most familliar with, having around 2 years of expierence
+        language I am most familliar with, having around 2.5 years of expierence
         with the language.
       </Text>
     }
@@ -105,12 +106,15 @@ export const CSharpModal = () => (
     }
     projectGridItems={[
       <Section delay={0.1} key="sect-1">
-        <AlbumViewerPreview />
+        <SpartanFitnessPreview />
       </Section>,
       <Section delay={0.1} key="sect-2">
-        <SongAPIPreview />
+        <AlbumViewerPreview />
       </Section>,
       <Section delay={0.1} key="sect-3">
+        <SongAPIPreview />
+      </Section>,
+      <Section delay={0.1} key="sect-4">
         <ProjectCPreview />
       </Section>,
     ]}
@@ -254,7 +258,7 @@ export const PowershellModal = () => (
         <br />
         Next to this project I used PowerShell scripting to amount automate
         certian tasks, like creating an estimation of lines of codes of certain
-        repos using CLOC. 
+        repos using CLOC.
       </Text>
     }
     experience={

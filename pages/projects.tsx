@@ -18,16 +18,18 @@ import {
   ProjectCPreview,
   ProjectDPreview,
   SongAPIPreview,
+  SpartanFitnessPreview,
 } from "../components/previews/project-previews";
 
 const Projects: NextPageWithLayout = () => {
   const personalProjects: ReactNode[] = [
     <JaimIOPreview key="jaim-io" />,
-    <SongAPIPreview key="song-api" />,
+    <SpartanFitnessPreview key="spartan-fitness" />,
+    <JenkinsMSTeamsIntegrationPreview key="jenkins-msteams-integration" />,
     <ArcadePreview key="arcade" />,
+    <SongAPIPreview key="song-api" />,
     <GoFitnessPreview key="go-fitness" />,
     <BookstoreAPIPreview key="bookstore-api" />,
-    <JenkinsMSTeamsIntegrationPreview key="jenkins-msteams-integration" />,
   ];
 
   const universityProjects: ReactNode[] = [
@@ -38,7 +40,7 @@ const Projects: NextPageWithLayout = () => {
   ];
 
   return (
-    <Layout>
+    <Layout title="Projects">
       <Container>
         <SectionHeading>Personal Projects</SectionHeading>
         <SimpleGrid columns={[1, 1, 2]} gap={6} pb={5}>
