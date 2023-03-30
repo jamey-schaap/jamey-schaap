@@ -23,7 +23,7 @@ const Modal = ({ isOpen, onOpen, onClose, children }: ModalProps) => {
 
   return (
     <>
-      <ChakraModal isCentered isOpen={isOpen} onClose={onClose} size="lg">
+      <ChakraModal isOpen={isOpen} onClose={onClose} size="lg">
         {overlay}
         {children}
       </ChakraModal>

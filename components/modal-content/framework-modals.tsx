@@ -9,6 +9,7 @@ import {
   JaimIOPreview,
   ProjectCPreview,
   SongAPIPreview,
+  SpartanFitnessPreview
 } from "../previews/project-previews";
 
 export const DotNetModal = () => (
@@ -35,12 +36,15 @@ export const DotNetModal = () => (
     }
     projectGridItems={[
       <Section delay={0.1} key="sect-1">
-        <AlbumViewerPreview />
+        <SpartanFitnessPreview />
       </Section>,
       <Section delay={0.1} key="sect-2">
-        <SongAPIPreview />
+        <AlbumViewerPreview />
       </Section>,
       <Section delay={0.1} key="sect-3">
+        <SongAPIPreview />
+      </Section>,
+      <Section delay={0.1} key="sect-4">
         <ProjectCPreview />
       </Section>,
     ]}
@@ -71,12 +75,15 @@ export const ASPNETCoreModal = () => (
     }
     projectGridItems={[
       <Section delay={0.1} key="sect-1">
-        <AlbumViewerPreview />
+        <SpartanFitnessPreview />
       </Section>,
       <Section delay={0.1} key="sect-2">
-        <SongAPIPreview />
+        <AlbumViewerPreview />
       </Section>,
       <Section delay={0.1} key="sect-3">
+        <SongAPIPreview />
+      </Section>,
+      <Section delay={0.1} key="sect-4">
         <ProjectCPreview />
       </Section>,
     ]}
@@ -107,9 +114,12 @@ export const EFCoreModal = () => (
     }
     projectGridItems={[
       <Section delay={0.1} key="sect-1">
-        <AlbumViewerPreview />
+        <SpartanFitnessPreview />
       </Section>,
       <Section delay={0.1} key="sect-2">
+        <AlbumViewerPreview />
+      </Section>,
+      <Section delay={0.1} key="sect-3">
         <SongAPIPreview />
       </Section>,
     ]}
