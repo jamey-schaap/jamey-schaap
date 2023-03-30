@@ -22,6 +22,7 @@ import { ReactNode } from "react";
 type NavItemProps = {
   href: string;
   path: string;
+  target?: string;
   children: ReactNode;
 };
 
@@ -29,6 +30,7 @@ const NavItem: React.FC<NavItemProps> = ({
   href,
   path,
   children,
+  target = "_self",
   ...props
 }) => {
   const active = path === href;
@@ -37,6 +39,7 @@ const NavItem: React.FC<NavItemProps> = ({
   return (
     <NextLink href={href} passHref scroll={false}>
       <Link
+        target={target}
         p={2}
         color={active ? activeColor : inactiveColor}
         css={{
@@ -101,6 +104,7 @@ const NavBar: React.FC<NavProps> = ({ path, ...props }: NavProps) => {
             path={path}
             // @ts-ignore
             display="inline-flex"
+            target="_blank"
             alignItems="center"
             style={{ gap: 4 }}
             pl={2}
