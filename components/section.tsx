@@ -55,10 +55,17 @@ export const SectionRow = ({
   ...props
 }: SectionRowProps) => (
   <Grid
-    templateAreas={`
-      "date info"
-      `}
-    gridTemplateColumns={`${columnWith}px 1fr`}
+    css={{
+      "@media screen and (min-width: 30em)": {
+        gridTemplateAreas: `"date info"`,
+        gridTemplateColumns: `${columnWith}px 1fr`,
+      },
+      "@media screen and (max-width: 30em)": {
+        gridTemplateAreas: `"date" "info"`,
+        textAlign: "center",	
+        marginBottom: "1rem",
+      },
+    }}
     gap="0"
     {...props}
   >
