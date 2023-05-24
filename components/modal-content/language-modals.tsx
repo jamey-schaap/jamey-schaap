@@ -6,6 +6,7 @@ import NextLink from "next/link";
 import { IoMdSchool } from "react-icons/io";
 import {
   AlbumViewerPreview,
+  Analysis7AssignmentPreview,
   Analysis8AssignmentPreview,
   ArcadePreview,
   BookstoreAPIPreview,
@@ -112,9 +113,12 @@ export const CSharpModal = () => (
         <AlbumViewerPreview />
       </Section>,
       <Section delay={0.1} key="sect-3">
-        <SongAPIPreview />
+        <Analysis7AssignmentPreview />
       </Section>,
       <Section delay={0.1} key="sect-4">
+        <SongAPIPreview />
+      </Section>,
+      <Section delay={0.1} key="sect-5">
         <ProjectCPreview />
       </Section>,
     ]}
@@ -183,9 +187,12 @@ export const TypescriptModal = () => (
         <JaimIOPreview />
       </Section>,
       <Section delay={0.1} key="sect-2">
-        <ProjectCPreview />
+        <SpartanFitnessPreview />
       </Section>,
       <Section delay={0.1} key="sect-3">
+        <ProjectCPreview />
+      </Section>,
+      <Section delay={0.1} key="sect-4">
         <GoFitnessPreview />
       </Section>,
     ]}

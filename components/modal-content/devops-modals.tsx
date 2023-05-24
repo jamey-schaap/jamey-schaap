@@ -10,6 +10,7 @@ import {
   GoFitnessPreview,
   ProjectDPreview,
   SongAPIPreview,
+  SpartanFitnessPreview,
 } from "../previews/project-previews";
 
 export const DockerModal = () => (
@@ -36,9 +37,12 @@ export const DockerModal = () => (
     }
     projectGridItems={[
       <Section delay={0.1} key="sect-1">
-        <GoFitnessPreview />
+        <SpartanFitnessPreview />
       </Section>,
       <Section delay={0.1} key="sect-2">
+        <GoFitnessPreview />
+      </Section>,
+      <Section delay={0.1} key="sect-3">
         <ProjectDPreview />
       </Section>,
       <Section delay={0.1} key="sect-4">
@@ -78,6 +82,11 @@ export const KubernetesModal = () => (
         </ListItem>
       </List>
     }
+    projectGridItems={[
+      <Section delay={0.1} key="sect-1">
+        <SpartanFitnessPreview />
+      </Section>,
+    ]}
   />
 );
 
@@ -105,9 +114,12 @@ export const GitHubActionsModal = () => (
     }
     projectGridItems={[
       <Section delay={0.1} key="sect-1">
-        <GoFitnessPreview />
+        <SpartanFitnessPreview />
       </Section>,
       <Section delay={0.1} key="sect-2">
+        <GoFitnessPreview />
+      </Section>,
+      <Section delay={0.1} key="sect-3">
         <SongAPIPreview />
       </Section>,
       <Section delay={0.1} key="sect-4">

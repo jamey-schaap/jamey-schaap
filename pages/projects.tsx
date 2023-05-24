@@ -9,6 +9,7 @@ import Section, { SectionHeading } from "../components/section";
 import { ReactNode } from "react";
 import {
   AlbumViewerPreview,
+  Analysis7AssignmentPreview,
   Analysis8AssignmentPreview,
   ArcadePreview,
   BookstoreAPIPreview,
@@ -35,8 +36,9 @@ const Projects: NextPageWithLayout = () => {
   const universityProjects: ReactNode[] = [
     <ProjectCPreview key="project-c" />,
     <ProjectDPreview key="project-d" />,
-    <AlbumViewerPreview key="album-viewer" />,
+    <Analysis7AssignmentPreview key="analysis-7-assignment" />,
     <Analysis8AssignmentPreview key="analysis-8-assignment" />,
+    <AlbumViewerPreview key="album-viewer" />,
   ];
 
   return (

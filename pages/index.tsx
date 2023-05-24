@@ -463,13 +463,6 @@ const Home: NextPageWithLayout = () => {
                 <TabPanel>
                   <TabItemManager>
                     <TabItem
-                      thumbnail="/svgs/languages/gopher.svg"
-                      title="Golang"
-                      modalContent={<GolangModal />}
-                    >
-                      <TabButton>Golang</TabButton>
-                    </TabItem>
-                    <TabItem
                       thumbnail="/svgs/languages/c-sharp.svg"
                       title="C#"
                       modalContent={<CSharpModal />}
@@ -477,18 +470,25 @@ const Home: NextPageWithLayout = () => {
                       <TabButton>C# </TabButton>
                     </TabItem>
                     <TabItem
-                      thumbnail="/svgs/languages/python.svg"
-                      title="Python"
-                      modalContent={<PythonModal />}
-                    >
-                      <TabButton>Python</TabButton>
-                    </TabItem>
-                    <TabItem
                       thumbnail="/svgs/languages/typescript.svg"
                       title="Typescript"
                       modalContent={<TypescriptModal />}
                     >
                       <TabButton>Typescript</TabButton>
+                    </TabItem>
+                    <TabItem
+                      thumbnail="/svgs/languages/gopher.svg"
+                      title="Golang"
+                      modalContent={<GolangModal />}
+                    >
+                      <TabButton>Golang</TabButton>
+                    </TabItem>
+                    <TabItem
+                      thumbnail="/svgs/languages/python.svg"
+                      title="Python"
+                      modalContent={<PythonModal />}
+                    >
+                      <TabButton>Python</TabButton>
                     </TabItem>
                     <TabItem
                       thumbnail="/svgs/languages/sql.svg"
@@ -517,10 +517,10 @@ const Home: NextPageWithLayout = () => {
                   <TabItemManager>
                     <TabItem
                       thumbnail="/svgs/frameworks/dotnet.svg"
-                      title=".NET"
+                      title=".NET Core"
                       modalContent={<DotNetModal />}
                     >
-                      <TabButton>.NET</TabButton>
+                      <TabButton>.NET Core</TabButton>
                     </TabItem>
                     <TabItem
                       thumbnail="/svgs/frameworks/dotnet-core.svg"

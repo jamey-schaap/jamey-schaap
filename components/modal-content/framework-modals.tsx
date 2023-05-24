@@ -5,21 +5,22 @@ import NextLink from "next/link";
 import { IoMdSchool } from "react-icons/io";
 import {
   AlbumViewerPreview,
+  Analysis7AssignmentPreview,
   GoFitnessPreview,
   JaimIOPreview,
   ProjectCPreview,
   SongAPIPreview,
-  SpartanFitnessPreview
+  SpartanFitnessPreview,
 } from "../previews/project-previews";
 
 export const DotNetModal = () => (
   <ModalTemplate
-    title=".NET"
+    title=".NET Core"
     description={
       <Text>
-        During the first 2 years of my computer science studies, I worked with
-        and created a number of project in .NET Core 3.1, .NET 5 and .NET 6 in
-        C#.
+        Over the past 3 year I have worked with and created a number of projects
+        in different versions of .NET Core: .NET Core 3.1, .NET 5, .NET 6 and
+        .NET 7.
       </Text>
     }
     experience={
@@ -42,9 +43,12 @@ export const DotNetModal = () => (
         <AlbumViewerPreview />
       </Section>,
       <Section delay={0.1} key="sect-3">
-        <SongAPIPreview />
+        <Analysis7AssignmentPreview />
       </Section>,
       <Section delay={0.1} key="sect-4">
+        <SongAPIPreview />
+      </Section>,
+      <Section delay={0.1} key="sect-5">
         <ProjectCPreview />
       </Section>,
     ]}
@@ -153,12 +157,15 @@ export const ReactModal = () => (
         <JaimIOPreview />
       </Section>,
       <Section delay={0.1} key="sect-2">
-        <SongAPIPreview />
+        <SpartanFitnessPreview />
       </Section>,
       <Section delay={0.1} key="sect-3">
-        <AlbumViewerPreview />
+        <SongAPIPreview />
       </Section>,
       <Section delay={0.1} key="sect-4">
+        <AlbumViewerPreview />
+      </Section>,
+      <Section delay={0.1} key="sect-5">
         <GoFitnessPreview />
       </Section>,
     ]}

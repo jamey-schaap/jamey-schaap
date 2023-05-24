@@ -17,13 +17,15 @@ const SpartanFitness: NextPageWithLayout = () => {
           Spartan Fitness <Badge>03/2023 - ongoing</Badge>
         </Title>
         <Text as="p">
-          Spartan Fitness is a fitness platform for both users and coaches.
-          Coaches create muscle groups, exercises and workouts for users to see, save and use. [Work in progress, more features will be added in the future.]
+          Spartan Fitness is a fitness platform for where users and coaches can
+          view and save workouts, exercises, muscle groups and muscles. Coaches
+          have the ability to create new workouts and new exercises. [Work in progress, more features will be added in the
+          future.]
         </Text>
         <List my={4}>
           <ListItem>
             <Meta>Backend-Stack</Meta>
-            C#, .NET 6, ASP.NET Core, Entity Framework Core 6, XUnit & MSSQL
+            C#, .NET 7, ASP.NET Core, Entity Framework Core 7, XUnit & MSSQL
           </ListItem>
           <ListItem>
             <Meta>Backend-Libraries</Meta>

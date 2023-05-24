@@ -84,6 +84,17 @@ export const ProjectDPreview = () => (
   </ProjectGridItem>
 );
 
+export const Analysis7AssignmentPreview = () => (
+  <ProjectGridItem
+    thumbnail="/svgs/projects/analysis-7-assignment.svg"
+    title="Analysis 7 Assignment"
+    path="/projects/analysis-7-assignment"
+  >
+    is a joint project. It is a card game which implements certain design
+    patterns.
+  </ProjectGridItem>
+);
+
 export const Analysis8AssignmentPreview = () => (
   <ProjectGridItem
     thumbnail="/svgs/projects/analysis-8-assignment.svg"
