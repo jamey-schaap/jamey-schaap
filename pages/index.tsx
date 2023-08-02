@@ -161,12 +161,7 @@ const Home: NextPageWithLayout = () => {
             <SectionHeading>Education</SectionHeading>
             <Section>
               <SectionRow>
-                <SectionDate>
-                  02-2023 to{" "}
-                  <Text as="i" color={useColorModeValue("#3d7aed", "#ffdd99")}>
-                    present{" "}
-                  </Text>
-                </SectionDate>
+                <SectionDate>02-2023 to 07-2023</SectionDate>
                 <SectionInfo>
                   <Text as="i">Minor Software Engineering</Text> at{" "}
                   <NextLink href="https://www.rotterdamuas.com/" passHref>
