@@ -154,12 +154,28 @@ const Home: NextPageWithLayout = () => {
             bg={useColorModeValue("whiteAlpha.500", "whiteAlpha.200")}
             css={{ backdropFilter: "blur(10px)" }}
           >
-            Hello, I am a third-year computer science student, based in The
+            Hello, I am a fourth-year computer science student, based in The
             Netherlands.
           </Box>
           <Section delay={0.2}>
             <SectionHeading>Education</SectionHeading>
             <Section>
+              <SectionRow>
+                <SectionDate>
+                  09-2023 to{" "}
+                  <Text as="i" color={useColorModeValue("#3d7aed", "#ffdd99")}>
+                    present{" "}
+                  </Text>
+                </SectionDate>
+                <SectionInfo>
+                  <Text as="i">Minor Data Science</Text> at{" "}
+                  <NextLink href="https://www.rotterdamuas.com/" passHref>
+                    <Link target="_blank">
+                      Rotterdam University of Applied Sciences
+                    </Link>
+                  </NextLink>
+                </SectionInfo>
+              </SectionRow>
               <SectionRow>
                 <SectionDate>02-2023 to 07-2023</SectionDate>
                 <SectionInfo>
