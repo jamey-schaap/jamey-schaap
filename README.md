@@ -13,7 +13,6 @@ Checkout [jaim-io](https://jaim-io.vercel.app/) to see my portfolio!
 <img align="left" alt="" width="30px" src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" />
 <img align="left" alt="" width="22px" src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" />
 
-<br/><br/>
 <img align="left" alt="" width="30px" src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg" />
 <img align="left" alt="" width="30px" src="https://upload.wikimedia.org/wikipedia/commons/6/6e/JetBrains_Rider_Icon.svg" />
 <img align="left" alt="" width="30px" src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Git_icon.svg" />
