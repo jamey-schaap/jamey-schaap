@@ -21,6 +21,4 @@ Checkout [jaim-io](https://jaim-io.vercel.app/) to see my portfolio!
 
 ---
 
-![Github stats](https://github-readme-stats.vercel.app/api?username=jaim-io&hide=issues,stars&count_private=true&show_icons=true&theme=radical)
-
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=jaim-io&layout=compact&theme=radical)
+![Github stats](https://github-readme-stats.vercel.app/api?username=jaim-io&hide=stars&count_private=true&show_icons=true&theme=radical)           ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=jaim-io&layout=compact&theme=radical)
