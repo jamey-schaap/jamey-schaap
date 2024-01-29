@@ -1,7 +1,7 @@
 # jaim-io (Jamey)
 
 Hi my name is Jamey, I am a 4th year BSc Computer Science student from the Netherlands.
-Checkout [jaim-io](https://jaim-io.vercel.app/) to see my portfolio!
+Checkout [jamey-schaap](https://jamey-schaap.vercel.app/) to see my portfolio!
 
 --- 
 <p> These are some languages, frameworks and tools I work and have worked with: </p>
