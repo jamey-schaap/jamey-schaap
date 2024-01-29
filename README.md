@@ -1,4 +1,4 @@
-# jaim-io (Jamey)
+# Jamey Schaap
 
 Hi my name is Jamey, I am a 4th year BSc Computer Science student from the Netherlands.
 Checkout [jamey-schaap](https://jamey-schaap.vercel.app/) to see my portfolio!
