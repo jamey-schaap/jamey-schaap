@@ -41,12 +41,12 @@ const AlbumViewer: NextPageWithLayout = () => {
           </ListItem>
           <ListItem>
             <Meta>Github</Meta>
-            <NextLink href="https://github.com/jaim-io/album-api" passHref>
-              <Link target="_blank">https://github.com/jaim-io/album-api</Link>
+            <NextLink href="https://github.com/jamey-schaap/album-api" passHref>
+              <Link target="_blank">https://github.com/jamey-schaap/album-api</Link>
             </NextLink>{" "}
-            <NextLink href="https://github.com/jaim-io/album-frontend" passHref>
+            <NextLink href="https://github.com/jamey-schaap/album-frontend" passHref>
               <Link target="_blank">
-                https://github.com/jaim-io/album-frontend
+                https://github.com/jamey-schaap/album-frontend
               </Link>
             </NextLink>
           </ListItem>

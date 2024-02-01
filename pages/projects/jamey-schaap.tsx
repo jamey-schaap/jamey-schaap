@@ -10,14 +10,14 @@ import NextLink from "next/link";
 
 const JaimIO: NextPageWithLayout = () => {
   return (
-    <Layout title="Jaim-IO">
+    <Layout title="jamey-schaap">
       <Container>
-        <HeadingImage id="jaim-io" />
+        <HeadingImage id="jamey-schaap" />
         <Title>
-          Jaim-IO <Badge>10/2022 - 11/2022</Badge>
+          jamey-schaap <Badge>10/2022 - 11/2022</Badge>
         </Title>
         <Text as="p">
-          Jaim-IO is the website you are currently looking at! This is my
+          jamey-schaap is the website you are currently looking at! This is my
           portfolio website where I showcase my experience and education. This
           project has been inspired by{" "}
           <NextLink href="https://www.youtube.com/c/devaslife" passHref>
@@ -36,8 +36,8 @@ const JaimIO: NextPageWithLayout = () => {
         <List my={4}>
           <ListItem>
             <Meta>Website</Meta>
-            <NextLink href="https://jaim-io.vercel.app" passHref>
-              <Link target="_blank">https://jaim-io.vercel.app</Link>
+            <NextLink href="https://jamey-schaap.vercel.app" passHref>
+              <Link target="_blank">https://jamey-schaap.vercel.app</Link>
             </NextLink>
           </ListItem>
           <ListItem>
@@ -46,8 +46,8 @@ const JaimIO: NextPageWithLayout = () => {
           </ListItem>
           <ListItem>
             <Meta>Github</Meta>
-            <NextLink href="https://github.com/jaim-io/jaim-io" passHref>
-              <Link target="_blank">https://github.com/jaim-io/jaim-io</Link>
+            <NextLink href="https://github.com/jamey-schaap/jamey-schaap" passHref>
+              <Link target="_blank">https://github.com/jamey-schaap/jamey-schaap</Link>
             </NextLink>
           </ListItem>
         </List>

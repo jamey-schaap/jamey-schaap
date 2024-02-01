@@ -108,9 +108,9 @@ export const Analysis8AssignmentPreview = () => (
 
 export const JaimIOPreview = () => (
   <ProjectGridItem
-    thumbnail="/svgs/projects/jaim-io.svg"
-    title="Jaim-IO"
-    path="/projects/jaim-io"
+    thumbnail="/svgs/projects/jamey-schaap.svg"
+    title="jamey-schaap"
+    path="/projects/jamey-schaap"
   >
     is the website your looking at right now! My portfolio.
   </ProjectGridItem>
@@ -133,5 +133,18 @@ export const SpartanFitnessPreview = () => (
     path="/projects/spartan-fitness"
   >
     is platform to catalog exercises, muscle groups and workouts.
+  </ProjectGridItem>
+);
+
+export const RiskFactorPreview = () => (
+  <ProjectGridItem
+    thumbnail="/svgs/projects/risk-factor.svg"
+    title="Minor Data Science"
+    path="/projects/risk-factor"
+  >
+    is the project created for the data science minor I followed at 
+    {" "}<NextLink href="https://www.rotterdamuas.com/" passHref>
+      <Link target="_blank">RUAS</Link>
+    </NextLink>.
   </ProjectGridItem>
 );

@@ -33,8 +33,8 @@ const GoFitness: NextPageWithLayout = () => {
           </ListItem>
           <ListItem>
             <Meta>Github</Meta>
-            <NextLink href="https://github.com/jaim-io/go-fitness" passHref>
-              <Link target="_blank">https://github.com/jaim-io/go-fitness</Link>
+            <NextLink href="https://github.com/jamey-schaap/go-fitness" passHref>
+              <Link target="_blank">https://github.com/jamey-schaap/go-fitness</Link>
             </NextLink>
           </ListItem>
         </List>

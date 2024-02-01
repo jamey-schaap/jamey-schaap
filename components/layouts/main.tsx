@@ -17,7 +17,7 @@ const Main = ({ children, router }: MainProps) => {
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="description" content="Jamey's homepage" />
       <meta name="author" content="Jamey Schaap" />
-      <meta name="author" content="jaim-io" />
+      <meta name="author" content="jamey-schaap" />
 
       <NavBar path={path} />
 

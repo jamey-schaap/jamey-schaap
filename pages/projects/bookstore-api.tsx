@@ -27,9 +27,9 @@ const BookstoreAPI: NextPageWithLayout = () => {
           </ListItem>
           <ListItem>
             <Meta>Github</Meta>
-            <NextLink href="https://github.com/jaim-io/bookstore-api" passHref>
+            <NextLink href="https://github.com/jamey-schaap/bookstore-api" passHref>
               <Link target="_blank">
-                https://github.com/jaim-io/bookstore-api
+                https://github.com/jamey-schaap/bookstore-api
               </Link>
             </NextLink>
           </ListItem>

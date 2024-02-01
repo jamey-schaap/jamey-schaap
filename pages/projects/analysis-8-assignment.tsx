@@ -34,11 +34,11 @@ const Analysis8Assignment: NextPageWithLayout = () => {
           <ListItem>
             <Meta>Github</Meta>
             <NextLink
-              href="https://github.com/jaim-io/analysis-8-assignment"
+              href="https://github.com/jamey-schaap/analysis-8-assignment"
               passHref
             >
               <Link target="_blank">
-                https://github.com/jaim-io/analysis-8-assignment
+                https://github.com/jamey-schaap/analysis-8-assignment
               </Link>
             </NextLink>
           </ListItem>

@@ -13,6 +13,7 @@ import {
   GoFitnessPreview,
   JaimIOPreview,
   JenkinsMSTeamsIntegrationPreview,
+  RiskFactorPreview,
   ProjectCPreview,
   ProjectDPreview,
   SongAPIPreview,
@@ -52,7 +53,7 @@ export const CSharpModal = () => (
       <Text>
         During the first 2 years of my computer science studies, I worked with
         and created a number of project with C#. C# together with Python is the
-        language I am most familliar with, having around 2.5 years of expierence
+        language I am most familliar with, having around 3 years of expierence
         with the language.
       </Text>
     }
@@ -130,9 +131,9 @@ export const PythonModal = () => (
     title="Python"
     description={
       <Text>
-        During the first 2 years of my computer science studies, I worked with
+        During the first 2 years of my computer science studies and during the minor in Data Science I followed, I worked with
         and created a number of project with Python. Python together with C# is
-        the language I am most familliar with, having around 2.5 years of
+        the language I am most familliar with, having around 3 years of
         expierence with the language.
       </Text>
     }
@@ -150,9 +151,12 @@ export const PythonModal = () => (
     }
     projectGridItems={[
       <Section delay={0.1} key="sect-1">
-        <ProjectDPreview />
+        <RiskFactorPreview />
       </Section>,
       <Section delay={0.1} key="sect-2">
+        <ProjectDPreview />
+      </Section>,
+      <Section delay={0.1} key="sect-3">
         <Analysis8AssignmentPreview />
       </Section>,
     ]}

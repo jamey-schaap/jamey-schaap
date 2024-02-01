@@ -14,13 +14,12 @@ const SpartanFitness: NextPageWithLayout = () => {
       <Container>
         <HeadingImage id="spartan-fitness" />
         <Title>
-          Spartan Fitness <Badge>03/2023 - ongoing</Badge>
+          Spartan Fitness <Badge>02/2023 - 10/2023</Badge>
         </Title>
         <Text as="p">
-          Spartan Fitness is a fitness platform for where users and coaches can
-          view and save workouts, exercises, muscle groups and muscles. Coaches
-          have the ability to create new workouts and new exercises. [Work in progress, more features will be added in the
-          future.]
+          SpartanFitness is a fitness platform where users and coaches can register 
+          and view and save workouts, exercises, muscle groups and muscles. Coaches have 
+          the ability to create new workouts and new exercises.
         </Text>
         <List my={4}>
           <ListItem>

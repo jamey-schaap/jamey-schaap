@@ -122,7 +122,7 @@ const Home: NextPageWithLayout = () => {
                 <Heading as="h2" variant="page-title">
                   Jamey Schaap
                 </Heading>
-                <Text as="i">Third-year computer science student</Text>
+                <Text as="i">Fourth-year computer science student</Text>
                 <Divider borderColor={dividerColor} />
                 <Text as="i">Fitness & programming enthusiast</Text>
                 <Divider borderColor={dividerColor} />
@@ -130,7 +130,7 @@ const Home: NextPageWithLayout = () => {
                 <Divider borderColor={dividerColor} />
                 <Text display="inline-flex" alignItems="center" gap={1} pr={10}>
                   <IoLogoGithub />
-                  <NextLink href="https://github.com/jaim-io" passHref>
+                  <NextLink href="https://github.com/jamey-schaap" passHref>
                     <Link target="_blank">GitHub</Link>
                   </NextLink>
                 </Text>
@@ -162,10 +162,7 @@ const Home: NextPageWithLayout = () => {
             <Section>
               <SectionRow>
                 <SectionDate>
-                  09-2023 to{" "}
-                  <Text as="i" color={useColorModeValue("#3d7aed", "#ffdd99")}>
-                    present{" "}
-                  </Text>
+                  09-2023 to 02-2024
                 </SectionDate>
                 <SectionInfo>
                   <Text as="i">Minor Data Science</Text> at{" "}
@@ -255,6 +252,16 @@ const Home: NextPageWithLayout = () => {
               <TabPanels>
                 <TabPanel pl={0} pr={0} pb={0} pt={2.5}>
                   <Section>
+                    <SectionRow>
+                      <SectionDate>07-2022 to 02-2024</SectionDate>
+                      <SectionInfo>
+                        <Text as="i">Administrative Assistant</Text> at{" "}
+                        <NextLink href="https://www.mrestart.nl/" passHref>
+                          <Link target="_blank">M Restart</Link>
+                        </NextLink>
+                      </SectionInfo>
+                    </SectionRow>
+
                     <SectionRow>
                       <SectionDate>08-2022 to 03-2023</SectionDate>
                       <SectionInfo>
@@ -488,18 +495,18 @@ const Home: NextPageWithLayout = () => {
                       <TabButton>Typescript</TabButton>
                     </TabItem>
                     <TabItem
-                      thumbnail="/svgs/languages/gopher.svg"
-                      title="Golang"
-                      modalContent={<GolangModal />}
-                    >
-                      <TabButton>Golang</TabButton>
-                    </TabItem>
-                    <TabItem
                       thumbnail="/svgs/languages/python.svg"
                       title="Python"
                       modalContent={<PythonModal />}
                     >
                       <TabButton>Python</TabButton>
+                    </TabItem>
+                    <TabItem
+                      thumbnail="/svgs/languages/gopher.svg"
+                      title="Golang"
+                      modalContent={<GolangModal />}
+                    >
+                      <TabButton>Golang</TabButton>
                     </TabItem>
                     <TabItem
                       thumbnail="/svgs/languages/sql.svg"

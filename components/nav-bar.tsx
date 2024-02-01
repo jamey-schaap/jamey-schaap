@@ -100,7 +100,7 @@ const NavBar: React.FC<NavProps> = ({ path, ...props }: NavProps) => {
             Experience
           </NavItem>
           <NavItem
-            href="https://github.com/jaim-io/jaim-io"
+            href="https://github.com/jamey-schaap/jamey-schaap"
             path={path}
             // @ts-ignore
             display="inline-flex"
@@ -135,7 +135,7 @@ const NavBar: React.FC<NavProps> = ({ path, ...props }: NavProps) => {
                 <NextLink href="/experience" passHref>
                   <MenuItem as={Link}>Experience</MenuItem>
                 </NextLink>
-                <NextLink href="https://github.com/jaim-io/jaim-io" passHref>
+                <NextLink href="https://github.com/jamey-schaap/jamey-schaap" passHref>
                   <MenuItem
                     as={Link}
                     display="inline-flex"

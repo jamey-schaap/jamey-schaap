@@ -45,9 +45,9 @@ const ProjectC: NextPageWithLayout = () => {
           </ListItem>
           <ListItem>
             <Meta>Github</Meta>
-            <NextLink href="https://github.com/jaim-io/Groep1ProjectC" passHref>
+            <NextLink href="https://github.com/jamey-schaap/Groep1ProjectC" passHref>
               <Link target="_blank">
-                https://github.com/jaim-io/Groep1ProjectC
+                https://github.com/jamey-schaap/Groep1ProjectC
               </Link>
             </NextLink>
           </ListItem>

@@ -48,11 +48,11 @@ const JenkinsMSTeamsIntegration: NextPageWithLayout = () => {
           <ListItem>
             <Meta>Github</Meta>
             <NextLink
-              href="https://github.com/jaim-io/jenkins-ms_teams-plugin"
+              href="https://github.com/jamey-schaap/jenkins-ms_teams-plugin"
               passHref
             >
               <Link target="_blank">
-                https://github.com/jaim-io/jenkins-ms_teams-plugin
+                https://github.com/jamey-schaap/jenkins-ms_teams-plugin
               </Link>
             </NextLink>
           </ListItem>

@@ -39,8 +39,8 @@ const Arcade: NextPageWithLayout = () => {
           </ListItem>
           <ListItem>
             <Meta>Github</Meta>
-            <NextLink href="https://github.com/jaim-io/arcade" passHref>
-              <Link target="_blank">https://github.com/jaim-io/arcade</Link>
+            <NextLink href="https://github.com/jamey-schaap/arcade" passHref>
+              <Link target="_blank">https://github.com/jamey-schaap/arcade</Link>
             </NextLink>
           </ListItem>
         </List>

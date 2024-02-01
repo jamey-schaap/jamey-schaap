@@ -18,13 +18,14 @@ import {
   JenkinsMSTeamsIntegrationPreview,
   ProjectCPreview,
   ProjectDPreview,
+  RiskFactorPreview,
   SongAPIPreview,
   SpartanFitnessPreview,
 } from "../components/previews/project-previews";
 
 const Projects: NextPageWithLayout = () => {
   const personalProjects: ReactNode[] = [
-    <JaimIOPreview key="jaim-io" />,
+    <JaimIOPreview key="jamey-schaap" />,
     <SpartanFitnessPreview key="spartan-fitness" />,
     <JenkinsMSTeamsIntegrationPreview key="jenkins-msteams-integration" />,
     <ArcadePreview key="arcade" />,
@@ -34,11 +35,12 @@ const Projects: NextPageWithLayout = () => {
   ];
 
   const universityProjects: ReactNode[] = [
+    <RiskFactorPreview key="risk-factor"/>,
     <ProjectCPreview key="project-c" />,
     <ProjectDPreview key="project-d" />,
+    <AlbumViewerPreview key="album-viewer" />,
     <Analysis7AssignmentPreview key="analysis-7-assignment" />,
     <Analysis8AssignmentPreview key="analysis-8-assignment" />,
-    <AlbumViewerPreview key="album-viewer" />,
   ];
 
   return (

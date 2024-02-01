@@ -44,8 +44,8 @@ const SongAPI: NextPageWithLayout = () => {
           </ListItem>
           <ListItem>
             <Meta>Github</Meta>
-            <NextLink href="https://github.com/jaim-io/song-api" passHref>
-              <Link target="_blank">https://github.com/jaim-io/song-api</Link>
+            <NextLink href="https://github.com/jamey-schaap/song-api" passHref>
+              <Link target="_blank">https://github.com/jamey-schaap/song-api</Link>
             </NextLink>
           </ListItem>
         </List>
