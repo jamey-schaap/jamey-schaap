@@ -17,7 +17,7 @@ const RiskFactor: NextPageWithLayout = () => {
           Risk Factor <Badge>08/2023 - 02/2024</Badge>
         </Title>
         <Text as="p">
-          The research paper "Risk Radar" aims to predict the risk for investors to invest in a given
+          The research paper &quot;Risk Radar&quot; aims to predict the risk for investors to invest in a given
           country by analysing political and economic factors through data science. Using machine
           learning models such as K-Nearest Neighbors, Support Vector Machines, and Artificial
           Neural Networks, the study examines the relationship between political stability, governance,
