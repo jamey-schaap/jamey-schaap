@@ -102,7 +102,7 @@ const Home: NextPageWithLayout = () => {
                 display={{ base: "flex", sm: "" }}
                 justifyContent={{ base: "center", sm: "" }}
               >
-                <Box w="130px" h="160px">
+                <Box w="115px" h="161px">
                   <Unselectable>
                     <ProfileImage
                       borderRadius="xl"
@@ -111,7 +111,7 @@ const Home: NextPageWithLayout = () => {
                       borderStyle="solid"
                       width="100%"
                       height="100%"
-                      src="/images/profile-picture.png"
+                      src="/images/profile-picture.JPG"
                       alt="Profile image"
                       placeholder
                     />
@@ -122,11 +122,16 @@ const Home: NextPageWithLayout = () => {
                 <Heading as="h2" variant="page-title">
                   Jamey Schaap
                 </Heading>
+                <Text as="i">Graduate intern at {" "}
+                  <NextLink
+                    href="https://www.virtualvaults.com/"
+                    passHref
+                  ><Link target="_blank">Virtual Vaults</Link></NextLink>
+                </Text>
+                <Divider borderColor={dividerColor} />
                 <Text as="i">Fourth-year computer science student</Text>
                 <Divider borderColor={dividerColor} />
                 <Text as="i">Fitness & programming enthusiast</Text>
-                <Divider borderColor={dividerColor} />
-                <br />
                 <Divider borderColor={dividerColor} />
                 <Text display="inline-flex" alignItems="center" gap={1} pr={10}>
                   <IoLogoGithub />
@@ -253,6 +258,19 @@ const Home: NextPageWithLayout = () => {
                 <TabPanel pl={0} pr={0} pb={0} pt={2.5}>
                   <Section>
                     <SectionRow>
+                      <SectionDate>02-2024 to {" "}
+                        <Text as="i" color={useColorModeValue("#3d7aed", "#ffdd99")}>
+                          present
+                        </Text></SectionDate>
+                      <SectionInfo>
+                        <Text as="i">Graduate Intern</Text> at{" "}
+                        <NextLink href="https://www.virtualvaults.com/" passHref>
+                          <Link target="_blank">Virtual Vaults</Link>
+                        </NextLink>
+                      </SectionInfo>
+                    </SectionRow>
+
+                    <SectionRow>
                       <SectionDate>07-2022 to 02-2024</SectionDate>
                       <SectionInfo>
                         <Text as="i">Administrative Assistant</Text> at{" "}
@@ -265,7 +283,7 @@ const Home: NextPageWithLayout = () => {
                     <SectionRow>
                       <SectionDate>08-2022 to 03-2023</SectionDate>
                       <SectionInfo>
-                        <Text as="i">(Intern) Software Engineer DevOps</Text> at{" "}
+                        <Text as="i">Intern Software Engineer DevOps</Text> at{" "}
                         <NextLink href="https://www.swecogroup.com/" passHref>
                           <Link target="_blank">Sweco</Link>
                         </NextLink>
