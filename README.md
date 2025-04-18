@@ -1,6 +1,6 @@
 # Jamey Schaap
 
-Hi my name is Jamey, I am a 4th year BSc Computer Science student from the Netherlands.
+Hi my name is Jamey, I have a BSc in Computer Science and I'm a Junior Full Stack Developer at Virtual Vaults.
 Checkout [jamey-schaap](https://jamey-schaap.vercel.app/) to see my portfolio!
 
 --- 
