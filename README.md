@@ -16,8 +16,6 @@ Checkout [jamey-schaap](https://jamey-schaap.vercel.app/) to see my portfolio!
 <img align="left" alt="" width="30px" src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg" />
 <img align="left" alt="" width="30px" src="https://upload.wikimedia.org/wikipedia/commons/6/6e/JetBrains_Rider_Icon.svg" />
 <img align="left" alt="" width="30px" src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Git_icon.svg" />
-<img alt="" height="30px" src="https://upload.wikimedia.org/wikipedia/en/f/f4/Docker_logo.svg" />
-
 ---
 
 [![Github stats stats-light](https://github-readme-stats.vercel.app/api?username=jamey-schaap&hide=stars&count_private=true&show_icons=true&hide_border=true&theme=default#gh-light-mode-only)](https://github-readme-stats.vercel.app/api?username=jamey-schaap&hide=stars&count_private=true&show_icons=true&hide_border=true&theme=default#gh-light-mode-only) [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=jamey-schaap&layout=compact&hide_border=true&theme=default#gh-light-mode-only)](https://github-readme-stats.vercel.app/api/top-langs/?username=jamey-schaap&layout=compact&hide_border=true&theme=default#gh-light-mode-only)
