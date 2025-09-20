@@ -1,8 +1,6 @@
 import {
   Box,
   Button,
-  Center,
-  Fade,
   LinkBox,
   SimpleGrid,
   Tab,
@@ -15,7 +13,6 @@ import {
 } from "@chakra-ui/react";
 import Image from "next/image";
 import { ReactElement, ReactNode, useState } from "react";
-import { AiOutlineDoubleRight } from "react-icons/ai";
 import Modal from "./modal";
 import Overlay from "./overlay";
 import Unselectable from "./unselectable";
@@ -29,7 +26,6 @@ type TabButtonProps = {
 
 export const TabButton = ({ children, ...props }: TabButtonProps) => (
   <Button
-    leftIcon={<AiOutlineDoubleRight />}
     borderRadius="lg"
     width="7.5rem"
     {...props}
@@ -209,7 +205,7 @@ const TabItem = ({
             toast({
               id: toastId,
               title: `No modal available for ${title}.`,
-              description: "Work in progresss!",
+              description: "Work in progress!",
               status: "error",
               isClosable: true,
               duration: 5000,
@@ -227,14 +223,14 @@ const TabItem = ({
       >
         <Tooltip label={tooltip}>
           <LinkBox cursor="pointer">
-            <Unselectable>
+            <Unselectable style={{ display: "flex", justifyContent: "center" }}>
               <Image
                 src={thumbnail}
                 alt={title ?? ""}
                 // Resolution 1920x1080
-                width="180"
-                height="101"
                 loading="lazy"
+                height={100}
+                width={100}
                 style={
                   hover
                     ? {

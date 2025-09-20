@@ -37,7 +37,7 @@ export const HeadingImage = ({ id, ...props }: SectionImageProps) => (
     <Image
       src={`/svgs/projects/${id}.svg`}
       alt={id}
-      style={{ borderRadius: "12px", height: "100%", width: "100%" }}
+      style={{ borderRadius: "12px", height: "auto", width: "100%" }}
     />
   </Box>
 );

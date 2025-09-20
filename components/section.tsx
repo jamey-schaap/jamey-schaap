@@ -1,11 +1,4 @@
-import {
-  chakra,
-  Divider,
-  Grid,
-  GridItem,
-  Heading,
-  shouldForwardProp,
-} from "@chakra-ui/react";
+import { chakra, Divider, Grid, GridItem, Heading, shouldForwardProp } from "@chakra-ui/react";
 import { isValidMotionProp, motion } from "framer-motion";
 import { ReactNode } from "react";
 
@@ -48,22 +41,22 @@ export const SectionInfo = ({ children, ...props }: BioProps) => (
   </GridItem>
 );
 
-type SectionRowProps = { columnWith?: number } & BioProps;
+type SectionRowProps = { columnWidth?: number } & BioProps;
 
 export const SectionRow = ({
   children,
-  columnWith = 160,
+  columnWidth = 180,
   ...props
 }: SectionRowProps) => (
   <Grid
     css={{
       "@media screen and (min-width: 30em)": {
         gridTemplateAreas: `"date info"`,
-        gridTemplateColumns: `${columnWith}px 1fr`,
+        gridTemplateColumns: `${columnWidth}px 1fr`,
       },
       "@media screen and (max-width: 30em)": {
         gridTemplateAreas: `"date" "info"`,
-        textAlign: "center",	
+        textAlign: "center",
         marginBottom: "1rem",
       },
     }}
