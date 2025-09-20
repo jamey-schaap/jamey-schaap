@@ -6,7 +6,6 @@ import Layout from "../../components/layouts/article";
 import { Badge, Container, Link, List, ListItem, Text } from "@chakra-ui/react";
 import { Router } from "next/router";
 import { HeadingImage, Meta, Title } from "../../components/projects";
-import NextLink from "next/link";
 
 const GoFitness: NextPageWithLayout = () => {
   return (
@@ -33,9 +32,12 @@ const GoFitness: NextPageWithLayout = () => {
           </ListItem>
           <ListItem>
             <Meta>Github</Meta>
-            <NextLink href="https://github.com/jamey-schaap/go-fitness" passHref>
-              <Link target="_blank">https://github.com/jamey-schaap/go-fitness</Link>
-            </NextLink>
+            <Link
+              target="_blank"
+              href="https://github.com/jamey-schaap/go-fitness"
+            >
+              https://github.com/jamey-schaap/go-fitness
+            </Link>
           </ListItem>
         </List>
       </Container>

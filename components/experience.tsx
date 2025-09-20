@@ -33,16 +33,14 @@ export const HeadingImage = ({ id, ...props }: SectionImageProps) => (
     textAlign="center"
     justifyContent="center"
     w="180"
-    h="101.25"
+    h="101"
     my={3}
     {...props}
   >
     <Image
       src={`/svgs/experience/${id}.svg`}
       alt={id}
-      style={{ borderRadius: "12px" }}
-      width="100%"
-      height="100%"
+      style={{ borderRadius: "12px", width: "100%", height: "100%" }}
     />
   </Box>
 );

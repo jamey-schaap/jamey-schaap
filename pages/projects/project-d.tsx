@@ -26,13 +26,13 @@ const ProjectC: NextPageWithLayout = () => {
         </Title>
         <Text as="p">
           Project D was our second project with external clients,{" "}
-          <NextLink href="https://www.alten.com/" passHref>
-            <Link target="_blank">Alten</Link>
-          </NextLink>{" "}
+          <Link target="_blank" href="https://www.alten.com/">
+            Alten
+          </Link>
           and{" "}
-          <NextLink href="https://chengetawildlife.org/" passHref>
-            <Link target="_blank">Chengeta Wildlife</Link>
-          </NextLink>
+          <Link target="_blank" href="https://chengetawildlife.org/">
+            Chengeta Wildlife
+          </Link>
           . In the wild area that Chengeta monitors, there are a number of nodes
           that listen for events. By means of machine learning, it is determined
           on the node what kind of sound has been collected.
@@ -62,7 +62,10 @@ const ProjectC: NextPageWithLayout = () => {
           </ListItem>
           <ListItem>
             <Meta>Github</Meta>
-            <NextLink href="https://github.com/jamey-schaap/Groep1ProjectD" passHref>
+            <NextLink
+              href="https://github.com/jamey-schaap/Groep1ProjectD"
+              passHref
+            >
               <Link target="_blank">
                 https://github.com/jamey-schaap/Groep1ProjectD
               </Link>

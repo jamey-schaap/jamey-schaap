@@ -20,25 +20,25 @@ const JaimIO: NextPageWithLayout = () => {
           jamey-schaap is the website you are currently looking at! This is my
           portfolio website where I showcase my experience and education. This
           project has been inspired by{" "}
-          <NextLink href="https://www.youtube.com/c/devaslife" passHref>
-            <Link target="_blank">DevAsLife</Link>
-          </NextLink>{" "}
+          <Link target="_blank" href="https://www.youtube.com/c/devaslife">
+            DevAsLife
+          </Link>
           and is powered by{" "}
-          <NextLink href="https://nextjs.org" passHref>
-            <Link target="_blank">Next.js</Link>
-          </NextLink>{" "}
+          <Link target="_blank" href="https://nextjs.org">
+            Next.js
+          </Link>
           and{" "}
-          <NextLink href="https://vercel.com" passHref>
-            <Link target="_blank">Vercel</Link>
-          </NextLink>
+          <Link target="_blank" href="https://vercel.com">
+            Vercel
+          </Link>
           .
         </Text>
         <List my={4}>
           <ListItem>
             <Meta>Website</Meta>
-            <NextLink href="https://jamey-schaap.vercel.app" passHref>
-              <Link target="_blank">https://jamey-schaap.vercel.app</Link>
-            </NextLink>
+            <Link target="_blank" href="https://jamey-schaap.vercel.app">
+              https://jamey-schaap.vercel.app
+            </Link>
           </ListItem>
           <ListItem>
             <Meta>Stack</Meta>
@@ -46,8 +46,13 @@ const JaimIO: NextPageWithLayout = () => {
           </ListItem>
           <ListItem>
             <Meta>Github</Meta>
-            <NextLink href="https://github.com/jamey-schaap/jamey-schaap" passHref>
-              <Link target="_blank">https://github.com/jamey-schaap/jamey-schaap</Link>
+            <NextLink
+              href="https://github.com/jamey-schaap/jamey-schaap"
+              passHref
+            >
+              <Link target="_blank">
+                https://github.com/jamey-schaap/jamey-schaap
+              </Link>
             </NextLink>
           </ListItem>
         </List>

@@ -230,10 +230,10 @@ const TabItem = ({
             <Unselectable>
               <Image
                 src={thumbnail}
-                alt={title}
+                alt={title ?? ""}
                 // Resolution 1920x1080
                 width="180"
-                height="101.25"
+                height="101"
                 loading="lazy"
                 style={
                   hover

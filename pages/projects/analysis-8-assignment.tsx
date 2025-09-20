@@ -6,7 +6,6 @@ import Layout from "../../components/layouts/article";
 import { Badge, Container, Link, List, ListItem, Text } from "@chakra-ui/react";
 import { Router } from "next/router";
 import { HeadingImage, Meta, Title } from "../../components/projects";
-import NextLink from "next/link";
 
 const Analysis8Assignment: NextPageWithLayout = () => {
   return (
@@ -23,7 +22,7 @@ const Analysis8Assignment: NextPageWithLayout = () => {
           shell injection, XSS and cryptography.
         </Text>
         <Text as="p" mt={4}>
-          The project is a user managment application, with roles that have
+          The project is a user management application, with roles that have
           different permissions and that is SQL- and shell injection safe.
         </Text>
         <List my={4}>
@@ -33,14 +32,12 @@ const Analysis8Assignment: NextPageWithLayout = () => {
           </ListItem>
           <ListItem>
             <Meta>Github</Meta>
-            <NextLink
+            <Link
+              target="_blank"
               href="https://github.com/jamey-schaap/analysis-8-assignment"
-              passHref
             >
-              <Link target="_blank">
-                https://github.com/jamey-schaap/analysis-8-assignment
-              </Link>
-            </NextLink>
+              https://github.com/jamey-schaap/analysis-8-assignment
+            </Link>
           </ListItem>
         </List>
       </Container>

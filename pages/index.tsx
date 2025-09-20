@@ -1,41 +1,35 @@
 import {
-  Text,
   Box,
+  chakra,
   Container,
-  SimpleGrid,
-  Tabs,
+  Divider,
+  Heading,
+  Image,
+  Link,
   TabList,
   TabPanel,
   TabPanels,
-  Link,
-  Image,
+  Tabs,
+  Text,
   Tooltip,
-  chakra,
-  Heading,
-  Divider,
-  Center,
-  Button,
-  useMediaQuery,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import MainLayout from "../components/layouts/main";
 import ArticleLayout from "../components/layouts/article";
-import { NextPageWithLayout } from "./_app";
-import { ReactElement, useContext, useState } from "react";
-import { useColorModeValue } from "@chakra-ui/react";
 import Layout from "../components/layouts/article";
+import { NextPageWithLayout } from "./_app";
+import { ReactElement, useContext } from "react";
 import Section, {
-  SectionHeading,
-  SectionRow,
   SectionDate,
+  SectionHeading,
   SectionInfo,
+  SectionRow,
 } from "../components/section";
 import TabItem, {
   TabButton,
-  TabActionButton,
   TabHeader,
   TabItemManager,
 } from "../components/tab";
-import Fade from "../components/transitions/fade";
 import NextLink from "next/link";
 import TabContext from "../contexts/tab-context";
 import Head from "next/head";
@@ -113,7 +107,7 @@ const Home: NextPageWithLayout = () => {
                       height="100%"
                       src="/images/profile-picture.JPG"
                       alt="Profile image"
-                      placeholder
+                      placeholder="true"
                     />
                   </Unselectable>
                 </Box>
@@ -122,11 +116,11 @@ const Home: NextPageWithLayout = () => {
                 <Heading as="h2" variant="page-title">
                   Jamey Schaap
                 </Heading>
-                <Text as="i">Graduate intern at {" "}
-                  <NextLink
-                    href="https://www.virtualvaults.com/"
-                    passHref
-                  ><Link target="_blank">Virtual Vaults</Link></NextLink>
+                <Text as="i">
+                  Graduate intern at{" "}
+                  <NextLink href="https://www.virtualvaults.com/" passHref>
+                    <Link target="_blank">Virtual Vaults</Link>
+                  </NextLink>
                 </Text>
                 <Divider borderColor={dividerColor} />
                 <Text as="i">Fourth-year computer science student</Text>
@@ -166,9 +160,7 @@ const Home: NextPageWithLayout = () => {
             <SectionHeading>Education</SectionHeading>
             <Section>
               <SectionRow>
-                <SectionDate>
-                  09-2023 to 02-2024
-                </SectionDate>
+                <SectionDate>09-2023 to 02-2024</SectionDate>
                 <SectionInfo>
                   <Text as="i">Minor Data Science</Text> at{" "}
                   <NextLink href="https://www.rotterdamuas.com/" passHref>
@@ -258,13 +250,21 @@ const Home: NextPageWithLayout = () => {
                 <TabPanel pl={0} pr={0} pb={0} pt={2.5}>
                   <Section>
                     <SectionRow>
-                      <SectionDate>02-2024 to {" "}
-                        <Text as="i" color={useColorModeValue("#3d7aed", "#ffdd99")}>
+                      <SectionDate>
+                        02-2024 to{" "}
+                        <Text
+                          as="i"
+                          color={useColorModeValue("#3d7aed", "#ffdd99")}
+                        >
                           present
-                        </Text></SectionDate>
+                        </Text>
+                      </SectionDate>
                       <SectionInfo>
                         <Text as="i">Graduate Intern</Text> at{" "}
-                        <NextLink href="https://www.virtualvaults.com/" passHref>
+                        <NextLink
+                          href="https://www.virtualvaults.com/"
+                          passHref
+                        >
                           <Link target="_blank">Virtual Vaults</Link>
                         </NextLink>
                       </SectionInfo>

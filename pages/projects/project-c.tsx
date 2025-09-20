@@ -26,9 +26,9 @@ const ProjectC: NextPageWithLayout = () => {
         </Title>
         <Text as="p">
           Project C was our first project with an external client,{" "}
-          <NextLink href="https://www.star-shl.nl/patient/" passHref>
-            <Link target="_blank">Star-shl</Link>
-          </NextLink>
+          <Link target="_blank" href="https://www.star-shl.nl/patient/">
+            Star-shl
+          </Link>
           . We created web application (phone view) to inform adults about the
           preparation and the procedure of a blood draw and to entertain
           children while waiting in the waiting room to draw blood.
@@ -45,11 +45,12 @@ const ProjectC: NextPageWithLayout = () => {
           </ListItem>
           <ListItem>
             <Meta>Github</Meta>
-            <NextLink href="https://github.com/jamey-schaap/Groep1ProjectC" passHref>
-              <Link target="_blank">
-                https://github.com/jamey-schaap/Groep1ProjectC
-              </Link>
-            </NextLink>
+            <Link
+              target="_blank"
+              href="https://github.com/jamey-schaap/Groep1ProjectC"
+            >
+              https://github.com/jamey-schaap/Groep1ProjectC
+            </Link>
           </ListItem>
           <ListItem>
             <Meta>Demo</Meta>

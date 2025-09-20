@@ -47,7 +47,7 @@ export const ProjectGridItem = ({
           alt={title}
           style={{ borderRadius: "12px" }}
           width="180"
-          height="101.25"
+          height="101"
           // placeholder="blur"
         />
         <LinkOverlay href={path}>

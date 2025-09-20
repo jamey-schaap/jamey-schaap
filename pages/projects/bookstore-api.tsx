@@ -6,7 +6,6 @@ import Layout from "../../components/layouts/article";
 import { Badge, Container, Link, List, ListItem, Text } from "@chakra-ui/react";
 import { Router } from "next/router";
 import { HeadingImage, Meta, Title } from "../../components/projects";
-import NextLink from "next/link";
 
 const BookstoreAPI: NextPageWithLayout = () => {
   return (
@@ -27,11 +26,12 @@ const BookstoreAPI: NextPageWithLayout = () => {
           </ListItem>
           <ListItem>
             <Meta>Github</Meta>
-            <NextLink href="https://github.com/jamey-schaap/bookstore-api" passHref>
-              <Link target="_blank">
-                https://github.com/jamey-schaap/bookstore-api
-              </Link>
-            </NextLink>
+            <Link
+              target="_blank"
+              href="https://github.com/jamey-schaap/bookstore-api"
+            >
+              https://github.com/jamey-schaap/bookstore-api
+            </Link>
           </ListItem>
         </List>
       </Container>
