@@ -23,6 +23,7 @@ export const ProjectGridItem = ({
 }: ProjectGridItemProps) => (
   <Box
     w="100%"
+    h="100%"
     textAlign="center"
     bg="whiteAlpha.200"
     py={2}
@@ -39,23 +40,35 @@ export const ProjectGridItem = ({
       },
     }}
   >
-    <LinkBox cursor="pointer">
+    <LinkBox
+      cursor="pointer"
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        padding: "4px",
+        height: "100%",
+      }}
+    >
       <Image
         src={thumbnail}
         alt={title}
         style={{ borderRadius: "12px" }}
-        width="180"
-        height="101"
+        width="120"
+        height="120"
         // placeholder="blur"
       />
-      <LinkOverlay href={path}>
-        <Text mt={2} fontSize={20}>
-          {title}
+      <Box>
+        <LinkOverlay href={path}>
+          <Text mt={2} fontSize={20}>
+            {title}
+          </Text>
+        </LinkOverlay>
+        <Text fontSize={14} mx={2}>
+          {children}
         </Text>
-      </LinkOverlay>
-      <Text fontSize={14} mx={2}>
-        {children}
-      </Text>
+      </Box>
     </LinkBox>
   </Box>
 );

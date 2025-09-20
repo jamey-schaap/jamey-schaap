@@ -1,6 +1,16 @@
 import { useColorModeValue } from "@chakra-ui/react";
 import { ProjectGridItem } from "../grid-item";
 
+export const VirtualVaultsPreview = () => (
+  <ProjectGridItem
+    thumbnail={"/svgs/experience/virtual-vaults.svg"}
+    title="Virtual Vaults"
+    path="/experience/sweco"
+  >
+    Junior Fullstack Developer
+  </ProjectGridItem>
+);
+
 export const SwecoPreview = () => (
   <ProjectGridItem
     thumbnail={

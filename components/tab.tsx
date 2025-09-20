@@ -25,11 +25,7 @@ type TabButtonProps = {
 };
 
 export const TabButton = ({ children, ...props }: TabButtonProps) => (
-  <Button
-    borderRadius="lg"
-    width="7.5rem"
-    {...props}
-  >
+  <Button borderRadius="lg" width="7.5rem" {...props}>
     {children}
   </Button>
 );
@@ -56,11 +52,11 @@ export const TabActionButton = ({
       css={{
         "&:hover": {
           color: hoverColor,
-          transform: "scale(0.90)",
+          transform: "scale(0.95)",
           transition: "200ms ease",
         },
         "&:hover:active": {
-          transform: "scale(0.80)",
+          transform: "scale(0.90)",
           transition: "200ms ease",
         },
       }}
@@ -216,7 +212,7 @@ const TabItem = ({
         }}
         css={{
           "&:active": {
-            transform: "scale(0.85)",
+            transform: "scale(0.95)",
             transition: "200ms ease",
           },
         }}
@@ -235,7 +231,7 @@ const TabItem = ({
                   hover
                     ? {
                         transition: "200ms ease",
-                        transform: hover ? "scale(0.85)" : "",
+                        transform: hover ? "scale(0.95)" : "",
                       }
                     : { transition: "200ms ease" }
                 }

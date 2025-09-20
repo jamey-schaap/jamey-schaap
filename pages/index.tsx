@@ -116,7 +116,7 @@ const Home: NextPageWithLayout = () => {
                   Jamey Schaap
                 </Heading>
                 <Text as="i">
-                  Graduate intern at&nbsp;
+                  Junior Fullstack Developer at&nbsp;
                   <Link target="_blank" href="https://www.virtualvaults.com/">
                     Virtual Vaults
                   </Link>

@@ -3,18 +3,21 @@ import MainLayout from "../components/layouts/main";
 import ArticleLayout from "../components/layouts/article";
 import Layout from "../components/layouts/article";
 import { Container, SimpleGrid } from "@chakra-ui/react";
-import { ReactElement } from "react";
+import { ReactElement, ReactNode } from "react";
 import { Router } from "next/router";
 import Section, { SectionHeading } from "../components/section";
-import { ReactNode } from "react";
 import {
   CalvijnVreewijkPreview,
   HogeschoolRotterdamPreview,
   SwecoPreview,
+  VirtualVaultsPreview,
 } from "../components/previews/experience-previews";
 
 const Experience: NextPageWithLayout = () => {
-  const work: ReactNode[] = [<SwecoPreview key="sweco" />];
+  const work: ReactNode[] = [
+    <VirtualVaultsPreview key="virtual-vaults" />,
+    <SwecoPreview key="sweco" />,
+  ];
   const education: ReactNode[] = [
     <CalvijnVreewijkPreview key="calvijn-vreewijk" />,
     <HogeschoolRotterdamPreview key="hogeschool-rotterdam" />,

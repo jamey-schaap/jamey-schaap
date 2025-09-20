@@ -5,7 +5,6 @@ import Layout from "../../components/layouts/article";
 import {
   Badge,
   Container,
-  Divider,
   Link,
   List,
   ListItem,
@@ -13,7 +12,6 @@ import {
   Text,
   Tooltip,
   UnorderedList,
-  useColorModeValue,
 } from "@chakra-ui/react";
 import { Router } from "next/router";
 import { HeadingImage, Meta, Title } from "../../components/experience";
@@ -28,7 +26,7 @@ const Ruas: NextPageWithLayout = () => {
           <Tooltip label="Rotterdam University of Applied Sciences">
             RUAS
           </Tooltip>{" "}
-          <Badge>08/2020 - present</Badge>
+          <Badge>08/2020 - 07/2024</Badge>
         </Title>
         <Text as="p">
           A good foundation has been built in the first year, here I learned the
@@ -84,8 +82,31 @@ const Ruas: NextPageWithLayout = () => {
           </ListItem>
         </List>
         <Text my={4}>
-          I am currently working an internship and in februari 2023 I am
-          starting a minor in Software Engineering.
+          During the first half of the third year I work as an DevOps Software
+          Engineer intern, where the main focus was security. I learned about
+          the different kinds of vulnerabilities, vulnerability scanning (SCA,
+          SAST, DAST), infrastructure as code and scripting. The second half of
+          third year was spend on a minor in Software Engineering, where I
+          learned about functional programming and paradigms like functors,
+          monads and monoids.
+        </Text>
+        <Text my={4}>
+          The first half of the fourth year was spend on a minor in Data
+          Science, where I gained knowledge about statistics, visualisation and
+          machine learning (including different types of neural networks).
+        </Text>
+        <Text my={4}>
+          After this I started working on my thesis and started working as a
+          graduate intern at{" "}
+          <Link target="_blank" href="https://www.virtualvaults.com/">
+            Virtual Vaults
+          </Link>
+          . I researched and created a proof of concept (POC) that applies
+          Information Rights Management (IRM) to files downloaded from their
+          platform. The main goal was to achieve document time bombing or ad hoc
+          access control regarding downloaded Excel files. After the analysis
+          stage the scope got extended to include all Office files and PDF
+          files.
         </Text>
         <List my={4}>
           <ListItem>

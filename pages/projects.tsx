@@ -1,4 +1,4 @@
-import { ReactElement } from "react";
+import { ReactElement, ReactNode } from "react";
 import { NextPageWithLayout } from "./_app";
 import MainLayout from "../components/layouts/main";
 import ArticleLayout from "../components/layouts/article";
@@ -6,7 +6,6 @@ import Layout from "../components/layouts/article";
 import { Container, SimpleGrid } from "@chakra-ui/react";
 import { Router } from "next/router";
 import Section, { SectionHeading } from "../components/section";
-import { ReactNode } from "react";
 import {
   AlbumViewerPreview,
   Analysis7AssignmentPreview,
@@ -35,7 +34,7 @@ const Projects: NextPageWithLayout = () => {
   ];
 
   const universityProjects: ReactNode[] = [
-    <RiskFactorPreview key="risk-factor"/>,
+    <RiskFactorPreview key="risk-factor" />,
     <ProjectCPreview key="project-c" />,
     <ProjectDPreview key="project-d" />,
     <AlbumViewerPreview key="album-viewer" />,
