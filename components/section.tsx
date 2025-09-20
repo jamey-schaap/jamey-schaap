@@ -6,12 +6,13 @@ import {
   Heading,
   shouldForwardProp,
 } from "@chakra-ui/react";
-import { motion } from "framer-motion";
+import { isValidMotionProp, motion } from "framer-motion";
 import { ReactNode } from "react";
 
 const StyledDiv = chakra(motion.div, {
   shouldForwardProp: (prop) => {
-    return shouldForwardProp(prop) || prop === "transition";
+    // Forward motion props and valid Chakra/style props
+    return isValidMotionProp(prop) || shouldForwardProp(prop);
   },
 });
 
