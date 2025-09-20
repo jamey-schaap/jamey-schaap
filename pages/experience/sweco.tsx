@@ -15,7 +15,6 @@ import {
 } from "@chakra-ui/react";
 import { Router } from "next/router";
 import { HeadingImage, Meta, Title } from "../../components/experience";
-import NextLink from "next/link";
 import { ReactElement } from "react";
 
 const Sweco: NextPageWithLayout = () => {
@@ -28,15 +27,11 @@ const Sweco: NextPageWithLayout = () => {
         </Title>
         <Text as="p">
           From August 2022 to Febuary 2023, I worked an internship at{" "}
-          <NextLink href="https://www.swecogroup.com/" passHref>
-            <Link target="_blank">Sweco</Link>
-          </NextLink>{" "}
+          <Link target="_blank" href="https://www.swecogroup.com/">Sweco</Link>{" "}
           as a Software Engineer DevOps. I worked within the DevSecOps team of
           Obsurv Software which falls under the GIS & ICT department. Team
           Obsurv Software develops a number of products, one of which{" "}
-          <NextLink href="https://obsurv.nl/" passHref>
-            <Link target="_blank">Obsurv</Link>
-          </NextLink>
+          <Link target="_blank" href="https://obsurv.nl/">Obsurv</Link>
           , a web-based management system.
           <br />
           <br />
@@ -83,37 +78,27 @@ const Sweco: NextPageWithLayout = () => {
           <ListItem>
             <Meta>Scrum</Meta>
             Agile Scrum &{" "}
-            <NextLink href="https://www.scaledagileframework.com/" passHref>
-              <Link target="_blank">SAFe 5</Link>
-            </NextLink>
+            <Link target="_blank" href="https://www.scaledagileframework.com/">SAFe 5</Link>
           </ListItem>
         </List>
         <List my={4}>
           <ListItem>
             <Meta>Sweco</Meta>
-            <NextLink href="https://www.swecogroup.com/" passHref>
-              <Link target="_blank">https://www.swecogroup.com/</Link>
-            </NextLink>
+            <Link target="_blank" href="https://www.swecogroup.com/">https://www.swecogroup.com/</Link>
           </ListItem>{" "}
           <ListItem>
             <Meta>Obsurv</Meta>
-            <NextLink href="https://obsurv.com/" passHref>
-              <Link target="_blank">https://obsurv.com/</Link>
-            </NextLink>
+            <Link target="_blank" href="https://obsurv.com/">https://obsurv.com/</Link>
           </ListItem>
         </List>
         <List my={4}>
           <ListItem>
             <Meta>Sweco-NL</Meta>
-            <NextLink href="https://www.sweco.nl/" passHref>
-              <Link target="_blank">https://www.sweco.nl/</Link>
-            </NextLink>
+            <Link href="https://www.sweco.nl/" target="_blank">https://www.sweco.nl/</Link>
           </ListItem>{" "}
           <ListItem>
             <Meta>Obsurv-NL</Meta>
-            <NextLink href="https://obsurv.nl/" passHref>
-              <Link target="_blank">https://obsurv.nl/</Link>
-            </NextLink>
+            <Link href="https://obsurv.nl/" target="_blank">https://obsurv.nl/</Link>
           </ListItem>
         </List>
       </Container>

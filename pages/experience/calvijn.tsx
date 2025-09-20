@@ -5,7 +5,6 @@ import Layout from "../../components/layouts/article";
 import { Badge, Container, Link, List, ListItem, Text } from "@chakra-ui/react";
 import { Router } from "next/router";
 import { HeadingImage, Meta, Title } from "../../components/experience";
-import NextLink from "next/link";
 import { ReactElement } from "react";
 
 const Calvijn: NextPageWithLayout = () => {
@@ -29,9 +28,7 @@ const Calvijn: NextPageWithLayout = () => {
         <List my={4}>
           <ListItem>
             <Meta>Website</Meta>
-            <NextLink href="" passHref>
-              <Link>No website exists anymore</Link>
-            </NextLink>
+            <Link href="">No website exists anymore</Link>
           </ListItem>
         </List>
       </Container>

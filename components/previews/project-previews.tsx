@@ -1,5 +1,4 @@
 import { Link } from "@chakra-ui/react";
-import NextLink from "next/link";
 import { ProjectGridItem } from "../grid-item";
 
 export const ArcadePreview = () => (
@@ -58,10 +57,8 @@ export const ProjectCPreview = () => (
     title="Project C"
     path="/projects/project-c"
   >
-    is a joint project, a blood draw application, created for{" "}
-    <NextLink href="https://www.star-shl.nl/patient/" passHref>
-      <Link target="_blank">Star-shl</Link>
-    </NextLink>
+    is a joint project, a blood draw application, created for 
+    <Link target="_blank" href="https://www.star-shl.nl/patient/">Star-shl</Link>
     .
   </ProjectGridItem>
 );
@@ -72,14 +69,10 @@ export const ProjectDPreview = () => (
     title="Project D"
     path="/projects/project-d"
   >
-    is a joint project, a POC dashboard for{" "}
-    <NextLink href="https://www.alten.com/" passHref>
-      <Link target="_blank">Alten</Link>
-    </NextLink>{" "}
-    and{" "}
-    <NextLink href="https://chengetawildlife.org/" passHref>
-      <Link target="_blank">Chengeta Wildlife</Link>
-    </NextLink>
+    is a joint project, a POC dashboard for 
+    <Link target="_blank" href="https://www.alten.com/">Alten</Link> 
+    and 
+    <Link target="_blank" href="https://chengetawildlife.org/">Chengeta Wildlife</Link>
     .
   </ProjectGridItem>
 );
@@ -143,8 +136,6 @@ export const RiskFactorPreview = () => (
     path="/projects/risk-factor"
   >
     is the project created for the data science minor I followed at 
-    {" "}<NextLink href="https://www.rotterdamuas.com/" passHref>
-      <Link target="_blank">RUAS</Link>
-    </NextLink>.
+    <Link target="_blank" href="https://www.rotterdamuas.com/">RUAS</Link>.
   </ProjectGridItem>
 );

@@ -15,7 +15,6 @@ import {
 } from "@chakra-ui/react";
 import { Router } from "next/router";
 import { HeadingImage, Meta, Title } from "../../components/projects";
-import NextLink from "next/link";
 import Image from "next/image";
 
 const Arcade: NextPageWithLayout = () => {
@@ -39,9 +38,7 @@ const Arcade: NextPageWithLayout = () => {
           </ListItem>
           <ListItem>
             <Meta>Github</Meta>
-            <NextLink href="https://github.com/jamey-schaap/arcade" passHref>
-              <Link target="_blank">https://github.com/jamey-schaap/arcade</Link>
-            </NextLink>
+            <Link target="_blank" href="https://github.com/jamey-schaap/arcade">https://github.com/jamey-schaap/arcade</Link>
           </ListItem>
         </List>
         <SimpleGrid

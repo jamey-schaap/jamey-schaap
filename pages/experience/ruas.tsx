@@ -17,7 +17,6 @@ import {
 } from "@chakra-ui/react";
 import { Router } from "next/router";
 import { HeadingImage, Meta, Title } from "../../components/experience";
-import NextLink from "next/link";
 import { ReactElement } from "react";
 
 const Ruas: NextPageWithLayout = () => {
@@ -91,11 +90,9 @@ const Ruas: NextPageWithLayout = () => {
         <List my={4}>
           <ListItem>
             <Meta>Website</Meta>
-            <NextLink href="https://www.rotterdamuas.com/" passHref>
-              <Link target="_blank">
-                Rotterdam University of Applied Sciences
-              </Link>
-            </NextLink>
+            <Link href="https://www.rotterdamuas.com/" target="_blank">
+              Rotterdam University of Applied Sciences
+            </Link>
           </ListItem>
         </List>
       </Container>

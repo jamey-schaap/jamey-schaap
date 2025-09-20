@@ -14,7 +14,6 @@ import {
 } from "@chakra-ui/react";
 import { Router } from "next/router";
 import { HeadingImage, Meta, Title } from "../../components/projects";
-import NextLink from "next/link";
 
 const ProjectC: NextPageWithLayout = () => {
   return (
@@ -51,9 +50,7 @@ const ProjectC: NextPageWithLayout = () => {
           <ListItem>
             <Meta>Stack</Meta>
             Python 3.9 &{" "}
-            <NextLink href="https://streamlit.io/" passHref>
-              <Link target="_blank">Streamlit</Link>
-            </NextLink>{" "}
+            <Link target="_blank" href="https://streamlit.io/">Streamlit</Link>{" "}
             and SQLite
           </ListItem>
           <ListItem>
@@ -62,20 +59,13 @@ const ProjectC: NextPageWithLayout = () => {
           </ListItem>
           <ListItem>
             <Meta>Github</Meta>
-            <NextLink
-              href="https://github.com/jamey-schaap/Groep1ProjectD"
-              passHref
-            >
-              <Link target="_blank">
-                https://github.com/jamey-schaap/Groep1ProjectD
-              </Link>
-            </NextLink>
+            <Link target="_blank" href="https://github.com/jamey-schaap/Groep1ProjectD">
+              https://github.com/jamey-schaap/Groep1ProjectD
+            </Link>
           </ListItem>
           <ListItem>
             <Meta>Demo</Meta>
-            <NextLink href="https://youtu.be/ewKxmAW7dcM" passHref>
-              <Link target="_blank">https://youtu.be/ewKxmAW7dcM</Link>
-            </NextLink>
+            <Link target="_blank" href="https://youtu.be/ewKxmAW7dcM">https://youtu.be/ewKxmAW7dcM</Link>
           </ListItem>
         </List>
         <AspectRatio ratio={16 / 9}>

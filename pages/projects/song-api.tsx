@@ -6,7 +6,6 @@ import Layout from "../../components/layouts/article";
 import { Badge, Container, Link, List, ListItem, Text } from "@chakra-ui/react";
 import { Router } from "next/router";
 import { HeadingImage, Meta, Title } from "../../components/projects";
-import NextLink from "next/link";
 
 const SongAPI: NextPageWithLayout = () => {
   return (
@@ -21,16 +20,9 @@ const SongAPI: NextPageWithLayout = () => {
           ASP.NET Core and Entity Framework Core. It contains the API, unit- and
           integrations tests and OpenAPI/Swagger documentation. With Docker and
           GitHub Actions a container image gets build and pushed to{" "}
-          <NextLink href="https://hub.docker.com/" passHref>
-            <Link target="_blank">Docker Hub</Link>
-          </NextLink>{" "}
+          <Link target="_blank" href="https://hub.docker.com/">Docker Hub</Link>{" "}
           and then the latest version gets pushed to a{" "}
-          <NextLink
-            href="https://www.redhat.com/en/technologies/cloud-computing/openshift"
-            passHref
-          >
-            <Link target="_blank">Red Hat OpenShift</Link>
-          </NextLink>{" "}
+          <Link target="_blank" href="https://www.redhat.com/en/technologies/cloud-computing/openshift">Red Hat OpenShift</Link>{" "}
           developer sandbox.
         </Text>
         <List my={4}>
@@ -44,9 +36,7 @@ const SongAPI: NextPageWithLayout = () => {
           </ListItem>
           <ListItem>
             <Meta>Github</Meta>
-            <NextLink href="https://github.com/jamey-schaap/song-api" passHref>
-              <Link target="_blank">https://github.com/jamey-schaap/song-api</Link>
-            </NextLink>
+            <Link target="_blank" href="https://github.com/jamey-schaap/song-api">https://github.com/jamey-schaap/song-api</Link>
           </ListItem>
         </List>
       </Container>

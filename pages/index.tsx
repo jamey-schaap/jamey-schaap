@@ -30,7 +30,6 @@ import TabItem, {
   TabHeader,
   TabItemManager,
 } from "../components/tab";
-import NextLink from "next/link";
 import TabContext from "../contexts/tab-context";
 import Head from "next/head";
 import { Router } from "next/router";
@@ -117,10 +116,8 @@ const Home: NextPageWithLayout = () => {
                   Jamey Schaap
                 </Heading>
                 <Text as="i">
-                  Graduate intern at{" "}
-                  <NextLink href="https://www.virtualvaults.com/" passHref>
-                    <Link target="_blank">Virtual Vaults</Link>
-                  </NextLink>
+                  Graduate intern at 
+                  <Link target="_blank" href="https://www.virtualvaults.com/">Virtual Vaults</Link>
                 </Text>
                 <Divider borderColor={dividerColor} />
                 <Text as="i">Fourth-year computer science student</Text>
@@ -129,18 +126,11 @@ const Home: NextPageWithLayout = () => {
                 <Divider borderColor={dividerColor} />
                 <Text display="inline-flex" alignItems="center" gap={1} pr={10}>
                   <IoLogoGithub />
-                  <NextLink href="https://github.com/jamey-schaap" passHref>
-                    <Link target="_blank">GitHub</Link>
-                  </NextLink>
+                  <Link target="_blank" href="https://github.com/jamey-schaap">GitHub</Link>
                 </Text>
                 <Text display="inline-flex" alignItems="center" gap={1}>
                   <IoLogoLinkedin />
-                  <NextLink
-                    href="https://www.linkedin.com/in/jamey-schaap/"
-                    passHref
-                  >
-                    <Link target="_blank">LinkedIn</Link>
-                  </NextLink>
+                  <Link target="_blank" href="https://www.linkedin.com/in/jamey-schaap/">LinkedIn</Link>
                 </Text>
                 <Divider borderColor={dividerColor} />
               </Box>
@@ -163,22 +153,18 @@ const Home: NextPageWithLayout = () => {
                 <SectionDate>09-2023 to 02-2024</SectionDate>
                 <SectionInfo>
                   <Text as="i">Minor Data Science</Text> at{" "}
-                  <NextLink href="https://www.rotterdamuas.com/" passHref>
-                    <Link target="_blank">
+                  <Link target="_blank" href="https://www.rotterdamuas.com/">
                       Rotterdam University of Applied Sciences
                     </Link>
-                  </NextLink>
                 </SectionInfo>
               </SectionRow>
               <SectionRow>
                 <SectionDate>02-2023 to 07-2023</SectionDate>
                 <SectionInfo>
                   <Text as="i">Minor Software Engineering</Text> at{" "}
-                  <NextLink href="https://www.rotterdamuas.com/" passHref>
-                    <Link target="_blank">
+                  <Link target="_blank" href="https://www.rotterdamuas.com/">
                       Rotterdam University of Applied Sciences
                     </Link>
-                  </NextLink>
                 </SectionInfo>
               </SectionRow>
               <SectionRow>
@@ -190,33 +176,27 @@ const Home: NextPageWithLayout = () => {
                 </SectionDate>
                 <SectionInfo>
                   <Text as="i">BSc Computer Science</Text> at{" "}
-                  <NextLink href="https://www.rotterdamuas.com/" passHref>
-                    <Link target="_blank">
+                  <Link target="_blank" href="https://www.rotterdamuas.com/">
                       Rotterdam University of Applied Sciences
                     </Link>
-                  </NextLink>
                 </SectionInfo>
               </SectionRow>
               <SectionRow>
                 <SectionDate>09-2019 to 03-2020</SectionDate>
                 <SectionInfo>
                   <Text as="i">BSc Human Resource Management</Text> at{" "}
-                  <NextLink href="https://www.rotterdamuas.com/" passHref>
-                    <Link target="_blank">
+                  <Link target="_blank" href="https://www.rotterdamuas.com/">
                       Rotterdam University of Applied Sciences
                     </Link>
-                  </NextLink>
                 </SectionInfo>
               </SectionRow>
               <SectionRow>
                 <SectionDate>09-2018 to 12-2018</SectionDate>
                 <SectionInfo>
                   <Text as="i">BSc Business IT management</Text> at{" "}
-                  <NextLink href="https://www.rotterdamuas.com/" passHref>
-                    <Link target="_blank">
+                  <Link target="_blank" href="https://www.rotterdamuas.com/">
                       Rotterdam University of Applied Sciences
                     </Link>
-                  </NextLink>
                 </SectionInfo>
               </SectionRow>
               <SectionRow>
@@ -261,12 +241,7 @@ const Home: NextPageWithLayout = () => {
                       </SectionDate>
                       <SectionInfo>
                         <Text as="i">Graduate Intern</Text> at{" "}
-                        <NextLink
-                          href="https://www.virtualvaults.com/"
-                          passHref
-                        >
-                          <Link target="_blank">Virtual Vaults</Link>
-                        </NextLink>
+                        <Link target="_blank" href="https://www.virtualvaults.com/">Virtual Vaults</Link>
                       </SectionInfo>
                     </SectionRow>
 
@@ -274,9 +249,7 @@ const Home: NextPageWithLayout = () => {
                       <SectionDate>07-2022 to 02-2024</SectionDate>
                       <SectionInfo>
                         <Text as="i">Administrative Assistant</Text> at{" "}
-                        <NextLink href="https://www.mrestart.nl/" passHref>
-                          <Link target="_blank">M Restart</Link>
-                        </NextLink>
+                        <Link target="_blank" href="https://www.mrestart.nl/">M Restart</Link>
                       </SectionInfo>
                     </SectionRow>
 
@@ -284,9 +257,7 @@ const Home: NextPageWithLayout = () => {
                       <SectionDate>08-2022 to 03-2023</SectionDate>
                       <SectionInfo>
                         <Text as="i">Intern Software Engineer DevOps</Text> at{" "}
-                        <NextLink href="https://www.swecogroup.com/" passHref>
-                          <Link target="_blank">Sweco</Link>
-                        </NextLink>
+                        <Link target="_blank" href="https://www.swecogroup.com/">Sweco</Link>
                       </SectionInfo>
                     </SectionRow>
 
@@ -294,48 +265,35 @@ const Home: NextPageWithLayout = () => {
                       <SectionDate>04-2019 to 09-2019</SectionDate>
                       <SectionInfo>
                         <Text as="i">Sales promotor</Text> at{" "}
-                        <NextLink href="https://www.pepperminds.com/" passHref>
-                          <Link target="_blank">Pepperminds</Link>
-                        </NextLink>
+                        <Link target="_blank" href="https://www.pepperminds.com/">Pepperminds</Link>
                       </SectionInfo>
                     </SectionRow>
                     <SectionRow>
                       <SectionDate>01-2019 to 06-2019</SectionDate>
                       <SectionInfo>
                         <Text as="i">Store clerk</Text> at{" "}
-                        <NextLink href="https://www.ah.nl/over-ah" passHref>
-                          <Link target="_blank">Albert Heijn</Link>
-                        </NextLink>
+                        <Link target="_blank" href="https://www.ah.nl/over-ah">Albert Heijn</Link>
                       </SectionInfo>
                     </SectionRow>
                     <SectionRow>
                       <SectionDate>08-2018 to 09-2018</SectionDate>
                       <SectionInfo>
                         <Text as="i">Waiter & Bartender</Text> at{" "}
-                        <NextLink href="https://venw.com/" passHref>
-                          <Link target="_blank">Verwiel en Wijngaard</Link>
-                        </NextLink>
+                        <Link href="https://venw.com/" target="_blank">Verwiel en Wijngaard</Link>
                       </SectionInfo>
                     </SectionRow>
                     <SectionRow>
                       <SectionDate>09-2017 to 06-2018</SectionDate>
                       <SectionInfo>
                         <Text as="i">Cashier & Customer service</Text> at{" "}
-                        <NextLink
-                          href="https://www.makro.nl/over-makro"
-                          passHref
-                        >
-                          <Link target="_blank">Marko</Link>
-                        </NextLink>
+                        <Link href="https://www.makro.nl/over-makro" target="_blank">Marko</Link>
                       </SectionInfo>
                     </SectionRow>
                     <SectionRow>
                       <SectionDate>06-2015 to 06-2017</SectionDate>
                       <SectionInfo>
                         <Text as="i">Store clerk</Text> at{" "}
-                        <NextLink href="https://www.ah.nl/over-ah" passHref>
-                          <Link target="_blank">Albert Heijn</Link>
-                        </NextLink>
+                          <Link target="_blank" href="https://www.ah.nl/over-ah" >Albert Heijn</Link>
                       </SectionInfo>
                     </SectionRow>
                   </Section>
@@ -349,124 +307,72 @@ const Home: NextPageWithLayout = () => {
                           Propedeutic Certificate in Computer Science
                         </Text>{" "}
                         at{" "}
-                        <NextLink href="https://www.rotterdamuas.com/" passHref>
-                          <Link target="_blank">
+                        <Link href="https://www.rotterdamuas.com/" target="_blank">
                             Rotterdam University of Applied Sciences
                           </Link>
-                        </NextLink>
                       </SectionInfo>
                     </SectionRow>
                     <SectionRow columnWith={70}>
                       <SectionDate>11-2022</SectionDate>
                       <SectionInfo>
-                        <NextLink
-                          href="https://www.udemy.com/certificate/UC-b512d857-2377-4f19-a6aa-15b1a09474ce/"
-                          passHref
-                        >
-                          <Link target="_blank" css={certificateLinkStyle}>
+                        <Link href="https://www.udemy.com/certificate/UC-b512d857-2377-4f19-a6aa-15b1a09474ce/" target="_blank" css={certificateLinkStyle}>
                             <Text as="i">
                               Kubernetes for the Absolute Beginners - Hands-on
                             </Text>{" "}
                             at{" "}
-                            <NextLink
-                              href="https://www.udemy.com/course/learn-kubernetes/"
-                              passHref
-                            >
-                              <Link target="_blank">Udemy</Link>
-                            </NextLink>
+                            <Link href="https://www.udemy.com/course/learn-kubernetes/" target="_blank">Udemy</Link>
                           </Link>
-                        </NextLink>
                       </SectionInfo>
                     </SectionRow>
                     <SectionRow columnWith={70}>
                       <SectionDate>10-2022</SectionDate>
                       <SectionInfo>
-                        <NextLink
-                          href="https://ude.my/UC-50f4e1df-7750-4371-a1b4-aef72cbcd49f/"
-                          passHref
-                        >
-                          <Link target="_blank" css={certificateLinkStyle}>
+                        <Link href="https://ude.my/UC-50f4e1df-7750-4371-a1b4-aef72cbcd49f/" target="_blank" css={certificateLinkStyle}>
                             <Text as="i">
                               The Complete SQL bootcamp 2022: Go from Zero to
                               Hero
                             </Text>
                             at{" "}
-                            <NextLink
-                              href="https://www.udemy.com/course/the-complete-sql-bootcamp/"
-                              passHref
-                            >
-                              <Link target="_blank">Udemy</Link>
-                            </NextLink>
+                            <Link href="https://www.udemy.com/course/the-complete-sql-bootcamp/" target="_blank">Udemy</Link>
                           </Link>
-                        </NextLink>
                       </SectionInfo>
                     </SectionRow>
                     <SectionRow columnWith={70}>
                       <SectionDate>01-2022</SectionDate>
                       <SectionInfo>
-                        <NextLink
-                          href="https://ude.my/UC-cfec9deb-dcad-4353-90e1-14cba7797642/"
-                          passHref
-                        >
-                          <Link target="_blank" css={certificateLinkStyle}>
+                        <Link href="https://ude.my/UC-cfec9deb-dcad-4353-90e1-14cba7797642/" target="_blank" css={certificateLinkStyle}>
                             <Text as="i">
                               C# Advanced Topics: Prepare for Technical
                               Interviews
                             </Text>{" "}
                             at{" "}
-                            <NextLink
-                              href="https://www.udemy.com/course/csharp-advanced/"
-                              passHref
-                            >
-                              <Link target="_blank">Udemy</Link>
-                            </NextLink>
+                            <Link href="https://www.udemy.com/course/csharp-advanced/" target="_blank">Udemy</Link>
                           </Link>
-                        </NextLink>
                       </SectionInfo>
                     </SectionRow>
                     <SectionRow columnWith={70}>
                       <SectionDate>01-2022</SectionDate>
                       <SectionInfo>
-                        <NextLink
-                          href="https://ude.my/UC-e484720a-0081-43b8-895f-137890c601b5/"
-                          passHref
-                        >
-                          <Link target="_blank" css={certificateLinkStyle}>
+                        <Link href="https://ude.my/UC-e484720a-0081-43b8-895f-137890c601b5/" target="_blank" css={certificateLinkStyle}>
                             <Text as="i">
                               C# Intermediate: Classes, Interfaces and OOP
                             </Text>{" "}
                             at{" "}
-                            <NextLink
-                              href="https://www.udemy.com/course/csharp-intermediate-classes-interfaces-and-oop/"
-                              passHref
-                            >
-                              <Link target="_blank">Udemy</Link>
-                            </NextLink>
+                            <Link href="https://www.udemy.com/course/csharp-intermediate-classes-interfaces-and-oop/" target="_blank">Udemy</Link>
                           </Link>
-                        </NextLink>
                       </SectionInfo>
                     </SectionRow>
                     <SectionRow columnWith={70}>
                       <SectionDate>10-2021</SectionDate>
                       <SectionInfo>
-                        <NextLink
-                          href="https://ude.my/UC-2624a9a1-0560-429c-a2c6-51f9784365d4/"
-                          passHref
-                        >
-                          <Link target="_blank" css={certificateLinkStyle}>
+                        <Link href="https://ude.my/UC-2624a9a1-0560-429c-a2c6-51f9784365d4/" target="_blank" css={certificateLinkStyle}>
                             <Text as="i">
                               C# Basics for Beginners: Learn C# Fundamentals by
                               Coding
                             </Text>{" "}
                             at{" "}
-                            <NextLink
-                              href="https://www.udemy.com/course/csharp-tutorial-for-beginners/"
-                              passHref
-                            >
-                              <Link target="_blank">Udemy</Link>
-                            </NextLink>
+                            <Link href="https://www.udemy.com/course/csharp-tutorial-for-beginners/" target="_blank">Udemy</Link>
                           </Link>
-                        </NextLink>
                       </SectionInfo>
                     </SectionRow>
                   </Section>

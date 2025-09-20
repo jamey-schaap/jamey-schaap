@@ -1,5 +1,4 @@
 import { ReactNode } from "react";
-import NextLink from "next/link";
 import { Badge, Box, Heading, Link, useColorModeValue } from "@chakra-ui/react";
 import { ChevronRightIcon } from "@chakra-ui/icons";
 import Image from "next/image";
@@ -10,9 +9,7 @@ type ProjectProps = {
 
 export const Title = ({ children }: ProjectProps) => (
   <Box>
-    <NextLink href="/projects" passHref>
-      <Link>Projects</Link>
-    </NextLink>
+    <Link href="/projects">Projects</Link>
     <Box as="span">
       {" "}
       <ChevronRightIcon />{" "}

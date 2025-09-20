@@ -6,7 +6,6 @@ import Layout from "../../components/layouts/article";
 import { Badge, Container, Link, List, ListItem, Text } from "@chakra-ui/react";
 import { Router } from "next/router";
 import { HeadingImage, Meta, Title } from "../../components/projects";
-import NextLink from "next/link";
 
 const AlbumViewer: NextPageWithLayout = () => {
   return (
@@ -41,14 +40,10 @@ const AlbumViewer: NextPageWithLayout = () => {
           </ListItem>
           <ListItem>
             <Meta>Github</Meta>
-            <NextLink href="https://github.com/jamey-schaap/album-api" passHref>
-              <Link target="_blank">https://github.com/jamey-schaap/album-api</Link>
-            </NextLink>{" "}
-            <NextLink href="https://github.com/jamey-schaap/album-frontend" passHref>
-              <Link target="_blank">
+            <Link target="_blank" href="https://github.com/jamey-schaap/album-api">https://github.com/jamey-schaap/album-api</Link>{" "}
+            <Link target="_blank" href="https://github.com/jamey-schaap/album-frontend">
                 https://github.com/jamey-schaap/album-frontend
               </Link>
-            </NextLink>
           </ListItem>
         </List>
       </Container>

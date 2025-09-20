@@ -1,7 +1,6 @@
 import { Link, ListItem, List, Text, ListIcon } from "@chakra-ui/react";
 import Section from "../section";
 import ModalTemplate from "./modal-template";
-import NextLink from "next/link";
 import { IoMdSchool } from "react-icons/io";
 import {
   AlbumViewerPreview,
@@ -27,11 +26,9 @@ export const DotNetModal = () => (
       <List>
         <ListItem>
           <ListIcon as={IoMdSchool} />
-          <NextLink href="https://www.rotterdamuas.com/" passHref>
-            <Link target="_blank">
+          <Link href="https://www.rotterdamuas.com/" target="_blank">
               Rotterdam University of Applied Sciences
             </Link>
-          </NextLink>
         </ListItem>
       </List>
     }
@@ -69,11 +66,9 @@ export const ASPNETCoreModal = () => (
       <List>
         <ListItem>
           <ListIcon as={IoMdSchool} />
-          <NextLink href="https://www.rotterdamuas.com/" passHref>
-            <Link target="_blank">
+          <Link href="https://www.rotterdamuas.com/" target="_blank">
               Rotterdam University of Applied Sciences
             </Link>
-          </NextLink>
         </ListItem>
       </List>
     }
@@ -108,11 +103,9 @@ export const EFCoreModal = () => (
       <List>
         <ListItem>
           <ListIcon as={IoMdSchool} />
-          <NextLink href="https://www.rotterdamuas.com/" passHref>
-            <Link target="_blank">
+          <Link href="https://www.rotterdamuas.com/" target="_blank">
               Rotterdam University of Applied Sciences
             </Link>
-          </NextLink>
         </ListItem>
       </List>
     }
@@ -144,11 +137,9 @@ export const ReactModal = () => (
       <List>
         <ListItem>
           <ListIcon as={IoMdSchool} />
-          <NextLink href="https://www.rotterdamuas.com/" passHref>
-            <Link target="_blank">
+          <Link href="https://www.rotterdamuas.com/" target="_blank">
               Rotterdam University of Applied Sciences
             </Link>
-          </NextLink>
         </ListItem>
       </List>
     }
@@ -185,11 +176,9 @@ export const VueModal = () => (
       <List>
         <ListItem>
           <ListIcon as={IoMdSchool} />
-          <NextLink href="https://www.rotterdamuas.com/" passHref>
-            <Link target="_blank">
+          <Link href="https://www.rotterdamuas.com/" target="_blank">
               Rotterdam University of Applied Sciences
             </Link>
-          </NextLink>
         </ListItem>
       </List>
     }

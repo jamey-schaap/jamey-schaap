@@ -6,7 +6,6 @@ import Layout from "../../components/layouts/article";
 import { Badge, Container, Link, List, ListItem, Text } from "@chakra-ui/react";
 import { Router } from "next/router";
 import { HeadingImage, Meta, Title } from "../../components/projects";
-import NextLink from "next/link";
 
 const JaimIO: NextPageWithLayout = () => {
   return (
@@ -46,14 +45,12 @@ const JaimIO: NextPageWithLayout = () => {
           </ListItem>
           <ListItem>
             <Meta>Github</Meta>
-            <NextLink
+            <Link
+              target="_blank"
               href="https://github.com/jamey-schaap/jamey-schaap"
-              passHref
             >
-              <Link target="_blank">
-                https://github.com/jamey-schaap/jamey-schaap
-              </Link>
-            </NextLink>
+              https://github.com/jamey-schaap/jamey-schaap
+            </Link>
           </ListItem>
         </List>
       </Container>

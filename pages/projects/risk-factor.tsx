@@ -6,7 +6,6 @@ import Layout from "../../components/layouts/article";
 import { Badge, Container, Link, List, ListItem, Text } from "@chakra-ui/react";
 import { Router } from "next/router";
 import { HeadingImage, Meta, Title } from "../../components/projects";
-import NextLink from "next/link";
 
 const RiskFactor: NextPageWithLayout = () => {
   return (
@@ -34,9 +33,7 @@ const RiskFactor: NextPageWithLayout = () => {
           </ListItem>
           <ListItem>
             <Meta>Github</Meta>
-            <NextLink href="https://github.com/jamey-schaap/Minor-Data_Science-Project" passHref>
-              <Link target="_blank">https://github.com/jamey-schaap/Minor-Data_Science-Project</Link>
-            </NextLink>{" "}
+            <Link target="_blank" href="https://github.com/jamey-schaap/Minor-Data_Science-Project">https://github.com/jamey-schaap/Minor-Data_Science-Project</Link>{" "}
           </ListItem>
         </List>
       </Container>

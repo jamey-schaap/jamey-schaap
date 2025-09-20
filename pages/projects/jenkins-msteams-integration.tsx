@@ -15,7 +15,6 @@ import {
 } from "@chakra-ui/react";
 import { Router } from "next/router";
 import { HeadingImage, Meta, Title } from "../../components/projects";
-import NextLink from "next/link";
 import Image from "next/image";
 
 const JenkinsMSTeamsIntegration: NextPageWithLayout = () => {
@@ -28,9 +27,7 @@ const JenkinsMSTeamsIntegration: NextPageWithLayout = () => {
         </Title>
         <Text as="p">
           The project is in a integration I created during my internship at{" "}
-          <NextLink href="https://www.swecogroup.com/" passHref>
-            <Link target="_blank">Sweco</Link>
-          </NextLink>{" "}
+          <Link target="_blank" href="https://www.swecogroup.com/">Sweco</Link>{" "}
           for the Obsurv Software team. This integration makes it possible to
           notify developers of about the results of specific Jenkins builds.{" "}
           <br />
@@ -47,14 +44,9 @@ const JenkinsMSTeamsIntegration: NextPageWithLayout = () => {
           </ListItem>
           <ListItem>
             <Meta>Github</Meta>
-            <NextLink
-              href="https://github.com/jamey-schaap/jenkins-ms_teams-plugin"
-              passHref
-            >
-              <Link target="_blank">
+            <Link target="_blank" href="https://github.com/jamey-schaap/jenkins-ms_teams-plugin">
                 https://github.com/jamey-schaap/jenkins-ms_teams-plugin
               </Link>
-            </NextLink>
           </ListItem>
         </List>
       </Container>

@@ -6,7 +6,6 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { ReactNode } from "react";
-import NextLink from "next/link";
 import Image from "next/image";
 
 type ProjectGridItemProps = {
@@ -40,25 +39,23 @@ export const ProjectGridItem = ({
       },
     }}
   >
-    <NextLink href={path} passHref scroll={false}>
-      <LinkBox cursor="pointer">
-        <Image
-          src={thumbnail}
-          alt={title}
-          style={{ borderRadius: "12px" }}
-          width="180"
-          height="101"
-          // placeholder="blur"
-        />
-        <LinkOverlay href={path}>
-          <Text mt={2} fontSize={20}>
-            {title}
-          </Text>
-        </LinkOverlay>
-        <Text fontSize={14} mx={2}>
-          {children}
+    <LinkBox cursor="pointer">
+      <Image
+        src={thumbnail}
+        alt={title}
+        style={{ borderRadius: "12px" }}
+        width="180"
+        height="101"
+        // placeholder="blur"
+      />
+      <LinkOverlay href={path}>
+        <Text mt={2} fontSize={20}>
+          {title}
         </Text>
-      </LinkBox>
-    </NextLink>
+      </LinkOverlay>
+      <Text fontSize={14} mx={2}>
+        {children}
+      </Text>
+    </LinkBox>
   </Box>
 );

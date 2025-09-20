@@ -1,10 +1,10 @@
-import NextLink from "next/link";
 import {
   Box,
   Button,
   Container,
   Divider,
   Heading,
+  Link,
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
@@ -31,7 +31,7 @@ const NotFound: NextPageWithLayout = () => {
         />
         {/* @ts-ignore */}
         <Box my={6} align="center">
-          <NextLink href="/" passHref>
+          <Link href="/">
             <Button
               color={useColorModeValue("black", "white")}
               css={{
@@ -46,7 +46,7 @@ const NotFound: NextPageWithLayout = () => {
             >
               Return to home
             </Button>
-          </NextLink>
+          </Link>
         </Box>
       </Container>
     </Layout>

@@ -6,7 +6,6 @@ import Layout from "../../components/layouts/article";
 import { Badge, Container, Link, List, ListItem, Text } from "@chakra-ui/react";
 import { Router } from "next/router";
 import { HeadingImage, Meta, Title } from "../../components/projects";
-import NextLink from "next/link";
 
 const SpartanFitness: NextPageWithLayout = () => {
   return (
@@ -40,11 +39,9 @@ const SpartanFitness: NextPageWithLayout = () => {
           </ListItem>
           <ListItem>
             <Meta>Github</Meta>
-            <NextLink href="https://github.com/jaim-io/SpartanFitness" passHref>
-              <Link target="_blank">
+            <Link target="_blank" href="https://github.com/jaim-io/SpartanFitness">
                 https://github.com/jaim-io/SpartanFitness
               </Link>
-            </NextLink>
           </ListItem>
         </List>
       </Container>

@@ -1,7 +1,6 @@
 import { Link, ListItem, List, Text, ListIcon } from "@chakra-ui/react";
 import Section from "../section";
 import ModalTemplate from "./modal-template";
-import NextLink from "next/link";
 import { GiSuitcase } from "react-icons/gi";
 import { IoMdSchool } from "react-icons/io";
 import {
@@ -27,11 +26,9 @@ export const DockerModal = () => (
       <List>
         <ListItem>
           <ListIcon as={IoMdSchool} />
-          <NextLink href="https://www.rotterdamuas.com/" passHref>
-            <Link target="_blank">
+          <Link href="https://www.rotterdamuas.com/" target="_blank">
               Rotterdam University of Applied Sciences
             </Link>
-          </NextLink>
         </ListItem>
       </List>
     }
@@ -71,14 +68,9 @@ export const KubernetesModal = () => (
       <List>
         <ListItem>
           <ListIcon as={IoMdSchool} />
-          <NextLink
-            href="https://www.udemy.com/certificate/UC-b512d857-2377-4f19-a6aa-15b1a09474ce/"
-            passHref
-          >
-            <Link target="_blank">
+          <Link href="https://www.udemy.com/certificate/UC-b512d857-2377-4f19-a6aa-15b1a09474ce/" target="_blank">
               Kubernetes for the Absolute Beginners - Hands-on
             </Link>
-          </NextLink>
         </ListItem>
       </List>
     }
@@ -104,11 +96,9 @@ export const GitHubActionsModal = () => (
       <List>
         <ListItem>
           <ListIcon as={IoMdSchool} />
-          <NextLink href="https://www.rotterdamuas.com/" passHref>
-            <Link target="_blank">
+          <Link href="https://www.rotterdamuas.com/" target="_blank">
               Rotterdam University of Applied Sciences
             </Link>
-          </NextLink>
         </ListItem>
       </List>
     }
@@ -141,9 +131,7 @@ export const AzurePipelinesModal = () => (
     description={
       <Text>
         During my internship at{" "}
-        <NextLink href="https://www.swecogroup.com/" passHref>
-          <Link target="_blank">Sweco</Link>
-        </NextLink>
+        <Link href="https://www.swecogroup.com/" target="_blank">Sweco</Link>
         , I setup a number of proof of concept pipelines in Azure Pipelines and
         obtained some insights into the use template pipelines in Azure
         Pipelines.
@@ -153,9 +141,7 @@ export const AzurePipelinesModal = () => (
       <List>
         <ListItem>
           <ListIcon as={GiSuitcase} />
-          <NextLink href="https://www.swecogroup.com/" passHref>
-            <Link target="_blank">Sweco</Link>
-          </NextLink>
+          <Link href="https://www.swecogroup.com/" target="_blank">Sweco</Link>
         </ListItem>
       </List>
     }
@@ -168,9 +154,7 @@ export const JenkinsModal = () => (
     description={
       <Text>
         During my internship at{" "}
-        <NextLink href="https://www.swecogroup.com/" passHref>
-          <Link target="_blank">Sweco</Link>
-        </NextLink>
+        <Link href="https://www.swecogroup.com/" target="_blank">Sweco</Link>
         , I created and worked on multiple Jenkins pipelines regarding CI/CD,
         automation and integration.
       </Text>
@@ -179,9 +163,7 @@ export const JenkinsModal = () => (
       <List>
         <ListItem>
           <ListIcon as={GiSuitcase} />
-          <NextLink href="https://www.swecogroup.com/" passHref>
-            <Link target="_blank">Sweco</Link>
-          </NextLink>
+          <Link href="https://www.swecogroup.com/" target="_blank">Sweco</Link>
         </ListItem>
       </List>
     }

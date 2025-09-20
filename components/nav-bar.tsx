@@ -14,7 +14,6 @@ import {
 } from "@chakra-ui/react";
 import Logo from "./logo";
 import ThemeToggleButton from "./theme-toggle-button";
-import NextLink from "next/link";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import { IoLogoGithub } from "react-icons/io5";
 import { ReactNode } from "react";
@@ -37,22 +36,21 @@ const NavItem: React.FC<NavItemProps> = ({
   const inactiveColor = useColorModeValue("gray200", "whiteAlpha.900");
   const activeColor = useColorModeValue("#3d7aed", "#ffdd99");
   return (
-    <NextLink href={href} passHref scroll={false}>
-      <Link
-        target={target}
-        p={2}
-        color={active ? activeColor : inactiveColor}
-        css={{
-          "&:active": {
-            transform: "scale(0.85)",
-            transition: "200ms ease",
-          },
-        }}
-        {...props}
-      >
-        {children}
-      </Link>
-    </NextLink>
+    <Link
+      href={href}
+      target={target}
+      p={2}
+      color={active ? activeColor : inactiveColor}
+      css={{
+        "&:active": {
+          transform: "scale(0.85)",
+          transition: "200ms ease",
+        },
+      }}
+      {...props}
+    >
+      {children}
+    </Link>
   );
 };
 
@@ -126,27 +124,20 @@ const NavBar: React.FC<NavProps> = ({ path, ...props }: NavProps) => {
                 aria-label="options"
               />
               <MenuList bg={useColorModeValue("#f0e7db", "#202023")}>
-                <NextLink href="/" passHref>
-                  <MenuItem as={Link}>About</MenuItem>
-                </NextLink>
-                <NextLink href="/projects" passHref>
-                  <MenuItem as={Link}>Projects</MenuItem>
-                </NextLink>
-                <NextLink href="/experience" passHref>
-                  <MenuItem as={Link}>Experience</MenuItem>
-                </NextLink>
-                <NextLink href="https://github.com/jamey-schaap/jamey-schaap" passHref>
-                  <MenuItem
-                    as={Link}
-                    display="inline-flex"
-                    alignItems="center"
-                    style={{ gap: 4 }}
-                    pl={2}
-                  >
-                    <IoLogoGithub />
-                    Source
-                  </MenuItem>
-                </NextLink>
+                <MenuItem as={Link} href="/">About</MenuItem>
+                <MenuItem as={Link} href="/projects">Projects</MenuItem>
+                <MenuItem as={Link} href="/experience">Experience</MenuItem>
+                <MenuItem
+                  as={Link}
+                  href="https://github.com/jamey-schaap/jamey-schaap"
+                  display="inline-flex"
+                  alignItems="center"
+                  style={{ gap: 4 }}
+                  pl={2}
+                >
+                  <IoLogoGithub />
+                  Source
+                </MenuItem>
               </MenuList>
             </Menu>
           </Box>

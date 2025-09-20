@@ -14,7 +14,6 @@ import {
 } from "@chakra-ui/react";
 import { Router } from "next/router";
 import { HeadingImage, Meta, Title } from "../../components/projects";
-import NextLink from "next/link";
 
 const ProjectC: NextPageWithLayout = () => {
   return (
@@ -54,9 +53,7 @@ const ProjectC: NextPageWithLayout = () => {
           </ListItem>
           <ListItem>
             <Meta>Demo</Meta>
-            <NextLink href="https://youtu.be/6_TGA3oigoQ" passHref>
-              <Link target="_blank">https://youtu.be/6_TGA3oigoQ</Link>
-            </NextLink>
+            <Link target="_blank" href="https://youtu.be/6_TGA3oigoQ">https://youtu.be/6_TGA3oigoQ</Link>
           </ListItem>
         </List>
         <AspectRatio ratio={16 / 9}>

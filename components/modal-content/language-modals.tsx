@@ -2,7 +2,6 @@ import { Link, ListItem, List, Text, ListIcon } from "@chakra-ui/react";
 import { ProjectGridItem } from "../grid-item";
 import Section from "../section";
 import ModalTemplate from "./modal-template";
-import NextLink from "next/link";
 import { IoMdSchool } from "react-icons/io";
 import {
   AlbumViewerPreview,
@@ -61,36 +60,21 @@ export const CSharpModal = () => (
       <List>
         <ListItem>
           <ListIcon as={IoMdSchool} />
-          <NextLink
-            href="https://www.udemy.com/certificate/UC-2624a9a1-0560-429c-a2c6-51f9784365d4/"
-            passHref
-          >
-            <Link target="_blank">
+          <Link href="https://www.udemy.com/certificate/UC-2624a9a1-0560-429c-a2c6-51f9784365d4/" target="_blank">
               C# Basics for Beginners: Learn C# Fundamentals by Coding
             </Link>
-          </NextLink>
         </ListItem>
         <ListItem>
           <ListIcon as={IoMdSchool} />
-          <NextLink
-            href="https://www.udemy.com/certificate/UC-e484720a-0081-43b8-895f-137890c601b5/"
-            passHref
-          >
-            <Link target="_blank">
+          <Link href="https://www.udemy.com/certificate/UC-e484720a-0081-43b8-895f-137890c601b5/" target="_blank">
               C# Intermediate: Classes, Interfaces and OOP
             </Link>
-          </NextLink>
         </ListItem>
         <ListItem>
           <ListIcon as={IoMdSchool} />
-          <NextLink
-            href="https://www.udemy.com/certificate/UC-cfec9deb-dcad-4353-90e1-14cba7797642/"
-            passHref
-          >
-            <Link target="_blank">
+          <Link href="https://www.udemy.com/certificate/UC-cfec9deb-dcad-4353-90e1-14cba7797642/" target="_blank">
               C# Advanced Topics: Prepare for Technical Interviews
             </Link>
-          </NextLink>
         </ListItem>
       </List>
     }
@@ -98,11 +82,9 @@ export const CSharpModal = () => (
       <List>
         <ListItem>
           <ListIcon as={IoMdSchool} />
-          <NextLink href="https://www.rotterdamuas.com/" passHref>
-            <Link target="_blank">
+          <Link href="https://www.rotterdamuas.com/" target="_blank">
               Rotterdam University of Applied Sciences
             </Link>
-          </NextLink>
         </ListItem>
       </List>
     }
@@ -141,11 +123,9 @@ export const PythonModal = () => (
       <List>
         <ListItem>
           <ListIcon as={IoMdSchool} />
-          <NextLink href="https://www.rotterdamuas.com/" passHref>
-            <Link target="_blank">
+          <Link href="https://www.rotterdamuas.com/" target="_blank">
               Rotterdam University of Applied Sciences
             </Link>
-          </NextLink>
         </ListItem>
       </List>
     }
@@ -178,11 +158,9 @@ export const TypescriptModal = () => (
       <List>
         <ListItem>
           <ListIcon as={IoMdSchool} />
-          <NextLink href="https://www.rotterdamuas.com/" passHref>
-            <Link target="_blank">
+          <Link href="https://www.rotterdamuas.com/" target="_blank">
               Rotterdam University of Applied Sciences
             </Link>
-          </NextLink>
         </ListItem>
       </List>
     }
@@ -217,14 +195,9 @@ export const SQLModal = () => (
       <List>
         <ListItem>
           <ListIcon as={IoMdSchool} />
-          <NextLink
-            href="https://www.udemy.com/certificate/UC-50f4e1df-7750-4371-a1b4-aef72cbcd49f/"
-            passHref
-          >
-            <Link target="_blank">
+          <Link href="https://www.udemy.com/certificate/UC-50f4e1df-7750-4371-a1b4-aef72cbcd49f/" target="_blank">
               The Complete SQL bootcamp 2022: Go from Zero to Hero
             </Link>
-          </NextLink>
         </ListItem>
       </List>
     }
@@ -232,11 +205,9 @@ export const SQLModal = () => (
       <List>
         <ListItem>
           <ListIcon as={IoMdSchool} />
-          <NextLink href="https://www.rotterdamuas.com/" passHref>
-            <Link target="_blank">
+          <Link href="https://www.rotterdamuas.com/" target="_blank">
               Rotterdam University of Applied Sciences
             </Link>
-          </NextLink>
         </ListItem>
       </List>
     }
@@ -260,9 +231,7 @@ export const PowershellModal = () => (
     description={
       <Text>
         During my internship at{" "}
-        <NextLink href="https://www.swecogroup.com/" passHref>
-          <Link target="_blank">Sweco</Link>
-        </NextLink>{" "}
+        <Link href="https://www.swecogroup.com/" target="_blank">Sweco</Link>{" "}
         I created an integration between Microsoft Teams and Jenkins in order to
         inform the developers about the results of Jenkins builds.
         <br />
@@ -276,9 +245,7 @@ export const PowershellModal = () => (
       <List>
         <ListItem>
           <ListIcon as={GiSuitcase} />
-          <NextLink href="https://www.swecogroup.com/" passHref>
-            <Link target="_blank">Sweco</Link>
-          </NextLink>
+          <Link href="https://www.swecogroup.com/" target="_blank">Sweco</Link>
         </ListItem>
       </List>
     }
@@ -298,9 +265,7 @@ export const BashModal = () => (
         I followed a course in Bash scripting in the first year of my computer
         science studies. Next to this I have done some minor bash scripting in
         personal projects and during my internship at{" "}
-        <NextLink href="https://www.swecogroup.com/" passHref>
-          <Link target="_blank">Sweco</Link>
-        </NextLink>
+        <Link href="https://www.swecogroup.com/" target="_blank">Sweco</Link>
         .
       </Text>
     }
@@ -308,17 +273,13 @@ export const BashModal = () => (
       <List>
         <ListItem>
           <ListIcon as={GiSuitcase} />
-          <NextLink href="https://www.swecogroup.com/" passHref>
-            <Link target="_blank">Sweco</Link>
-          </NextLink>
+          <Link href="https://www.swecogroup.com/" target="_blank">Sweco</Link>
         </ListItem>
         <ListItem>
           <ListIcon as={IoMdSchool} />
-          <NextLink href="https://www.rotterdamuas.com/" passHref>
-            <Link target="_blank">
+          <Link href="https://www.rotterdamuas.com/" target="_blank">
               Rotterdam University of Applied Sciences
             </Link>
-          </NextLink>
         </ListItem>
       </List>
     }
