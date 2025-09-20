@@ -5,7 +5,7 @@ export const VirtualVaultsPreview = () => (
   <ProjectGridItem
     thumbnail={"/svgs/experience/virtual-vaults.svg"}
     title="Virtual Vaults"
-    path="/experience/sweco"
+    path="/experience/virtual-vaults"
   >
     Junior Fullstack Developer
   </ProjectGridItem>

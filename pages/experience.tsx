@@ -19,8 +19,8 @@ const Experience: NextPageWithLayout = () => {
     <SwecoPreview key="sweco" />,
   ];
   const education: ReactNode[] = [
-    <CalvijnVreewijkPreview key="calvijn-vreewijk" />,
     <HogeschoolRotterdamPreview key="hogeschool-rotterdam" />,
+    <CalvijnVreewijkPreview key="calvijn-vreewijk" />,
   ];
 
   return (
