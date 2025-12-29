@@ -18,9 +18,3 @@ Checkout [jamey-schaap](https://jamey-schaap.vercel.app/) to see my portfolio!
 <img align="left" alt="" width="30px" src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Git_icon.svg" />
 
 <br/>
-
----
-
-[![Github stats stats-light](https://github-readme-stats.vercel.app/api?username=jamey-schaap&hide=stars&count_private=true&show_icons=true&hide_border=true&theme=default#gh-light-mode-only)](https://github-readme-stats.vercel.app/api?username=jamey-schaap&hide=stars&count_private=true&show_icons=true&hide_border=true&theme=default#gh-light-mode-only) [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=jamey-schaap&layout=compact&hide_border=true&theme=default#gh-light-mode-only)](https://github-readme-stats.vercel.app/api/top-langs/?username=jamey-schaap&layout=compact&hide_border=true&theme=default#gh-light-mode-only)
-
-[![Github stats stats-dark](https://github-readme-stats.vercel.app/api?username=jamey-schaap&hide=stars&count_private=true&show_icons=true&hide_border=true&theme=github_dark#gh-dark-mode-only)](https://github-readme-stats.vercel.app/api?username=jamey-schaap&hide=stars&count_private=true&show_icons=true&hide_border=true&theme=github_dark#gh-dark-mode-only) [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=jamey-schaap&layout=compact&hide_border=true&theme=github_dark#gh-dark-mode-only)](https://github-readme-stats.vercel.app/api/top-langs/?username=jamey-schaap&layout=compact&hide_border=true&theme=github_dark#gh-dark-mode-only)
